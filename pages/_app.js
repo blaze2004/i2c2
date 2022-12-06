@@ -20,6 +20,9 @@ function MyApp({ Component, emotionCache=clientSideEmotionCache, pageProps }) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>I2C2 Hackathon | Ideate-Innovate-Code-Compete</title>
+        <meta name="description" content="Ideate, Innovate, Code, Compete is an ideathon organised under the collaboration of Befikra, Code8 and Codedu communities." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
