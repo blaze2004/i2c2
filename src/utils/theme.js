@@ -4,10 +4,10 @@ export const theme=createTheme({
     mode: 'dark',
     palette: {
         primary: {
-            main: "#5785B6",
+            main: "#0093E9",
         },
         secondary: {
-            main: "#5785B6"
+            main: "#00DEE2"
         },
         background: {
             default: "#101825"
@@ -18,7 +18,8 @@ export const theme=createTheme({
         },
         neutral: {
             container: "#1C1B20",
-            navbar: '#99CBE7'
+            navbar: '#99CBE7',
+            black: "#000"
         }
     },
 });
