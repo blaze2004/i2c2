@@ -1,8 +1,9 @@
 import { Menu } from "@mui/icons-material";
-import { Avatar, Box, Button, IconButton, Divider, useMediaQuery } from "@mui/material";
+import { Avatar, Box, Button, IconButton, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen]=useState(false);
@@ -12,7 +13,33 @@ export default function Navbar() {
         setDrawerOpen(!drawerOpen);
     };
 
-    const registerButton=(<Button variant="contained" sx={{ borderRadius: '1rem', background: 'linear-gradient(to right, #30cfd0 0%, #330867 100%)' }}>Register</Button>);
+    const registerButton=(
+        <Button
+            variant="contained"
+            sx={{
+                borderRadius: '50px',
+                // margin: '20px',
+                // height: '55px',
+                textAlign: 'center',
+                border: 'none',
+                backgroundSize: '300% 100%',
+                boxShadow: '0 4px 15px 0 rgba(65, 132, 234, 0.75)',
+                backgroundImage: 'linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed)',
+                transition: 'all .4s ease-in-out',
+                WebkitTransition: 'all .4s ease-in-out',
+                ":hover": {
+                    backgroundPosition: '100% 0',
+                    transition: 'all .4s ease-in-out',
+                    WebkitTransition: 'all .4s ease-in-out',
+                },
+                ":focus": {
+                    outline: 'none'
+                },
+            }}
+        >
+            Register
+        </Button>
+    );
 
     const navbarButtons=(
         <>
@@ -47,7 +74,7 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
             }}>
-                <Avatar alt="i2c2 logo" src={'/logo.png'} />
+                <Avatar alt="i2c2 logo" src={logo.src} />
                 {
                     smallScreen?
                         (
@@ -73,9 +100,9 @@ function NavbarLink({ children, href }) {
     return (
         <>
             <Button
-                variant={isActive? "contained":"text"}
+                variant={"text"}
                 onPointerDown={() => router.push(href)}
-                sx={{ borderRadius: '1rem', color: theme.palette.text.primary }}
+                sx={{ borderRadius: '1rem', color: isActive? theme.palette.text.secondary:theme.palette.text.primary }}
             >
                 {children}
             </Button>

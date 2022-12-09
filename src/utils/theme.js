@@ -10,11 +10,11 @@ export const theme=createTheme({
             main: "#00DEE2"
         },
         background: {
-            default: "#101825"
+            default: "#000"
         },
         text: {
             primary: "#fff",
-            secondary: '#999'
+            secondary: '#c9c7c7'
         },
         neutral: {
             container: "#1C1B20",

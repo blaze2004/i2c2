@@ -5,6 +5,11 @@ import Navbar from '../src/components/navbar';
 import Faqs from '../src/components/faqs';
 import Footer from '../src/components/footer';
 import AboutHackathon from '../src/components/aboutHackathon';
+import Challenges from '../src/components/challenges';
+import banner from '../src/assets/hero-bg.png';
+import Speakers from '../src/components/speakers';
+import Mentors from '../src/components/mentors';
+import Schedule from '../src/components/schedule';
 
 export default function Home() {
   const theme=useTheme();
@@ -17,7 +22,7 @@ export default function Home() {
           alignItems: 'center',
           justifyContent: 'center',
           paddingTop: '2rem',
-          backgroundImage: "url('/hero-bg.png')",
+          backgroundImage: `url(${banner.src})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
@@ -27,7 +32,12 @@ export default function Home() {
           <Hero />
         </Box>
       </Box>
+
       <AboutHackathon />
+      <Challenges />
+      <Schedule />
+      <Speakers />
+      <Mentors />
 
       <Box
         sx={{
@@ -36,13 +46,7 @@ export default function Home() {
           justifyContent: 'center',
         }}
       >
-        <Box>
-          <Faqs />
-          <Faqs />
-          <Faqs />
-          <Faqs />
-          <Faqs />
-        </Box>
+        <Faqs />
       </Box>
 
       <Box

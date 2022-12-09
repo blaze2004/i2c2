@@ -1,26 +1,58 @@
 import { ArrowDropDownCircleOutlined } from "@mui/icons-material";
 import { useTheme } from '@mui/material/styles';
-import { Box, Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import { Box, Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery } from "@mui/material";
+import Link from "next/link";
 
 export default function Faqs() {
+    const smallScreen=useMediaQuery(`(max-width: 800px)`);
+
     const faqs=[
         {
-            summary: "What is I2C2?",
-            description: "I2C2 : Ideate, Innovate, Code, Compete is an ideathon."
+            summary: "What is a Hackathon?",
+            description: "A hackathon is social coding event where programmers, designers, and developers collaborate to solve a problem and compete for cash prizes. It’s one part party, one part work-your-butt-off overnight battle against the clock and the competition."
         },
         {
-            summary: "Do I need to pay for the registration of the bootcamp ?",
-            description: "No, It is free for everyone."
+            summary: "Who can participate?",
+            description: "Everyone is welcome to participate, be it, students, professionals, or aliens from a different planet!"
         },
         {
-            summary: "Do I need to pay for the registration of the bootcamp ?",
-            description: "No, It is free for everyone."
+            summary: "Are there any fees forI2C2?",
+            description: "No. You are not required to make any payments to anyone. It is entirely free to all."
+        },
+        {
+            summary: "Can we form a team?",
+            description: "Yes, it is required that each participant be a part of a team. Participants may form teams of 4 participants from the same institution/university. Every squad is required to include at least one female player. Each participant must belong to a single team and submit a single project."
+        },
+        {
+            summary: "Can we work on old or ongoing projects?",
+            description: "Yes. You can bring your old projects, but you will be judged on the features you add during the hackathon."
+        },
+        {
+            summary: "How do I know my registration is confirmed and when to start the development phase?",
+            description: "The organizing team will approve and confirm your participation. Shortlisted teams will receive a confirmation email and it will reflect on the user dashboard."
+        },
+        {
+            summary: "Have more questions?",
+            description: (<Typography>Join our <Link href="https://discord.com" style={{textDecoration: 'none', color: '#21D4FD'}}>Discord Community</Link> Get in touch with a bigger community and ask any further queries you may have. Looking forward to welcoming you.</Typography>)
         }
     ];
 
     return (
-        <Box>
-            <Typography variant="h2" fontWeight={"bold"} sx={{textAlign: 'center', margin: '20px 0'}}>Frequently Asked Questions</Typography>
+        <Box sx={{maxWidth: '800px'}}>
+            <Typography
+                textAlign={"center"}
+                variant={smallScreen? "h2":"h1"}
+                fontWeight={"bold"}
+                sx={{
+                    mt: "5rem",
+                    mb: "2rem",
+                    background: 'linear-gradient(180deg, #21D4FD 0%, #215dff 100%)',
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                }}
+            >
+                Frequently Asked Questions
+            </Typography>
             {
                 faqs.map((faq, key) => (
                     <StyledAccordion key={key} summary={faq.summary}>
