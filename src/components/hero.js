@@ -28,7 +28,6 @@ export default function Hero() {
                         mt: "5rem",
                         mb: "2rem",
                         background: 'linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)',
-                        // background: '-webkit-linear-gradient(45deg, #0093E9 30%, #80D0C7 90%)',
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent"
                     }}
@@ -42,7 +41,7 @@ export default function Hero() {
                     sx={{ maxWidth: "600px" }}
                     m={theme.spacing(1,2)}
                 >
-                    I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you'll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others.
+                    I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you&#39;ll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others.
                 </Typography>
 
                 <Button

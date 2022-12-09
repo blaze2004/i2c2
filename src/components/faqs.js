@@ -9,7 +9,7 @@ export default function Faqs() {
     const faqs=[
         {
             summary: "What is a Hackathon?",
-            description: "A hackathon is social coding event where programmers, designers, and developers collaborate to solve a problem and compete for cash prizes. It’s one part party, one part work-your-butt-off overnight battle against the clock and the competition."
+            description: "A hackathon is social coding event where programmers, designers, and developers collaborate to solve a problem and compete for cash prizes. It's one part party, one part work-your-butt-off overnight battle against the clock and the competition."
         },
         {
             summary: "Who can participate?",
