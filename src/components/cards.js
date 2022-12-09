@@ -1,13 +1,14 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 
 export default function HoverInfoCard({ title, description, img, colorTheme }) {
     const theme=useTheme();
+    const mobileScreen=useMediaQuery('(max-width: 500px)');
     return (
         <Box
             sx={{
                 background: 'transparent',
-                width: '400px',
+                width: mobileScreen? '280px': '400px',
                 height: '300px',
                 perspective: '1000px',
             }}
@@ -29,7 +30,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme }) {
                     borderRadius: '2rem',
                     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                     backgroundImage: `url(${img.src})`,
-                    backgroundSize: 'cover',
+                    backgroundSize: '100% 100%',
                     backgroundRepeat: 'no-repeat',
                     position: 'absolute',
                     width: '100%',
@@ -45,6 +46,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme }) {
                         position: 'absolute',
                         width: '100%',
                         height: '100%',
+                        backgroundSize: '100% 100%',
                         WebkitBackfaceVisibility: 'hidden',
                         backfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)',

@@ -5,10 +5,11 @@ import YouTube from 'react-youtube';
 export default function Hero() {
     const theme=useTheme();
     const smallScreen=useMediaQuery('(max-width: 650px');
-
+    const mobileScreen=useMediaQuery('(max-width: 500px)');
+    const videoWidth = mobileScreen ? 300: (smallScreen ? 400: 600)
     const opts={
         height: '390',
-        width: smallScreen? '400':'600',
+        width: videoWidth,
         playerVars: {
             autoplay: 0, //to be changed to 1
             controls: 0,
@@ -71,7 +72,7 @@ export default function Hero() {
                 </Button>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "2rem", mt: "2rem" }}>
-                <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: smallScreen? '410px':'610px' }}>
+                <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}>
                     <YouTube
                         title='I2C2 Teaser Video'
                         videoId='7oEQgzMTwi8'

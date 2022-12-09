@@ -47,7 +47,7 @@ function SummaryCard({ title, content, button, image, flexDirection }) {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
     const tranformValue=flexDirection&&flexDirection==="row-reverse"? '24':'-24';
-    const contentPadding=flexDirection&&flexDirection==="row-reverse"? 8:0;
+    const contentPadding=flexDirection&&flexDirection==="row-reverse"? 8:1;
 
     return (
         <Card
@@ -107,7 +107,7 @@ function SummaryCard({ title, content, button, image, flexDirection }) {
 
             <CardContent
                 sx={{
-                    textAlign: "left",
+                    textAlign: smallScreen ? 'center':"left",
                     padding: theme.spacing(2,2,2,contentPadding)
                 }}
             >
