@@ -13,16 +13,31 @@ export default function Mentors() {
             title: "Abhilash Jain",
             description: "Web Developer",
             imgUrl: speaker,
+            links: {
+                github: "https://github.com/blaze2004",
+                twitter: "https://twitter.com/@blaze06112004",
+                linkedin: "https://linkedin.com/blaze2004"
+            }
         },
         {
             title: "Rajesh Singh",
             description: "iOS App Developer",
             imgUrl: speaker,
+            links: {
+                github: "https://github.com/blaze2004",
+                twitter: "https://twitter.com/@blaze06112004",
+                linkedin: "https://linkedin.com/blaze2004"
+            }
         },
         {
             title: "Mayank Rajvansh",
             description: "UI/ UX Designer",
             imgUrl: speaker,
+            links: {
+                github: "https://github.com/blaze2004",
+                twitter: "https://twitter.com/@blaze06112004",
+                linkedin: "https://linkedin.com/blaze2004"
+            }
         },
     ];
 
@@ -70,6 +85,8 @@ export default function Mentors() {
                             description={mentor.description}
                             img={mentor.imgUrl}
                             colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
+                            person={true}
+                            links={mentor.links}
                         />
                     ))
                 }

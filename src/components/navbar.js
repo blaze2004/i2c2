@@ -1,4 +1,4 @@
-import { Menu } from "@mui/icons-material";
+import { HdrOffSelectRounded, Menu } from "@mui/icons-material";
 import { Avatar, Box, Button, IconButton, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
@@ -17,6 +17,7 @@ export default function Navbar() {
         <Button
             variant="contained"
             sx={{
+                fontSize: 'large',
                 borderRadius: '50px',
                 // margin: '20px',
                 // height: '55px',
@@ -39,6 +40,14 @@ export default function Navbar() {
         >
             Register
         </Button>
+        // <div
+        //     class="apply-button"
+        //     data-hackathon-slug="i2c2-hackathon"
+        //     data-button-theme="dark"
+        //     style={{
+        //         height: '44px', width: '312px'
+        //     }}
+        // ></div>
     );
 
     const navbarButtons=(
@@ -74,7 +83,7 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
             }}>
-                <Avatar alt="i2c2 logo" src={logo.src} />
+                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 50, height: 50 }} />
                 {
                     smallScreen?
                         (
@@ -98,14 +107,13 @@ function NavbarLink({ children, href }) {
     const theme=useTheme();
     const isActive=router.asPath===href;
     return (
-        <>
+        <a href={href}>
             <Button
                 variant={"text"}
-                onPointerDown={() => router.push(href)}
-                sx={{ borderRadius: '1rem', color: isActive? theme.palette.text.secondary:theme.palette.text.primary }}
+                sx={{ borderRadius: '1rem', color: isActive? theme.palette.text.secondary:theme.palette.text.primary, fontSize: 'large' }}
             >
                 {children}
             </Button>
-        </>
+        </a>
     );
 }

@@ -21,5 +21,5 @@ export const theme=createTheme({
             navbar: '#99CBE7',
             black: "#000"
         }
-    },
+    }
 });

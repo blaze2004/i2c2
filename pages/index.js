@@ -25,6 +25,9 @@ export default function Home() {
           backgroundImage: `url(${banner.src})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
+          // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 49%, #000000 100%)',
+          // background: 'linear-gradient(0deg, #1cb9f6 3%, #0061a8 35%, #000000 100%)',
+          // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 16%, #000000 100%)'
         }}
       >
         <Box>
@@ -60,7 +63,7 @@ export default function Home() {
       >
         <Footer />
       </Box>
+      <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
     </Box>
-
   )
 }

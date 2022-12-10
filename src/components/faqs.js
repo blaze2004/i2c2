@@ -2,9 +2,16 @@ import { ArrowDropDownCircleOutlined } from "@mui/icons-material";
 import { useTheme } from '@mui/material/styles';
 import { Box, Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Faqs() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+
+    const [expanded, setExpanded]=useState(false);
+
+    const handleChange=(panel) => (event, isExpanded) => {
+        setExpanded(isExpanded? panel:false);
+    };
 
     const faqs=[
         {
@@ -33,12 +40,12 @@ export default function Faqs() {
         },
         {
             summary: "Have more questions?",
-            description: (<Typography>Join our <Link href="https://discord.com" style={{textDecoration: 'none', color: '#21D4FD'}}>Discord Community</Link> Get in touch with a bigger community and ask any further queries you may have. Looking forward to welcoming you.</Typography>)
+            description: (<Typography>Join our <Link href="https://discord.com" style={{ textDecoration: 'none', color: '#21D4FD' }}>Discord Community</Link> Get in touch with a bigger community and ask any further queries you may have. Looking forward to welcoming you.</Typography>)
         }
     ];
 
     return (
-        <Box sx={{maxWidth: '800px'}}>
+        <Box id="faq" sx={{ maxWidth: '800px' }}>
             <Typography
                 textAlign={"center"}
                 variant={smallScreen? "h2":"h1"}
@@ -46,7 +53,7 @@ export default function Faqs() {
                 sx={{
                     mt: "5rem",
                     mb: "2rem",
-                    background: 'linear-gradient(180deg, #21D4FD 0%, #215dff 100%)',
+                    background: 'linear-gradient(180deg, #215dff 0%, #21D4FD 100%)',
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent"
                 }}
@@ -55,7 +62,7 @@ export default function Faqs() {
             </Typography>
             {
                 faqs.map((faq, key) => (
-                    <StyledAccordion key={key} summary={faq.summary}>
+                    <StyledAccordion key={key} summary={faq.summary} panelnum={`panel${key+1}`} expanded={ expanded} handleChange={handleChange} >
                         {faq.description}
                     </StyledAccordion>
                 ))
@@ -64,11 +71,11 @@ export default function Faqs() {
     );
 }
 
-function StyledAccordion({ children, summary }) {
+function StyledAccordion({ children, summary, panelnum , expanded, handleChange}) {
     const theme=useTheme();
 
     return (
-        <Accordion sx={{ background: '#27364D' }}>
+        <Accordion expanded={expanded===panelnum} onChange={handleChange(panelnum)} sx={{ background: '#27364D' }}>
             <AccordionSummary expandIcon={<ArrowDropDownCircleOutlined sx={{ color: theme.palette.text.primary }} />}>
                 {summary}
             </AccordionSummary>

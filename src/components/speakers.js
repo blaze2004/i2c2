@@ -69,6 +69,7 @@ export default function Speakers() {
                             title={speaker.title}
                             description={speaker.description}
                             img={speaker.imgUrl}
+                            person={true}
                             colorTheme="linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)"
                         />
                     ))

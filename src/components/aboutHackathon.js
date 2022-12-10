@@ -18,7 +18,6 @@ export default function AboutHackathon() {
                 content={
                     "The online hackathon is divided into 3 phases and will continue for 45 days. There will be sessions and everyone will have access to mentors who are experts in various domains and guide all the participants."
                 }
-                button={true}
                 image={banner.src}
             />
 
@@ -27,7 +26,6 @@ export default function AboutHackathon() {
                 content={
                     "You’ll get to grip new technologies, learn new technical skills, chance to network, and meet experienced industry-level professionals. You will get a taste of smart management, team dynamics, and innovative new ideas that will be helpful for the society and environment."
                 }
-                button={true}
                 image={"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png"}
                 flexDirection="row-reverse"
             />
@@ -117,34 +115,6 @@ function SummaryCard({ title, content, button, image, flexDirection }) {
                 <Typography marginBottom={theme.spacing(8)} color={theme.palette.neutral.black}>
                     {content}
                 </Typography>
-                {
-                    button?
-                        (
-                            <Button
-                                sx={{
-                                    backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
-                                    boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
-                                    borderRadius: 100,
-                                    padding: '10px',
-                                    color: theme.palette.text.primary,
-                                    backgroundSize: '300% 100%',
-                                    transition: 'all .4s ease-in-out',
-                                    WebkitTransition: 'all .4s ease-in-out',
-                                    ":hover": {
-                                        backgroundPosition: '100% 0',
-                                        transition: 'all .4s ease-in-out',
-                                        WebkitTransition: 'all .4s ease-in-out',
-                                    },
-                                    ":focus": {
-                                        outline: 'none'
-                                    },
-                                }}
-                            >
-                                Register Now
-                            </Button>
-                        )
-                        :null
-                }
             </CardContent>
 
         </Card>

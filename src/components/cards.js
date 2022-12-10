@@ -1,16 +1,27 @@
-import { Typography, Box, useMediaQuery } from "@mui/material";
+import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
+import { Typography, Box, useMediaQuery, IconButton, Button } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import { useRouter } from "next/router";
+import { useState } from 'react';
 
-export default function HoverInfoCard({ title, description, img, colorTheme }) {
+export default function HoverInfoCard({ title, description, img, colorTheme, person=false, links={} }) {
+    const [viewProblem, setViewProblem]=useState(false);
     const theme=useTheme();
+    const router=useRouter();
     const mobileScreen=useMediaQuery('(max-width: 500px)');
+    const { github, twitter, linkedin }=links;
+
+    const viewProblemStatement=() => {
+        setViewProblem(true);
+    };
+
     return (
         <Box
             sx={{
                 background: 'transparent',
-                width: mobileScreen? '280px': '400px',
+                width: mobileScreen? '280px':'400px',
                 height: '300px',
-                perspective: '1000px',
+                perspective: '1000px'
             }}
         >
             <Box
@@ -52,11 +63,37 @@ export default function HoverInfoCard({ title, description, img, colorTheme }) {
                         transform: 'rotateY(180deg)',
                         display: 'flex',
                         flexDirection: 'column',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        wordWrap: 'break-word'
                     }}
                 >
                     <Typography fontWeight={"bold"} variant={"h3"} gutterBottom>{title}</Typography>
-                    <Typography>{description}</Typography>
+                    <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography>
+                    {
+                        person? (
+                            <Box>
+                                <IconButton onPointerDown={() => window.open(github, '_blank', 'noopener,noreferrer')} >
+                                    <GitHub />
+                                </IconButton>
+                                <IconButton onPointerDown={() => window.open(twitter, '_blank', 'noopener,noreferrer')}>
+                                    <Twitter />
+                                </IconButton>
+                                <IconButton onPointerDown={() => window.open(linkedin, '_blank', 'noopener,noreferrer')}>
+                                    <LinkedIn />
+                                </IconButton>
+                            </Box>
+                        ):
+                            (
+                                viewProblem? null:
+                                    (
+                                        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                            <Button variant="contained" sx={{ borderRadius: '2rem', maxWidth: 'max-content' }} onClick={viewProblemStatement}>
+                                                View Problem Statement
+                                            </Button>
+                                        </Box>
+                                    )
+                            )
+                    }
                 </Box>
             </Box>
         </Box>

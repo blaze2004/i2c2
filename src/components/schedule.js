@@ -51,6 +51,7 @@ export default function Schedule() {
 
     return (
         <Box
+            id="schedule"
             sx={{
                 display: 'flex',
                 alignItems: "center",

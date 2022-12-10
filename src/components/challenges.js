@@ -48,6 +48,7 @@ export default function Challenges() {
 
     return (
         <Box
+            id="challenges"
             sx={{
                 display: 'flex',
                 alignItems: "center",
