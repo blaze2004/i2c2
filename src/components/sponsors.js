@@ -103,13 +103,13 @@ export default function Sponsors() {
 function LogoGroup({ dataList, value, index }) {
     return (
         value===index&&(
-            <Box className={styles.cardsList}>
+            <Box className={styles.cardsList} sx={{maxWidth: "800px"}}>
                 {
                     dataList.map((data, key) => (
                         <Box
                             key={key}
                             sx={{
-                                m: '10px',
+                                m: '5px',
                                 transition: "0.3s",
                                 "&:hover": {
                                     transform: "scale(1.2)",
@@ -117,7 +117,7 @@ function LogoGroup({ dataList, value, index }) {
                             }}
                         >
                             <a href={data.link} target="_blank" rel="noreferrer">
-                                <Image src={data.imgUrl} alt={data.title} height="44px" width="50px" />
+                                <Image src={data.imgUrl} alt={data.title} height={44} width={50} />
                             </a>
                         </Box>
                     ))

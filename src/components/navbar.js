@@ -14,40 +14,38 @@ export default function Navbar() {
     };
 
     const registerButton=(
-        <Button
-            variant="contained"
-            sx={{
-                fontSize: 'large',
-                borderRadius: '50px',
-                // margin: '20px',
-                // height: '55px',
-                textAlign: 'center',
-                border: 'none',
-                backgroundSize: '300% 100%',
-                boxShadow: '0 4px 15px 0 rgba(65, 132, 234, 0.75)',
-                backgroundImage: 'linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed)',
-                transition: 'all .4s ease-in-out',
-                WebkitTransition: 'all .4s ease-in-out',
-                ":hover": {
-                    backgroundPosition: '100% 0',
-                    transition: 'all .4s ease-in-out',
-                    WebkitTransition: 'all .4s ease-in-out',
-                },
-                ":focus": {
-                    outline: 'none'
-                },
-            }}
-        >
-            Register
-        </Button>
-        // <div
-        //     class="apply-button"
-        //     data-hackathon-slug="i2c2-hackathon"
-        //     data-button-theme="dark"
-        //     style={{
-        //         height: '44px', width: '312px'
+        // <Button
+        //     variant="contained"
+        //     sx={{
+        //         fontSize: 'large',
+        //         borderRadius: '50px',
+        //         // margin: '20px',
+        //         // height: '55px',
+        //         textAlign: 'center',
+        //         border: 'none',
+        //         backgroundSize: '300% 100%',
+        //         boxShadow: '0 4px 15px 0 rgba(65, 132, 234, 0.75)',
+        //         backgroundImage: 'linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed)',
+        //         transition: 'all .4s ease-in-out',
+        //         WebkitTransition: 'all .4s ease-in-out',
+        //         ":hover": {
+        //             backgroundPosition: '100% 0',
+        //             transition: 'all .4s ease-in-out',
+        //             WebkitTransition: 'all .4s ease-in-out',
+        //         },
+        //         ":focus": {
+        //             outline: 'none'
+        //         },
         //     }}
-        // ></div>
+        // >
+        //     Register
+        // </Button>
+        <div
+            className="apply-button"
+            data-hackathon-slug="i2c2-hackathon"
+            data-button-theme="light"
+            style={{ height: '44px', width: '312px' }}
+        ></div>
     );
 
     const navbarButtons=(

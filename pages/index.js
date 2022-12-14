@@ -51,6 +51,7 @@ export default function Home() {
 
       <Box
         sx={{
+          backgroundColor: theme.palette.neutral.black,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

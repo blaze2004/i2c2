@@ -88,8 +88,8 @@ export default function Hero() {
                 </Button> */}
                 <div
                     className="apply-button"
-                    data-hackathon-slug="opencode22"
-                    data-button-theme="dark"
+                    data-hackathon-slug="i2c2-hackathon"
+                    data-button-theme="light"
                     style={{height: '44px', width: '312px'}}
                 ></div>
             </Box>
