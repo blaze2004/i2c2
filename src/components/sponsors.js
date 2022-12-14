@@ -103,7 +103,7 @@ export default function Sponsors() {
 function LogoGroup({ dataList, value, index }) {
     return (
         value===index&&(
-            <Box className={styles.cardsList} sx={{maxWidth: "800px"}}>
+            <Box className={styles.cardsList}>
                 {
                     dataList.map((data, key) => (
                         <Box
