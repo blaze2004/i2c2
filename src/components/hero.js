@@ -1,6 +1,7 @@
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import YouTube from 'react-youtube';
+import { useEffect } from 'react';
 
 export default function Hero() {
     const theme=useTheme();
@@ -17,6 +18,17 @@ export default function Hero() {
             modestbranding: 1,
         },
     };
+
+    useEffect(() => {
+        const script=document.createElement('script');
+        script.src='https://apply.devfolio.co/v2/sdk.js';
+        script.async=true;
+        script.defer=true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        }
+    }, []);
 
     return (
         <Box>
@@ -44,11 +56,11 @@ export default function Hero() {
                     sx={{ maxWidth: "600px" }}
                     m={theme.spacing(1, 2)}
                 >
-                    Go from idea to award with I2C2 Ideathon.
+                    Go from idea to award with I2C2 hackathon.
                     {/* I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you&#39;ll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others. */}
                 </Typography>
 
-                <Button
+                {/* <Button
                     variant="contained"
                     sx={{
                         fontSize: 'large',
@@ -73,9 +85,15 @@ export default function Hero() {
                     }}
                 >
                     Register
-                </Button>
+                </Button> */}
+                <div
+                    class="apply-button"
+                    data-hackathon-slug="i2c2-hackathon"
+                    data-button-theme="dark"
+                    style={{height: '44px', width: '312px'}}
+                ></div>
             </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "2rem", mt: "2rem" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "3rem", mt: "2rem" }}>
                 <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}>
                     <YouTube
                         title='I2C2 Teaser Video'

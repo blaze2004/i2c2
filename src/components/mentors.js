@@ -44,6 +44,7 @@ export default function Mentors() {
     return (
         <Box
             sx={{
+                pb: '2rem',
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',

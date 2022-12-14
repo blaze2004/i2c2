@@ -10,10 +10,24 @@ import banner from '../src/assets/hero-bg.png';
 import Speakers from '../src/components/speakers';
 import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
+import Sponsors from '../src/components/sponsors';
+import { useEffect } from 'react';
 
 export default function Home() {
   const theme=useTheme();
   const desktop=useMediaQuery('(min-width:1200px)');
+
+  useEffect(() => {
+    const script=document.createElement('script');
+    script.src='https://apply.devfolio.co/v2/sdk.js';
+    script.async=true;
+    script.defer=true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+
   return (
     <Box>
       <Box
@@ -25,6 +39,9 @@ export default function Home() {
           backgroundImage: `url(${banner.src})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
+          // position: 'sticky',
+          // top: 0,
+          // zIndex: -1
           // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 49%, #000000 100%)',
           // background: 'linear-gradient(0deg, #1cb9f6 3%, #0061a8 35%, #000000 100%)',
           // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 16%, #000000 100%)'
@@ -39,6 +56,7 @@ export default function Home() {
       <AboutHackathon />
       <Challenges />
       <Schedule />
+      <Sponsors />
       <Speakers />
       <Mentors />
 
@@ -57,13 +75,12 @@ export default function Home() {
           backgroundColor: theme.palette.neutral.black,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
           paddingTop: '1rem',
         }}
       >
         <Footer />
       </Box>
-      <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
     </Box>
   )
 }

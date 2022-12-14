@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardContent, CardMedia, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import banner from '../assets/logo.png';
+import banner from '../assets/logo.jpg';
 
 export default function AboutHackathon() {
     return (
@@ -14,7 +14,7 @@ export default function AboutHackathon() {
         >
 
             <SummaryCard
-                title={"About I2C2"}
+                title={"About I2C2 Hackathon"}
                 content={
                     "The online hackathon is divided into 3 phases and will continue for 45 days. There will be sessions and everyone will have access to mentors who are experts in various domains and guide all the participants."
                 }

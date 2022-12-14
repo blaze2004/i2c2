@@ -23,7 +23,7 @@ export default function Faqs() {
             description: "Everyone is welcome to participate, be it, students, professionals, or aliens from a different planet!"
         },
         {
-            summary: "Are there any fees forI2C2?",
+            summary: "Are there any fees for I2C2?",
             description: "No. You are not required to make any payments to anyone. It is entirely free to all."
         },
         {

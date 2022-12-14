@@ -1,9 +1,9 @@
-import { HdrOffSelectRounded, Menu } from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 import { Avatar, Box, Button, IconButton, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpg';
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen]=useState(false);
@@ -52,7 +52,7 @@ export default function Navbar() {
 
     const navbarButtons=(
         <>
-            <Box sx={{ display: 'flex', flexDirection: smallScreen? 'column':'row' }}>
+            <Box sx={{ display: 'flex', flexDirection: smallScreen? 'column':'row', alignItems: 'center' }}>
                 <NavbarLink href="/#challenges">Challenges</NavbarLink>
                 <NavbarLink href="/#rewards">Rewards</NavbarLink>
                 <NavbarLink href="/#schedule">Schedule</NavbarLink>
@@ -76,7 +76,6 @@ export default function Navbar() {
             borderRadius: '1rem',
             padding: '0.2rem 1rem',
             transition: '0.32s ease-in-out',
-            zIndex: 9999
         }}>
             <Box sx={{
                 display: 'flex',

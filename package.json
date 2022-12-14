@@ -25,5 +25,8 @@
     "react-dom": "18.2.0",
     "react-scroll-parallax": "^3.3.2",
     "react-youtube": "^10.1.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1"
   }
 }

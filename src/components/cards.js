@@ -1,19 +1,24 @@
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import { Typography, Box, useMediaQuery, IconButton, Button } from "@mui/material";
+import { Typography, Box, useMediaQuery, IconButton, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { useState } from 'react';
 
 export default function HoverInfoCard({ title, description, img, colorTheme, person=false, links={} }) {
-    const [viewProblem, setViewProblem]=useState(false);
+
+    const [open, setOpen]=useState(false);
+
+    const handleClickOpen=() => {
+        setOpen(true);
+    };
+
+    const handleClose=() => {
+        setOpen(false);
+    };
     const theme=useTheme();
-    const router=useRouter();
+    // const router=useRouter();
     const mobileScreen=useMediaQuery('(max-width: 500px)');
     const { github, twitter, linkedin }=links;
-
-    const viewProblemStatement=() => {
-        setViewProblem(true);
-    };
 
     return (
         <Box
@@ -68,7 +73,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                     }}
                 >
                     <Typography fontWeight={"bold"} variant={"h3"} gutterBottom>{title}</Typography>
-                    <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography>
+                    {/* <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography> */}
                     {
                         person? (
                             <Box>
@@ -84,16 +89,31 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                             </Box>
                         ):
                             (
-                                viewProblem? null:
-                                    (
-                                        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                            <Button variant="contained" sx={{ borderRadius: '2rem', maxWidth: 'max-content' }} onClick={viewProblemStatement}>
-                                                View Problem Statement
-                                            </Button>
-                                        </Box>
-                                    )
+                                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Button variant="contained" sx={{ borderRadius: '2rem', maxWidth: 'max-content' }} onClick={handleClickOpen}>
+                                        View Problem Statement
+                                    </Button>
+                                </Box>
                             )
                     }
+                    <Dialog
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
+                    >
+                        <DialogTitle id="alert-dialog-title" color={theme.palette.neutral.black}>
+                            Problem Statement for {title} category
+                        </DialogTitle>
+                        <DialogContent>
+                            <DialogContentText color={theme.palette.neutral.black}>
+                                {description}
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button autoFocus onClick={handleClose}>Close</Button>
+                        </DialogActions>
+                    </Dialog>
                 </Box>
             </Box>
         </Box>

@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Slide, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
 import health from '../assets/1health.png';
@@ -53,23 +53,26 @@ export default function Challenges() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary
+                backgroundColor: theme.palette.text.primary,
             }}
         >
-            <Typography
-                textAlign={"center"}
-                variant={smallScreen? "h2":"h1"}
-                fontWeight={"bold"}
-                sx={{
-                    mt: "5rem",
-                    mb: "1rem",
-                    background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                }}
-            >
-                Challenges
-            </Typography>
+            <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                <Typography
+                    textAlign={"center"}
+                    variant={smallScreen? "h2":"h1"}
+                    fontWeight={"bold"}
+                    sx={{
+                        mt: "5rem",
+                        mb: "1rem",
+                        background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)',
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
+                    }}
+                >
+                    Challenges
+                </Typography>
+            </Slide>
+
             <Typography
                 textAlign={"center"}
                 fontWeight={"bold"}
