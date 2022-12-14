@@ -117,7 +117,7 @@ function LogoGroup({ dataList, value, index }) {
                             }}
                         >
                             <a href={data.link} target="_blank" rel="noreferrer">
-                                <Image src={data.imgUrl} alt={data.title} height={44} width={50} />
+                                <Image src={data.imgUrl} alt={data.title} height={44} width={312} />
                             </a>
                         </Box>
                     ))
