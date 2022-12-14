@@ -87,8 +87,8 @@ export default function Hero() {
                     Register
                 </Button> */}
                 <div
-                    class="apply-button"
-                    data-hackathon-slug="i2c2-hackathon"
+                    className="apply-button"
+                    data-hackathon-slug="opencode22"
                     data-button-theme="dark"
                     style={{height: '44px', width: '312px'}}
                 ></div>

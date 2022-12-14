@@ -2,8 +2,13 @@ import styles from '../styles/Home.module.css';
 import { Box, ButtonGroup, Button, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import devfolio from '../assets/Devfolio_Logo-Black.png';
+import polygon from '../assets/Polygon_Logo-Dark.png';
+import solana from '../assets/Solana-Colored.png';
+import replit from '../assets/Replit-light-background.png';
+import filecoin from '../assets/Filecoin Coloured White Text.png';
+import streamyard from '../assets/StreamYard_2021.png';
+import befikra from '../assets/befikra.jpeg';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Sponsors() {
@@ -23,26 +28,36 @@ export default function Sponsors() {
             link: "https://devfolio.co/"
         },
         {
-            title: "DevFolio",
-            imgUrl: devfolio,
-            link: "https://devfolio.co/"
+            title: "Polygon",
+            imgUrl: polygon,
+            link: "https://polygon.technology"
         },
         {
-            title: "DevFolio",
-            imgUrl: devfolio,
-            link: "https://devfolio.co/"
+            title: "Solana",
+            imgUrl: solana,
+            link: "https://solana.com"
         },
         {
-            title: "DevFolio",
-            imgUrl: devfolio,
-            link: "https://devfolio.co/"
+            title: "Filecoin",
+            imgUrl: filecoin,
+            link: "https://filecoin.io"
+        },
+        {
+            title: 'replit',
+            imgUrl: replit,
+            link: 'https://replit.com'
+        },
+        {
+            title: "streamyard",
+            imgUrl: streamyard,
+            link: 'https://streamyard.com'
         }
     ];
 
     const communityPartners=[
         {
             title: "Befikra Community",
-            imgUrl: devfolio,
+            imgUrl: befikra,
             link: "https://befikracommunity.in"
         },
     ];
@@ -101,8 +116,8 @@ function LogoGroup({ dataList, value, index }) {
                                 },
                             }}
                         >
-                            <a href={data.link} target="_blank">
-                                <Image src={data.imgUrl} alt={data.title} />
+                            <a href={data.link} target="_blank" rel="noreferrer">
+                                <Image src={data.imgUrl} alt={data.title} height="44px" width="50px" />
                             </a>
                         </Box>
                     ))
