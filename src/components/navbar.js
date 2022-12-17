@@ -3,7 +3,7 @@ import { Avatar, Box, Button, IconButton, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import { useEffect } from "react";
 
 export default function Navbar() {
@@ -93,7 +93,7 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
             }}>
-                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 50, height: 50 }} />
+                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 60, height: 60 }} />
                 {
                     smallScreen?
                         (

@@ -16,33 +16,27 @@ export default function WhyJoinUs() {
     const points=[
         {
             icon: Sessions,
-            title: "Interactive Sessions",
-            description: "The students shall receive interactive sessions with mentors to learn about the various aspects of Blockchain. Along with that, they shall also receive resource information to guide them along the learning process."
+            title: "Informative & Interactive Session"
         },
         {
             icon: Support,
-            title: "Mentorship Support",
-            description: "Mentors will always be available to help with doubt-solving."
+            title: "Mentorship Support"
         },
         {
             icon: Nft,
-            title: "NFTs and Swags",
-            description: "After the end of the program, students shall receive certificates, and internship opportunities, and take home some amazing goodies."
+            title: "NFT's, Certificates  & Swags"
         },
         {
             icon: Project,
-            title: "Project Building Assistance",
-            description: "Alongside the sessions, they shall also receive guidance on building blockchain-based projects."
+            title: "Project Building Experience"
         },
         {
             icon: Learn,
-            title: "Learn and build on the Tezos Platform",
-            description: "As part of this program, students can easily access and learn on the Tezos platform."
+            title: "Learn, Build & Participate"
         },
         {
             icon: Intern,
-            title: "Internship and PPO opportunities.",
-            description: "You shall get internships and Pre-Placement Opportunities with Tezos based on the evaluation of the project created."
+            title: "Internship & PPO Opportunities"
         },
     ];
 

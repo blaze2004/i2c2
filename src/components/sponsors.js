@@ -119,7 +119,7 @@ export default function Sponsors() {
                     </Typography>
                     <Button
                         variant='contained'
-                        onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}
+                        onClick={() => window.open("mailto:contact.i2c2@gmail.com?subject=Regarding%20Sponsoring%20I2C2%20Hackathon%20&body=Hi%20there%20%F0%9F%91%8B%2C%0D%0AHope%20you%20are%20having%20a%20great%20day.%0D%0A%0D%0AJust%20visited%20your%20hackathon%20website%20and%20got%20excited%20to%20know%20more%20about%20this.%0D%0AWe%20at%20%5BOragnisation%5D%20would%20like%20to%20sponsor%20your%20hackathon.%0D%0ABefore%2C%20that%20let%20us%20know%20more%20about%20the%20hackathon%20you%20are%20organising.%0D%0A%0D%0AWaiting%20for%20your%20reply%20!%0D%0A%5BOtrganisation%5D", '_blank', 'noopener,noreferrer')}
                         sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
                     >
                         Sponsor Us
@@ -145,11 +145,11 @@ export default function Sponsors() {
                     </Typography>
                     <Button
                         variant='contained'
-                     onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}
-                     sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
-                     >
+                        onClick={() => window.open("mailto:contact.i2c2@gmail.com?subject=Regarding%20Partnering%20I2C2%20Hackathon%20&body=Hi%20there%20%F0%9F%91%8B%2C%0D%0AHope%20you%20are%20having%20a%20great%20day.%0D%0A%0D%0AJust%20visited%20your%20hackathon%20website%20and%20got%20excited%20to%20know%20more%20about%20this.%0D%0AWe%20at%20%5BOragnisation%5D%20would%20like%20to%20partner%20with%20you%20for%20the%20above%20mentioned%20hackathon.%0D%0ABefore%2C%20that%20let%20us%20know%20more%20about%20the%20hackathon%20you%20are%20organising.%0D%0A%0D%0AWaiting%20for%20your%20reply%20!%0D%0A%5BOtrganisation%5D", '_blank', 'noopener,noreferrer')}
+                        sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
+                    >
                         Mail us
-                        </Button>
+                    </Button>
                 </Box>
                 <Box className={styles.cardsList}>
                     {

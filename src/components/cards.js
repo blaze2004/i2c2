@@ -143,7 +143,7 @@ export function RewardsCard({ reward }) {
                 flexDirection: 'column',
                 borderRadius: '1rem',
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-                p: 1,
+                p: 2,
                 alignItems: 'center',
                 background: "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
                 "&:hover": {
@@ -152,13 +152,13 @@ export function RewardsCard({ reward }) {
                 },
             }}
         >
-            <Typography variant="h3" fontWeight="bold" textAlign="center">
+            <Typography variant="h3" fontWeight="bold" textAlign="center" sx={{pb:2}}>
                 {reward.medal}
             </Typography>
             <Image src={reward.img} width={250} height={250} />
             <Box
                 sx={{
-                    p: 1,
+                    p: 2,
                 }}
             >
                 {
@@ -172,13 +172,13 @@ export function RewardsCard({ reward }) {
                     ))
                 }
             </Box>
-            <Button variant={reward.medal==="Gold"? 'contained':'text'}>Know More</Button>
+            <Button variant={'contained'}>Know More</Button>
         </Box>
     );
 }
 
 
-export function WhyUsCard({ icon, title, description }) {
+export function WhyUsCard({ icon, title }) {
     return (
         <Box
             sx={{
@@ -193,9 +193,9 @@ export function WhyUsCard({ icon, title, description }) {
         >
             <Image src={icon} width={50} height={50} />
             <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
-            <Typography>
+            {/* <Typography>
                 {description}
-            </Typography>
+            </Typography> */}
         </Box>
     );
 }

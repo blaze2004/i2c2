@@ -14,6 +14,7 @@ import Sponsors from '../src/components/sponsors';
 import { useEffect } from 'react';
 import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
+import AboutUs from '../src/components/aboutus';
 
 export default function Home() {
   const theme=useTheme();
@@ -63,6 +64,7 @@ export default function Home() {
         }}
       >
         <Faqs />
+        <AboutUs />
       </Box>
 
       <Box>

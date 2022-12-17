@@ -1,7 +1,8 @@
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 import { useEffect } from 'react';
+// import teaser from '../assets/teaser.m4v';
 
 export default function Hero() {
     const theme=useTheme();
@@ -97,18 +98,21 @@ export default function Hero() {
                     data-hackathon-slug="opencode22"
                     // data-hackathon-slug="i2c2-hackathon"
                     data-button-theme="light"
-                    style={{height: '44px', width: '312px'}}
+                    style={{ height: '44px', width: '312px' }}
                 ></div>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "3rem", mt: "2rem" }}>
-                <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}>
-                    <YouTube
+                {/* <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}> */}
+                {/* <YouTube
                         title='I2C2 Teaser Video'
                         videoId='7oEQgzMTwi8'
                         opts={opts}
                         onReady={() => { }}
-                    />
-                </Box>
+                    /> */}
+                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '500px', height: '500px' }} >
+                    <source src={'/teaser.m4v'} type='video/mp4' controls={false} />
+                </video>
+                {/* </Box> */}
             </Box>
         </Box>
     );

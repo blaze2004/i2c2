@@ -1,6 +1,6 @@
 import { EmailRounded, FacebookRounded, Instagram, Twitter, WhatsApp } from '@mui/icons-material';
-import { Box, Typography, IconButton, Avatar, SvgIcon } from '@mui/material';
-import logo from '../assets/logo.jpg';
+import { Box, Typography, IconButton, Avatar } from '@mui/material';
+import logo from '../assets/logo.png';
 import Discord from '../assets/discord.svg';
 
 export default function Footer() {
@@ -30,18 +30,12 @@ export default function Footer() {
                     <IconButton onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}>
                         <EmailRounded color="primary" />
                     </IconButton>
-                    {/* <IconButton>
-                        <SvgIcon color="primary">
-                            {discord.src}
-                        </SvgIcon>
-                    </IconButton> */}
                     <IconButton onClick={() => window.open("https://discord.io/i2c2-hackathon", '_blank', 'noopener,noreferrer')} >
                         <Discord color="#0093E9" />
                     </IconButton>
-
                 </Box>
             </Box>
-            <Typography textAlign="center">Copyright 2022. All rights reserved</Typography>
+            <Typography textAlign="left">Copyright 2022. All rights reserved</Typography>
         </Box>
     );
 }
