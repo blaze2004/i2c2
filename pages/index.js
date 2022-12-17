@@ -45,6 +45,7 @@ export default function Home() {
       </Box>
 
       <AboutHackathon />
+      <WhyJoinUs />
       <Challenges />
       <Rewards />
       <Schedule />
@@ -62,7 +63,6 @@ export default function Home() {
         }}
       >
         <Faqs />
-        <WhyJoinUs />
       </Box>
 
       <Box>

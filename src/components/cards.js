@@ -163,12 +163,12 @@ export function RewardsCard({ reward }) {
             >
                 {
                     reward.prizes.map((prize, key) => (
-                        <>
+                        <Box key={key} >
                             <Typography fontSize={"large"}>
                                 {prize}
                             </Typography>
                             <Divider />
-                        </>
+                        </Box>
                     ))
                 }
             </Box>
@@ -183,10 +183,11 @@ export function WhyUsCard({ icon, title, description }) {
         <Box
             sx={{
                 p: 2,
-                background: '#000',
+                background: 'white',
+                color: '#000',
                 ':hover': {
-                    background: 'white',
-                    color: '#000'
+                    background: '#000',
+                    color: 'white'
                 }
             }}
         >
