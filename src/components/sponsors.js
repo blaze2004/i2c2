@@ -106,12 +106,51 @@ export default function Sponsors() {
             </Box>
 
             <LogoGroup value={value} index={0}>
+                <Box
+                    sx={{
+                        mt: '2rem',
+                        p: '1rem 2rem',
+                        display: 'flex',
+                        flexDirection: smallScreen? 'column':'row',
+                    }}
+                >
+                    <Typography variant="h4" color="#999" sx={{ m: 1 }}>
+                        Interested in Sponsoring
+                    </Typography>
+                    <Button
+                        variant='contained'
+                        onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}
+                        sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
+                    >
+                        Sponsor Us
+                    </Button>
+                </Box>
                 <SponsorGroup title={"Premium Sponsors"} sponsors={sponsors.premium} />
                 <SponsorGroup title={"Economy Sponsors"} sponsors={sponsors.economy} />
                 <SponsorGroup title={"Standard Sponsors"} sponsors={sponsors.standard} />
                 <SponsorGroup title={"Other Sponsors"} sponsors={sponsors.others} />
             </LogoGroup>
+
             <LogoGroup value={value} index={1} >
+                <Box
+                    sx={{
+                        mt: '2rem',
+                        p: '1rem 2rem',
+                        display: 'flex',
+                        flexDirection: smallScreen? 'column':'row',
+                    }}
+                >
+                    <Typography variant="h4" color="#999" sx={{ m: 1 }}>
+                        Become a partner
+                    </Typography>
+                    <Button
+                        variant='contained'
+                     onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}
+                     sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
+                     >
+                        Mail us
+                        </Button>
+                </Box>
                 <Box className={styles.cardsList}>
                     {
                         communityPartners.map((data, key) => (

@@ -49,6 +49,7 @@ export default function Rewards() {
 
     return (
         <Box
+            id="rewards"
             sx={{
                 pb: '2rem',
                 display: 'flex',
