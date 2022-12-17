@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import { Box, ButtonGroup, Button, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import devfolio from '../assets/Devfolio_Logo-Black.png';
 import polygon from '../assets/Polygon_Logo-Dark.png';
@@ -21,38 +21,47 @@ export default function Sponsors() {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
 
-    const sponsors=[
-        {
-            title: "DevFolio",
-            imgUrl: devfolio,
-            link: "https://devfolio.co/"
-        },
-        {
-            title: "Polygon",
-            imgUrl: polygon,
-            link: "https://polygon.technology"
-        },
-        {
-            title: "Solana",
-            imgUrl: solana,
-            link: "https://solana.com"
-        },
-        {
-            title: "Filecoin",
-            imgUrl: filecoin,
-            link: "https://filecoin.io"
-        },
-        {
-            title: 'replit',
-            imgUrl: replit,
-            link: 'https://replit.com'
-        },
-        {
-            title: "streamyard",
-            imgUrl: streamyard,
-            link: 'https://streamyard.com'
-        }
-    ];
+    const sponsors={
+        premium: [
+            {
+                title: "DevFolio",
+                imgUrl: devfolio,
+                link: "https://devfolio.co/"
+            },
+            {
+                title: "Polygon",
+                imgUrl: polygon,
+                link: "https://polygon.technology"
+            }
+        ],
+        economy: [
+            {
+                title: "Solana",
+                imgUrl: solana,
+                link: "https://solana.com"
+            },
+            {
+                title: "Filecoin",
+                imgUrl: filecoin,
+                link: "https://filecoin.io"
+            },
+            {
+                title: 'replit',
+                imgUrl: replit,
+                link: 'https://replit.com'
+            },
+        ],
+        standard: [
+
+        ],
+        others: [
+            {
+                title: "streamyard",
+                imgUrl: streamyard,
+                link: 'https://streamyard.com'
+            }
+        ]
+    };
 
     const communityPartners=[
         {
@@ -79,40 +88,125 @@ export default function Sponsors() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    // background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
+                    // WebkitBackgroundClip: "text",
+                    // WebkitTextFillColor: "transparent"
+                    color: 'transparent',
+                    backgroundImage: 'url(https://media.giphy.com/media/l4FGmfnKZRGwtJ4v6/giphy.gif)',
+                    backgroundPosition: 'center',
+                    WebkitBackgroundClip: 'text'
                 }}
             >
                 Sponsors &amp; Partners
             </Typography>
 
-            <ButtonGroup>
-                <Button variant="contained" sx={{ borderRadius: '1rem' }} onPointerDown={() => handleChange(0)} >Our Sponsors</Button>
-                <Button variant="contained" sx={{ borderRadius: '1rem' }} onPointerDown={() => handleChange(1)} >Community Partners</Button>
-            </ButtonGroup>
+            <Box sx={{ justifyContent: 'space-around', display: 'flex', flexDirection: smallScreen? 'column':'row', alignItems: 'center', width: 'inherit' }}>
+                <Button variant="contained" sx={{ borderRadius: '2rem', fontSize: 25, m: 2 }} onPointerDown={() => handleChange(0)} >Our Sponsors</Button>
+                <Button variant="contained" sx={{ borderRadius: '2rem', fontSize: 25, m: 2 }} onPointerDown={() => handleChange(1)} >Community Partners</Button>
+            </Box>
 
-            <LogoGroup value={value} index={0} dataList={sponsors} />
-            <LogoGroup value={value} index={1} dataList={communityPartners} />
+            <LogoGroup value={value} index={0}>
+                <SponsorGroup title={"Premium Sponsors"} sponsors={sponsors.premium} />
+                <SponsorGroup title={"Economy Sponsors"} sponsors={sponsors.economy} />
+                <SponsorGroup title={"Standard Sponsors"} sponsors={sponsors.standard} />
+                <SponsorGroup title={"Other Sponsors"} sponsors={sponsors.others} />
+            </LogoGroup>
+            <LogoGroup value={value} index={1} >
+                <Box className={styles.cardsList}>
+                    {
+                        communityPartners.map((data, key) => (
+                            <Box
+                                key={key}
+                                sx={{
+                                    m: '5px',
+                                    transition: "0.3s",
+                                    borderRadius: '1rem',
+                                    padding: '5px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    // boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                                    "&:hover": {
+                                        transform: "scale(1.2)",
+                                        // transform: "translateY(-3px)",
+                                        boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
+                                    },
+                                }}
+                            >
+                                <a href={data.link} target="_blank" rel="noreferrer">
+                                    <Image src={data.imgUrl} alt={data.title} width={312} />
+                                </a>
+                            </Box>
+                        ))
+                    }
+                </Box>
+            </LogoGroup>
 
         </Box>
     );
 }
 
 
-function LogoGroup({ dataList, value, index }) {
+function LogoGroup({ children, value, index }) {
     return (
         value===index&&(
+            children
+        )
+    );
+}
+
+function SponsorGroup({ title, sponsors }) {
+    const smallScreen=useMediaQuery(`(max-width: 800px)`);
+
+    if (sponsors.length<1) {
+        return;
+    }
+    return (
+        <Box
+            sx={{
+                mt: '2rem',
+                p: '1rem 2rem',
+                borderRadius: '1rem',
+                boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
+                },
+            }}
+        >
+            <Typography
+                textAlign={"center"}
+                variant={smallScreen? "h3":"h2"}
+                fontWeight={"bold"}
+                sx={{
+                    mb: "1rem",
+                    background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                    // color: 'transparent',
+                    // backgroundImage: 'url(https://media.giphy.com/media/l4FGmfnKZRGwtJ4v6/giphy.gif)',
+                    // backgroundPosition: 'center',
+                    // WebkitBackgroundClip: 'text'
+                }}
+            >
+                {title}
+            </Typography>
             <Box className={styles.cardsList}>
                 {
-                    dataList.map((data, key) => (
+                    sponsors.map((data, key) => (
                         <Box
                             key={key}
                             sx={{
                                 m: '5px',
                                 transition: "0.3s",
+                                borderRadius: '1rem',
+                                padding: '5px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                // boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                                 "&:hover": {
                                     transform: "scale(1.2)",
+                                    // transform: "translateY(-3px)",
+                                    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
                                 },
                             }}
                         >
@@ -123,6 +217,6 @@ function LogoGroup({ dataList, value, index }) {
                     ))
                 }
             </Box>
-        )
+        </Box>
     );
 }

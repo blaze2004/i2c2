@@ -5,9 +5,15 @@ import Discord from '../assets/discord.svg';
 
 export default function Footer() {
     return (
-        <Box sx={{ mt: '2rem' }}>
+        <Box
+            sx={{
+                backgroundImage: `linear-gradient(45deg, #0093E9 30%, #80D0C7 90%)`,
+                padding: '2rem',
+                transition: '0.32s ease-in-out'
+            }}
+        >
             <Box sx={{ display: "flex", justifyContent: 'space-between', alignItems: 'center', mb: '1rem' }}>
-                <Avatar alt="i2c2 logo" src={logo.src} />
+                <Avatar alt="i2c2 logo" src={logo.src} sx={{width: 80, height: 80}} />
                 <Box sx={{ borderRadius: '1rem', backgroundColor: '#000' }}>
                     <IconButton onClick={() => window.open("https://www.facebook.com/profile.php?id=100087475219899", '_blank', 'noopener,noreferrer')}>
                         <FacebookRounded color="primary" />

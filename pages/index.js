@@ -12,6 +12,8 @@ import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
 import { useEffect } from 'react';
+import Rewards from '../src/components/rewards';
+import WhyJoinUs from '../src/components/whyjoinus';
 
 export default function Home() {
   const theme=useTheme();
@@ -44,6 +46,7 @@ export default function Home() {
 
       <AboutHackathon />
       <Challenges />
+      <Rewards />
       <Schedule />
       <Sponsors />
       <Speakers />
@@ -51,6 +54,7 @@ export default function Home() {
 
       <Box
         sx={{
+          flexDirection: 'column',
           backgroundColor: theme.palette.neutral.black,
           display: 'flex',
           alignItems: 'center',
@@ -58,17 +62,10 @@ export default function Home() {
         }}
       >
         <Faqs />
+        <WhyJoinUs />
       </Box>
 
-      <Box
-        sx={{
-          backgroundColor: theme.palette.neutral.black,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          paddingTop: '1rem',
-        }}
-      >
+      <Box>
         <Footer />
       </Box>
     </Box>

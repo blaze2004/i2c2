@@ -1,7 +1,22 @@
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import { Typography, Box, useMediaQuery, IconButton, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } from "@mui/material";
+import {
+    Typography,
+    Box,
+    useMediaQuery,
+    IconButton,
+    Button,
+    Dialog,
+    Divider,
+    DialogTitle,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    Card,
+    CardContent,
+} from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 // import { useRouter } from "next/router";
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function HoverInfoCard({ title, description, img, colorTheme, person=false, links={} }) {
@@ -116,6 +131,70 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                     </Dialog>
                 </Box>
             </Box>
+        </Box>
+    );
+}
+
+export function RewardsCard({ reward }) {
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                borderRadius: '1rem',
+                boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                p: 1,
+                alignItems: 'center',
+                background: "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
+                "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
+                },
+            }}
+        >
+            <Typography variant="h3" fontWeight="bold" textAlign="center">
+                {reward.medal}
+            </Typography>
+            <Image src={reward.img} width={250} height={250} />
+            <Box
+                sx={{
+                    p: 1,
+                }}
+            >
+                {
+                    reward.prizes.map((prize, key) => (
+                        <>
+                            <Typography fontSize={"large"}>
+                                {prize}
+                            </Typography>
+                            <Divider />
+                        </>
+                    ))
+                }
+            </Box>
+            <Button variant={reward.medal==="Gold"? 'contained':'text'}>Know More</Button>
+        </Box>
+    );
+}
+
+
+export function WhyUsCard({ icon, title, description }) {
+    return (
+        <Box
+            sx={{
+                p: 2,
+                background: '#000',
+                ':hover': {
+                    background: 'white',
+                    color: '#000'
+                }
+            }}
+        >
+            <Image src={icon} width={50} height={50} />
+            <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
+            <Typography>
+                {description}
+            </Typography>
         </Box>
     );
 }

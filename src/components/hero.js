@@ -40,6 +40,12 @@ export default function Hero() {
                     sx={{
                         mt: "5rem",
                         mb: "2rem",
+                        // color: 'transparent',
+                        // backgroundImage: 'url(https://media.giphy.com/media/MaThe6p8WAKbf9NDDM/giphy.gif)',
+                        // backgroundImage: 'url(https://media.giphy.com/media/3og0IV7MOCfnm85iRa/giphy.gif)',
+                        // backgroundImage: 'url(https://media.giphy.com/media/PqjTdvXImZQfcmTYEO/giphy.gif)',
+                        backgroundPosition: 'center',
+                        WebkitBackgroundClip: 'text'
                         // background: 'linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)',
                         // background: 'linear-gradient(303deg, #1cb9f6 0%, #416fd0 75%)',
                         // WebkitBackgroundClip: "text",
@@ -56,7 +62,7 @@ export default function Hero() {
                     sx={{ maxWidth: "600px" }}
                     m={theme.spacing(1, 2)}
                 >
-                    Go from idea to award with I2C2 hackathon.
+                    Go from Idea to Prototype with I2C2 Hackathon!
                     {/* I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you&#39;ll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others. */}
                 </Typography>
 

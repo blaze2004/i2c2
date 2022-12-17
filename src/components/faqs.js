@@ -45,7 +45,7 @@ export default function Faqs() {
     ];
 
     return (
-        <Box id="faq" sx={{ maxWidth: '800px' }}>
+        <Box id="faq" sx={{ maxWidth: '800px', mb: '2rem' }}>
             <Typography
                 textAlign={"center"}
                 variant={smallScreen? "h2":"h1"}

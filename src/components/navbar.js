@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
 import logo from '../assets/logo.jpg';
+import { useEffect } from "react";
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen]=useState(false);
