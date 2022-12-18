@@ -20,16 +20,16 @@ export default function Hero() {
         },
     };
 
-    useEffect(() => {
-        const script=document.createElement('script');
-        script.src='https://apply.devfolio.co/v2/sdk.js';
-        script.async=true;
-        script.defer=true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const script=document.createElement('script');
+    //     script.src='https://apply.devfolio.co/v2/sdk.js';
+    //     script.async=true;
+    //     script.defer=true;
+    //     document.body.appendChild(script);
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     return (
         <Box>
@@ -93,13 +93,13 @@ export default function Hero() {
                 >
                     Register
                 </Button> */}
-                <div
+                {/* <div
                     className="apply-button"
                     data-hackathon-slug="opencode22"
                     // data-hackathon-slug="i2c2-hackathon"
                     data-button-theme="light"
                     style={{ height: '44px', width: '312px' }}
-                ></div>
+                ></div> */}
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "3rem", mt: "2rem" }}>
                 {/* <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}> */}
@@ -109,7 +109,7 @@ export default function Hero() {
                         opts={opts}
                         onReady={() => { }}
                     /> */}
-                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '500px', height: '500px' }} >
+                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '380px', height: '500px' }} >
                     <source src={'/teaser.m4v'} type='video/mp4' controls={false} />
                 </video>
                 {/* </Box> */}

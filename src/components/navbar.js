@@ -14,16 +14,16 @@ export default function Navbar() {
         setDrawerOpen(!drawerOpen);
     };
 
-    useEffect(() => {
-        const script=document.createElement('script');
-        script.src='https://apply.devfolio.co/v2/sdk.js';
-        script.async=true;
-        script.defer=true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const script=document.createElement('script');
+    //     script.src='https://apply.devfolio.co/v2/sdk.js';
+    //     script.async=true;
+    //     script.defer=true;
+    //     document.body.appendChild(script);
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     const registerButton=(
         // <Button
@@ -52,13 +52,14 @@ export default function Navbar() {
         // >
         //     Register
         // </Button>
-        <div
-            className="apply-button"
-            data-hackathon-slug="opencode22"
-            // data-hackathon-slug="i2c2-hackathon"
-            data-button-theme="light"
-            style={{ height: '44px', width: '312px' }}
-        ></div>
+        // <div
+        //     className="apply-button"
+        //     data-hackathon-slug="opencode22"
+        //     // data-hackathon-slug="i2c2-hackathon"
+        //     data-button-theme="light"
+        //     style={{ height: '44px', width: '312px' }}
+        // ></div>
+        <></>
     );
 
     const navbarButtons=(
