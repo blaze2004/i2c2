@@ -21,7 +21,9 @@ export default function Home() {
   const desktop=useMediaQuery('(min-width:1200px)');
 
   return (
-    <Box>
+    <Box sx={{
+      width: '100%',
+    }}>
       <Box
         sx={{
           display: 'flex',

@@ -109,7 +109,7 @@ export default function Hero() {
                         opts={opts}
                         onReady={() => { }}
                     /> */}
-                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '400px', height: '500px' }} >
+                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '380px', height: '500px' }} >
                     <source src={'/teaser.m4v'} type='video/mp4' controls={false} />
                 </video>
                 {/* </Box> */}
