@@ -1,8 +1,8 @@
-import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import { Box, Avatar, Button, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import devfolio from '../assets/Devfolio_Logo-White.png';
 // import YouTube from 'react-youtube';
-import { useEffect } from 'react';
-// import teaser from '../assets/teaser.m4v';
+// import { useEffect } from 'react';
 
 export default function Hero() {
     const theme=useTheme();
@@ -20,16 +20,16 @@ export default function Hero() {
         },
     };
 
-    useEffect(() => {
-        const script=document.createElement('script');
-        script.src='https://apply.devfolio.co/v2/sdk.js';
-        script.async=true;
-        script.defer=true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const script=document.createElement('script');
+    //     script.src='https://apply.devfolio.co/v2/sdk.js';
+    //     script.async=true;
+    //     script.defer=true;
+    //     document.body.appendChild(script);
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     return (
         <Box>
@@ -67,39 +67,15 @@ export default function Hero() {
                     {/* I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you&#39;ll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others. */}
                 </Typography>
 
-                {/* <Button
-                    variant="contained"
-                    sx={{
-                        fontSize: 'large',
-                        borderRadius: '50px',
-                        // margin: '20px',
-                        // height: '55px',
-                        textAlign: 'center',
-                        border: 'none',
-                        backgroundSize: '300% 100%',
-                        boxShadow: '0 4px 15px 0 rgba(65, 132, 234, 0.75)',
-                        backgroundImage: 'linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed)',
-                        transition: 'all .4s ease-in-out',
-                        WebkitTransition: 'all .4s ease-in-out',
-                        ":hover": {
-                            backgroundPosition: '100% 0',
-                            transition: 'all .4s ease-in-out',
-                            WebkitTransition: 'all .4s ease-in-out',
-                        },
-                        ":focus": {
-                            outline: 'none'
-                        },
-                    }}
-                >
-                    Register
-                </Button> */}
-                <div
+                {/* <div
                     className="apply-button"
                     data-hackathon-slug="opencode22"
                     // data-hackathon-slug="i2c2-hackathon"
                     data-button-theme="light"
-                    style={{ height: '44px', width: '312px' }}
-                ></div>
+                    style={{ height: '44px', width: '280px' }}
+                ></div> */}
+
+                <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "3rem", mt: "2rem" }}>
                 {/* <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}> */}
@@ -109,7 +85,7 @@ export default function Hero() {
                         opts={opts}
                         onReady={() => { }}
                     /> */}
-                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '380px', height: '500px' }} >
+                <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '360px', height: '500px' }} >
                     <source src={'/teaser.m4v'} type='video/mp4' controls={false} />
                 </video>
                 {/* </Box> */}

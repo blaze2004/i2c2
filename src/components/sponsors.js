@@ -135,7 +135,7 @@ export default function Sponsors() {
                 <Box
                     sx={{
                         mt: '2rem',
-                        p: '1rem 2rem',
+                        p: '1rem 1rem',
                         display: 'flex',
                         flexDirection: smallScreen? 'column':'row',
                     }}
@@ -202,8 +202,8 @@ function SponsorGroup({ title, sponsors }) {
     return (
         <Box
             sx={{
-                mt: '2rem',
-                p: '1rem 2rem',
+                m: '2rem 1rem',
+                p: '1rem 1rem',
                 borderRadius: '1rem',
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                 "&:hover": {

@@ -105,8 +105,8 @@ function SummaryCard({ title, content, button, image, flexDirection }) {
 
             <CardContent
                 sx={{
-                    textAlign: smallScreen ? 'center':"left",
-                    padding: theme.spacing(2,2,2,contentPadding)
+                    textAlign: smallScreen? 'center':"left",
+                    padding: theme.spacing(2, 2, 2, smallScreen? 2:contentPadding)
                 }}
             >
                 <Typography fontWeight={"bold"} variant={"h3"} gutterBottom color={theme.palette.neutral.black}>

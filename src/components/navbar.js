@@ -4,7 +4,8 @@ import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
 import logo from '../assets/logo.png';
-import { useEffect } from "react";
+import devfolio from '../assets/Devfolio_Logo-White.png';
+// import { useEffect } from "react";
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen]=useState(false);
@@ -14,16 +15,16 @@ export default function Navbar() {
         setDrawerOpen(!drawerOpen);
     };
 
-    useEffect(() => {
-        const script=document.createElement('script');
-        script.src='https://apply.devfolio.co/v2/sdk.js';
-        script.async=true;
-        script.defer=true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const script=document.createElement('script');
+    //     script.src='https://apply.devfolio.co/v2/sdk.js';
+    //     script.async=true;
+    //     script.defer=true;
+    //     document.body.appendChild(script);
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     const registerButton=(
         // <Button
@@ -52,13 +53,7 @@ export default function Navbar() {
         // >
         //     Register
         // </Button>
-        <div
-            className="apply-button"
-            data-hackathon-slug="opencode22"
-            // data-hackathon-slug="i2c2-hackathon"
-            data-button-theme="light"
-            style={{ height: '44px', width: '312px' }}
-        ></div>
+        <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button>
     );
 
     const navbarButtons=(
@@ -85,6 +80,7 @@ export default function Navbar() {
         <Box sx={{
             backgroundImage: `linear-gradient(45deg, #0093E9 30%, #80D0C7 90%)`,
             borderRadius: '1rem',
+            m: ' 0 1rem',
             padding: '0.2rem 1rem',
             transition: '0.32s ease-in-out',
         }}>
