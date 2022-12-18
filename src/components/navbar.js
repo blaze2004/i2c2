@@ -93,7 +93,7 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
             }}>
-                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 60, height: 60 }} />
+                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 50, height: 50 }} />
                 {
                     smallScreen?
                         (
