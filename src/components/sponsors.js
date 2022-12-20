@@ -8,6 +8,7 @@ import replit from '../assets/Replit-light-background.png';
 import filecoin from '../assets/Filecoin Coloured White Text.png';
 import streamyard from '../assets/StreamYard_2021.png';
 import befikra from '../assets/befikra.jpeg';
+import echo3d from '../assets/echo3D.png';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -59,6 +60,11 @@ export default function Sponsors() {
                 title: "streamyard",
                 imgUrl: streamyard,
                 link: 'https://streamyard.com'
+            },
+            {
+                title: "echo3d",
+                imgUrl: echo3d,
+                link: "https://www.echo3d.com"
             }
         ]
     };
