@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import { useRouter } from "next/router";
 import { useState } from "react";
 import logo from '../assets/logo.png';
-import devfolio from '../assets/Devfolio_Logo-White.png';
+// import devfolio from '../assets/Devfolio_Logo-White.png';
 // import { useEffect } from "react";
 
 export default function Navbar() {
@@ -53,7 +53,16 @@ export default function Navbar() {
         // >
         //     Register
         // </Button>
-        <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button>
+        <>
+            <div
+                className="apply-button"
+                data-hackathon-slug="i2c2-hackathon"
+                data-button-theme="light"
+                style={{ height: '44px', width: '312px' }}
+            ></div>
+        </>
+
+        // <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button>
     );
 
     const navbarButtons=(
@@ -64,9 +73,10 @@ export default function Navbar() {
                 <NavbarLink href="/#schedule">Schedule</NavbarLink>
                 <NavbarLink href="/#sponsors">Sponsors</NavbarLink>
                 <NavbarLink href="/#faq">FAQ</NavbarLink>
-                {smallScreen? registerButton:null}
+                {registerButton}
+                {/* {smallScreen? registerButton:null} */}
             </Box>
-            {smallScreen? null:registerButton}
+            {/* {smallScreen? null:registerButton} */}
         </>
     );
 

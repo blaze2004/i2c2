@@ -11,7 +11,7 @@ import Speakers from '../src/components/speakers';
 import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
 import AboutUs from '../src/components/aboutus';

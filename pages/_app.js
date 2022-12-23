@@ -6,7 +6,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import Head from "next/head";
-// import Script from "next/script";
+import Script from "next/script";
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
@@ -29,7 +29,7 @@ function MyApp({ Component, emotionCache=clientSideEmotionCache, pageProps }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
-        {/* <Script defer async src="https://apply.devfolio.co/v2/sdk.js"></Script> */}
+        <Script defer async src="https://apply.devfolio.co/v2/sdk.js"></Script>
       </ThemeProvider>
     </CacheProvider>
   );
