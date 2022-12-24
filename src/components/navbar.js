@@ -53,14 +53,12 @@ export default function Navbar() {
         // >
         //     Register
         // </Button>
-        <>
-            <div
-                className="apply-button"
-                data-hackathon-slug="i2c2-hackathon"
-                data-button-theme="light"
-                style={{ height: '44px', width: '312px' }}
-            ></div>
-        </>
+        <div
+            className="apply-button"
+            data-hackathon-slug="swocs3"
+            data-button-theme="light"
+            style={{ height: '44px', width: '312px' }}
+        ></div>
 
         // <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button>
     );

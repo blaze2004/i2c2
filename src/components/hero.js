@@ -66,14 +66,12 @@ export default function Hero() {
                     Go from Idea to Prototype with I2C2 Hackathon!
                     {/* I2C2 is a Hackathon organized by Code8, Befikra &amp; Codedu. It is a 24-hour fully online, students-focused hackathon where you&#39;ll delve into your curiosities, learn something new, and build real working stuff. The event starts with showcasing your idea and then coding it as well as competing with others. */}
                 </Typography>
-                <>
-                    <div
-                        className="apply-button"
-                        data-hackathon-slug="i2c2-hackathon"
-                        data-button-theme="light"
-                        style={{ height: '44px', width: '312px' }}
-                    ></div>
-                </>
+                <div
+                    className="apply-button"
+                    data-hackathon-slug="swocs3"
+                    data-button-theme="light"
+                    style={{ height: '44px', width: '312px' }}
+                ></div>
 
                 {/* <Button variant="contained" startIcon={<Avatar src={devfolio.src} />} sx={{background: '#3770ff'}} >Apply with Devfolio</Button> */}
             </Box>
