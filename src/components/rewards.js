@@ -9,8 +9,9 @@ import bronze from '../assets/trophy3.png';
 export default function Rewards() {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const mobileScreen=useMediaQuery('(max-width: 600px)');
 
-    const rewards=[
+    const rewardsData=[
         {
             medal: 'Silver',
             img: silver,
@@ -46,6 +47,10 @@ export default function Rewards() {
         },
 
     ];
+
+    const rewardsMobile = [rewardsData[1], rewardsData[0], rewardsData[2]];
+
+    const rewards = mobileScreen ? rewardsMobile : rewardsData;
 
     return (
         <Box
