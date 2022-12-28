@@ -55,7 +55,7 @@ export default function Navbar() {
         // </Button>
         <div
             className="apply-button"
-            data-hackathon-slug="swocs3"
+            data-hackathon-slug="i2c2-hackathon"
             data-button-theme="light"
             style={{ height: '44px', width: '312px' }}
         ></div>
