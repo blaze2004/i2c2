@@ -13,6 +13,7 @@ import {
     DialogContentText,
     Card,
     CardContent,
+    CardMedia
 } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 // import { useRouter } from "next/router";
@@ -197,5 +198,85 @@ export function WhyUsCard({ icon, title }) {
                 {description}
             </Typography> */}
         </Box>
+    );
+}
+
+export function SummaryCard({ title, content, button, image, flexDirection }) {
+    const theme=useTheme();
+    const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const tranformValue=flexDirection&&flexDirection==="row-reverse"? '24':'-24';
+    const contentPadding=flexDirection&&flexDirection==="row-reverse"? 8:1;
+
+    return (
+        <Card
+            sx={{
+                borderRadius: theme.spacing(8), // 8px
+                transition: "0.3s",
+                boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                width: "80%",
+                position: "relative",
+                maxWidth: 800,
+                mt: '2rem',
+                mb: '2rem',
+                marginLeft: "auto",
+                marginRight: 'auto',
+                overflow: "initial",
+                background: "#ffffff",
+                display: "flex",
+                flexDirection: flexDirection||'row',
+                alignItems: "center",
+                padding: theme.spacing(2, 0),
+                "&:hover": {
+                    transform: "translateY(-3px)",
+                    boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
+                },
+            }}
+        >{
+                smallScreen? null:
+                    (
+                        <CardMedia
+                            sx={{
+                                flexShrink: 0,
+                                width: "40%",
+                                paddingTop: "48%",
+                                transform: `translateX(${tranformValue}%)`,
+                                boxShadow: "4px 4px 20px 1px rgba(252, 56, 56, 0.2)",
+                                borderRadius: theme.spacing(8), // 8
+                                backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+                                backgroundColor: theme.palette.text.primary,
+                                overflow: "hidden",
+                                "&:after": {
+                                    content: '" "',
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    width: "100%",
+                                    height: "100%",
+                                    backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+                                    borderRadius: theme.spacing(8), // 8
+                                    opacity: 0.5
+                                }
+                            }}
+
+                            image={image}
+                        />
+                    )
+            }
+
+            <CardContent
+                sx={{
+                    textAlign: smallScreen? 'center':"left",
+                    padding: theme.spacing(2, 2, 2, smallScreen? 2:contentPadding)
+                }}
+            >
+                <Typography fontWeight={"bold"} variant={"h3"} gutterBottom color={theme.palette.neutral.black}>
+                    {title}
+                </Typography>
+                <Typography marginBottom={theme.spacing(8)} color={theme.palette.neutral.black}>
+                    {content}
+                </Typography>
+            </CardContent>
+
+        </Card>
     );
 }

@@ -12,6 +12,7 @@ import echo3d from '../assets/echo3D.png';
 import Image from 'next/image';
 import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
+import cybrancee from '../assets/logo_cybrancee.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {
@@ -72,6 +73,11 @@ export default function Sponsors() {
                 title: "taskade",
                 imgUrl: taskade,
                 link: "https://taskade.com"
+            },
+            {
+                title: 'cybrancee',
+                imgUrl: cybrancee,
+                link: 'https://cybrancee.com'
             }
         ]
     };
