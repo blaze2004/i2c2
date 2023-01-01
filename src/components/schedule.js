@@ -139,7 +139,7 @@ export default function Schedule() {
                                 </TimelineSeparator>
                                 {
                                     smallScreen?
-                                        (<Box sx={{ height: '500px' }}></Box>)
+                                        (<Box sx={{ height: '350px' }}></Box>)
                                         :(<TimelineContent sx={{
                                             borderRadius: '2rem',
                                             transition: "0.3s",

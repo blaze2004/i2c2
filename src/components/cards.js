@@ -164,7 +164,7 @@ export function RewardsCard({ reward }) {
                 {
                     reward.prizes.map((prize, key) => (
                         <Box key={key} >
-                            <Typography fontSize={"large"}>
+                            <Typography color="#000" fontSize={"large"}>
                                 {prize}
                             </Typography>
                             <Divider />
