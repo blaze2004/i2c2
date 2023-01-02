@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
+import { GitHub, LinkedIn, Twitter, Instagram } from "@mui/icons-material";
 import {
     Typography,
     Box,
@@ -34,14 +34,14 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
     const theme=useTheme();
     // const router=useRouter();
     const mobileScreen=useMediaQuery('(max-width: 500px)');
-    const { github, twitter, linkedin }=links;
+    const { github, twitter, linkedin, instagram }=links;
 
     return (
         <Box
             sx={{
                 background: 'transparent',
                 width: mobileScreen? '280px':'400px',
-                height: '300px',
+                height: '350px',
                 perspective: '1000px'
             }}
         >
@@ -85,24 +85,51 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
-                        wordWrap: 'break-word'
+                        wordWrap: 'break-word',
+                        p:2
                     }}
                 >
                     <Typography fontWeight={"bold"} variant={"h3"} gutterBottom>{title}</Typography>
                     {/* <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography> */}
                     {
                         person? (
-                            <Box>
-                                <IconButton onPointerDown={() => window.open(github, '_blank', 'noopener,noreferrer')} >
-                                    <GitHub />
-                                </IconButton>
-                                <IconButton onPointerDown={() => window.open(twitter, '_blank', 'noopener,noreferrer')}>
-                                    <Twitter />
-                                </IconButton>
-                                <IconButton onPointerDown={() => window.open(linkedin, '_blank', 'noopener,noreferrer')}>
-                                    <LinkedIn />
-                                </IconButton>
-                            </Box>
+                            <>
+                                <Typography>{description}</Typography>
+                                <Box>
+                                    {
+                                        github===undefined? null:
+                                            (
+                                                <IconButton onPointerDown={() => window.open(github, '_blank', 'noopener,noreferrer')} >
+                                                    <GitHub />
+                                                </IconButton>
+                                            )
+                                    }
+                                    {
+                                        linkedin===undefined? null:
+                                            (
+                                                <IconButton onPointerDown={() => window.open(linkedin, '_blank', 'noopener,noreferrer')}>
+                                                    <LinkedIn />
+                                                </IconButton>
+                                            )
+                                    }
+                                    {
+                                        twitter===undefined? null:
+                                            (
+                                                <IconButton onPointerDown={() => window.open(twitter, '_blank', 'noopener,noreferrer')}>
+                                                    <Twitter />
+                                                </IconButton>
+                                            )
+                                    }
+                                    {
+                                        instagram===undefined? null:
+                                            (
+                                                <IconButton onPointerDown={() => window.open(instagram, '_blank', 'noopener,noreferrer')}>
+                                                    <Instagram />
+                                                </IconButton>
+                                            )
+                                    }
+                                </Box>
+                            </>
                         ):
                             (
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -153,7 +180,7 @@ export function RewardsCard({ reward }) {
                 },
             }}
         >
-            <Typography variant="h3" fontWeight="bold" textAlign="center" sx={{pb:2}}>
+            <Typography variant="h3" fontWeight="bold" textAlign="center" sx={{ pb: 2 }}>
                 {reward.medal}
             </Typography>
             <Image src={reward.img} width={250} height={250} />

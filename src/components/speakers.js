@@ -3,6 +3,7 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
 import speaker from '../assets/speaker1.jpg';
+import adityaArora from '../assets/Aditya_arora.jpeg';
 
 export default function Speakers() {
     const theme=useTheme();
@@ -10,19 +11,33 @@ export default function Speakers() {
 
     const speakers=[
         {
-            title: "Abhilash Jain",
-            description: "Web Developer",
-            imgUrl: speaker,
+            title: "Aditya Arora",
+            description: "At the age of 25, Aditya has been recognized as a Successful Young Entrepreneur and Achiever on various National and International platforms. Currently, he is the CEO at Faad Network Pvt LTD. and an Angel Investor in 20+ Startups.",
+            imgUrl: adityaArora,
+            links:{
+                linkedin: 'https://www.linkedin.com/in/thefaadguy',
+                instagram: 'https://instagram.com/adi__arora'
+            }
         },
         {
             title: "Rajesh Singh",
             description: "iOS App Developer",
             imgUrl: speaker,
+            links: {
+                github: "https://github.com/blaze2004",
+                twitter: "https://twitter.com/@blaze06112004",
+                linkedin: "https://linkedin.com/blaze2004"
+            }
         },
         {
             title: "Mayank Rajvansh",
             description: "UI/ UX Designer",
             imgUrl: speaker,
+            links: {
+                github: "https://github.com/blaze2004",
+                twitter: "https://twitter.com/@blaze06112004",
+                linkedin: "https://linkedin.com/blaze2004"
+            }
         },
     ];
 
@@ -71,6 +86,7 @@ export default function Speakers() {
                             img={speaker.imgUrl}
                             person={true}
                             colorTheme="linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)"
+                            links={speaker.links}
                         />
                     ))
                 }

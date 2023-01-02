@@ -13,6 +13,7 @@ import Image from 'next/image';
 import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
 import cybrancee from '../assets/logo_cybrancee.png';
+import codingMinutes from '../assets/coding_minutes_logo.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {
@@ -36,6 +37,11 @@ export default function Sponsors() {
                 title: "Polygon",
                 imgUrl: polygon,
                 link: "https://polygon.technology"
+            },
+            {
+                title: "Coding Minutes",
+                imgUrl: codingMinutes,
+                link: "https://codingminutes.com"
             }
         ],
         economy: [
@@ -149,7 +155,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
                         Interested in Sponsoring
                     </Typography>
                     <Button
@@ -175,7 +181,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
                         Become a partner
                     </Typography>
                     <Button
@@ -245,11 +251,12 @@ function SponsorGroup({ title, sponsors }) {
                     transform: "translateY(-3px)",
                     boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
                 },
+                width: 'inherit'
             }}
         >
             <Typography
                 textAlign={"center"}
-                variant={smallScreen? "h3":"h2"}
+                variant={smallScreen? "h4":"h2"}
                 fontWeight={"bold"}
                 sx={{
                     mb: "1rem",
@@ -285,7 +292,7 @@ function SponsorGroup({ title, sponsors }) {
                             }}
                         >
                             <a href={data.link} target="_blank" rel="noreferrer">
-                                <Image src={data.imgUrl} alt={data.title} width={312} />
+                                <Image src={data.imgUrl} alt={data.title} width={smallScreen? 200:312} />
                             </a>
                         </Box>
                     ))
