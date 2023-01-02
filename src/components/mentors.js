@@ -60,7 +60,8 @@ export default function Mentors() {
                     mb: "1rem",
                     background: 'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px #999',
                 }}
             >
                 Mentors

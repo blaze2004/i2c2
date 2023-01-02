@@ -114,8 +114,8 @@ export default function Schedule() {
                                             <Typography
                                                 sx={{ m: 'auto' }}
                                                 textAlign="center"
-                                                variant="body2"
-                                                color="#fff"
+                                                fontSize={18}
+                                                color="#968"
                                             >
                                                 {step.date}
                                             </Typography>
@@ -155,8 +155,8 @@ export default function Schedule() {
                                             <Typography
                                                 sx={{ m: 'auto' }}
                                                 textAlign="center"
-                                                variant="body2"
-                                                color="#fff"
+                                                fontSize={20}
+                                                color="#968"
                                             >
                                                 {step.date}
                                             </Typography>

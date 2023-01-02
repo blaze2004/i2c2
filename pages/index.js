@@ -1,4 +1,5 @@
-import { Box, useMediaQuery } from '@mui/material';
+import { Box, useMediaQuery, Fab } from '@mui/material';
+import { WhatsApp } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 import Hero from '../src/components/hero';
 import Navbar from '../src/components/navbar';
@@ -33,12 +34,6 @@ export default function Home() {
           backgroundImage: `url(${banner.src})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          // position: 'sticky',
-          // top: 0,
-          // zIndex: -1
-          // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 49%, #000000 100%)',
-          // background: 'linear-gradient(0deg, #1cb9f6 3%, #0061a8 35%, #000000 100%)',
-          // background: 'linear-gradient(0deg, #1cb9f6 0%, #4158d0 16%, #000000 100%)'
         }}
       >
         <Box>
@@ -81,6 +76,20 @@ export default function Home() {
       <Box>
         <Footer />
       </Box>
+      <Fab
+        variant="extended"
+        // color="green"
+        aria-label="add"
+        onClick={() => window.open("https://chat.whatsapp.com/KtuB2CpU6EH9Sku2xV2igA", '_blank', 'noopener,noreferrer')}
+        sx={{
+          position: 'fixed',
+          bottom: 48,
+          right: 16,
+          background: '#25D366'
+        }}>
+        <WhatsApp sx={{ mr: 1 }} />
+        Join WhatsaApp Group
+      </Fab>
     </Box>
   )
 }

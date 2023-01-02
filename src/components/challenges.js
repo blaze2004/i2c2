@@ -82,7 +82,8 @@ export default function Challenges() {
                         mb: "1rem",
                         background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)',
                         WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent"
+                        WebkitTextFillColor: "transparent",
+                        WebkitTextStroke: '2px #999',
                     }}
                 >
                     Challenges

@@ -59,7 +59,8 @@ export default function Speakers() {
                     mb: "1rem",
                     background: 'linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)',
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px #999',
                 }}
             >
                 Speakers

@@ -40,7 +40,8 @@ export default function AboutUs() {
                     mb: "2rem",
                     background: 'linear-gradient(296deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)',
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px #fff',
                 }}
             >
                 Who are We?

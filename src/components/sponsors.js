@@ -14,6 +14,10 @@ import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
 import cybrancee from '../assets/logo_cybrancee.png';
 import codingMinutes from '../assets/coding_minutes_logo.png';
+import sosTech from '../assets/sos_tech.jpeg';
+import chatraShala from '../assets/chatra_shala.jpeg';
+import coderEvoke from '../assets/coders_evoke.jpeg';
+import skillShip from '../assets/skillship_logo.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {
@@ -90,10 +94,25 @@ export default function Sponsors() {
 
     const communityPartners=[
         {
-            title: "Befikra Community",
-            imgUrl: befikra,
-            link: "https://befikracommunity.in"
+            title: "Sos Tech Inc.",
+            imgUrl: sosTech,
+            link: "https://www.linkedin.com/company/sos-tech-inc/"
         },
+        {
+            title: "Chatra Shala",
+            imgUrl: chatraShala,
+            link: "https://chatrashala.com"
+        },
+        {
+            title: "Skillship",
+            imgUrl: skillShip,
+            link: "https://www.linkedin.com/company/skillship-foundation/"
+        },
+        {
+            title: "Coders Evoke",
+            imgUrl: coderEvoke,
+            link: "https://www.linkedin.com/company/codersevoke/"
+        }
     ];
 
     return (

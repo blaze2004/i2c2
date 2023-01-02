@@ -183,7 +183,7 @@ export function RewardsCard({ reward }) {
             <Typography variant="h3" fontWeight="bold" textAlign="center" sx={{ pb: 2 }}>
                 {reward.medal}
             </Typography>
-            <Image src={reward.img} width={250} height={250} />
+            <Image src={reward.img} alt="rewards" width={250} height={250} />
             <Box
                 sx={{
                     p: 2,
@@ -219,7 +219,7 @@ export function WhyUsCard({ icon, title }) {
                 }
             }}
         >
-            <Image src={icon} width={50} height={50} />
+            <Image src={icon} width={50} alt="why join us" height={50} />
             <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
             {/* <Typography>
                 {description}

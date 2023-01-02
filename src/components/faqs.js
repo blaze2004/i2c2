@@ -16,7 +16,7 @@ export default function Faqs() {
     const faqs=[
         {
             summary: "What is a Hackathon?",
-            description: "A hackathon is social coding event where programmers, designers, and developers collaborate to solve a problem and compete for cash prizes. It's one part party, one part work-your-butt-off overnight battle against the clock and the competition."
+            description: "I2C2 is a Hackathon where students can come together to brainstorm and develop ideas to tackle significant issues. The format is similar to a workshop and encourages the use of design thinking and collaborative problem-solving techniques. Participants will work independently and in teams to generate innovative solutions."
         },
         {
             summary: "Who can participate?",

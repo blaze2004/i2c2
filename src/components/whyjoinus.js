@@ -63,7 +63,8 @@ export default function WhyJoinUs() {
                         mb: "2rem",
                         background: 'linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);',
                         WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent"
+                        WebkitTextFillColor: "transparent",
+                        WebkitTextStroke: '2px #999',
                     }}
                 >
                     Why Join Us?
