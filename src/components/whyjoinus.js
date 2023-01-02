@@ -47,7 +47,10 @@ export default function WhyJoinUs() {
                 alignItems: "center",
                 justifyContent: 'center',
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary
+                p: '2rem',
+                pb: '10rem',
+                backgroundColor: theme.palette.text.primary               
+
             }}
         >
             <Box sx={{ maxWidth: '1000px' }}>

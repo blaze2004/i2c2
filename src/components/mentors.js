@@ -48,7 +48,7 @@ export default function Mentors() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary
+                // backgroundColor: theme.palette.text.primary
             }}
         >
             <Typography

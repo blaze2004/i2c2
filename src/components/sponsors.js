@@ -10,7 +10,11 @@ import streamyard from '../assets/StreamYard_2021.png';
 import befikra from '../assets/befikra.jpeg';
 import echo3d from '../assets/echo3D.png';
 import Image from 'next/image';
+import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
+import cybrancee from '../assets/logo_cybrancee.png';
+import codingMinutes from '../assets/coding_minutes_logo.png';
+// import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {
     const [value, setValue]=useState(0);
@@ -33,6 +37,11 @@ export default function Sponsors() {
                 title: "Polygon",
                 imgUrl: polygon,
                 link: "https://polygon.technology"
+            },
+            {
+                title: "Coding Minutes",
+                imgUrl: codingMinutes,
+                link: "https://codingminutes.com"
             }
         ],
         economy: [
@@ -65,6 +74,16 @@ export default function Sponsors() {
                 title: "echo3d",
                 imgUrl: echo3d,
                 link: "https://www.echo3d.com"
+            },
+            {
+                title: "taskade",
+                imgUrl: taskade,
+                link: "https://taskade.com"
+            },
+            {
+                title: 'cybrancee',
+                imgUrl: cybrancee,
+                link: 'https://cybrancee.com'
             }
         ]
     };
@@ -84,7 +103,25 @@ export default function Sponsors() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary
+                // backgroundColor: theme.palette.text.primary,
+                // backgroundImage: 'linear-gradient(180deg, #ffcc70 13%, #e64e4e 100%)',
+                // backgroundImage: `url(${bgMesh.src})`,
+                // backgroundSize: 'cover',
+                // backgroundRepeat: 'no-repeat',
+                backgroundColor: "hsla(196,92%,53%,1)",
+                backgroundImage: "radial-gradient(at 69% 100%, hsla(104,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 6% 99%, hsla(88,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 32% 99%, hsla(304,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 93% 99%, hsla(304,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 22% 49%, hsla(149,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 7% 6%, hsla(124,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 100% 49%, hsla(183,100%,65%,1) 0px, transparent 50%),\
+                radial-gradient(at 95% 6%, hsla(39,100%,75%,1) 0px, transparent 50%),\
+                radial-gradient(at 73% 20%, hsla(197,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 52% 58%, hsla(290,100%,61%,1) 0px, transparent 50%),\
+                radial-gradient(at 63% 72%, hsla(249,100%,73%,1) 0px, transparent 50%),\
+                radial-gradient(at 38% 67%, hsla(27,100%,62%,1) 0px, transparent 50%)"
+
             }}
         >
             <Typography
@@ -94,13 +131,11 @@ export default function Sponsors() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    // background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
-                    // WebkitBackgroundClip: "text",
-                    // WebkitTextFillColor: "transparent"
-                    color: 'transparent',
-                    backgroundImage: 'url(https://media.giphy.com/media/l4FGmfnKZRGwtJ4v6/giphy.gif)',
-                    backgroundPosition: 'center',
-                    WebkitBackgroundClip: 'text'
+                    // color: 'transparent',
+                    background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px #999',
                 }}
             >
                 Sponsors &amp; Partners
@@ -120,7 +155,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography variant="h4" color="#999" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
                         Interested in Sponsoring
                     </Typography>
                     <Button
@@ -134,7 +169,7 @@ export default function Sponsors() {
                 <SponsorGroup title={"Premium Sponsors"} sponsors={sponsors.premium} />
                 <SponsorGroup title={"Economy Sponsors"} sponsors={sponsors.economy} />
                 <SponsorGroup title={"Standard Sponsors"} sponsors={sponsors.standard} />
-                <SponsorGroup title={"Other Sponsors"} sponsors={sponsors.others} />
+                <SponsorGroup title={"Digital Sponsors"} sponsors={sponsors.others} />
             </LogoGroup>
 
             <LogoGroup value={value} index={1} >
@@ -146,7 +181,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography variant="h4" color="#999" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
                         Become a partner
                     </Typography>
                     <Button
@@ -216,11 +251,12 @@ function SponsorGroup({ title, sponsors }) {
                     transform: "translateY(-3px)",
                     boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
                 },
+                width: 'inherit'
             }}
         >
             <Typography
                 textAlign={"center"}
-                variant={smallScreen? "h3":"h2"}
+                variant={smallScreen? "h4":"h2"}
                 fontWeight={"bold"}
                 sx={{
                     mb: "1rem",
@@ -256,7 +292,7 @@ function SponsorGroup({ title, sponsors }) {
                             }}
                         >
                             <a href={data.link} target="_blank" rel="noreferrer">
-                                <Image src={data.imgUrl} alt={data.title} width={312} />
+                                <Image src={data.imgUrl} alt={data.title} width={smallScreen? 200:312} />
                             </a>
                         </Box>
                     ))

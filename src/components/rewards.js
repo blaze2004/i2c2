@@ -5,6 +5,7 @@ import { RewardsCard } from './cards';
 import gold from '../assets/trophy.png';
 import silver from '../assets/trophy2.png';
 import bronze from '../assets/trophy3.png';
+// import bgMesh from '../assets/yelllow_red_purple_mesh.jpg';
 
 export default function Rewards() {
     const theme=useTheme();
@@ -48,19 +49,33 @@ export default function Rewards() {
 
     ];
 
-    const rewardsMobile = [rewardsData[1], rewardsData[0], rewardsData[2]];
+    const rewardsMobile=[rewardsData[1], rewardsData[0], rewardsData[2]];
 
-    const rewards = mobileScreen ? rewardsMobile : rewardsData;
+    const rewards=mobileScreen? rewardsMobile:rewardsData;
 
     return (
         <Box
             id="rewards"
             sx={{
-                pb: '2rem',
+                pb: '4rem',
+                pt: '3rem',
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary
+                // backgroundColor: "#26004d",
+                // backgroundImage: 'linear-gradient(0deg, #4158D0 1%, #8ec5fc 80%)',
+                // backgroundImage: `url(${bgMesh.src})`,
+                // backgroundSize: 'cover',
+                // backgroundRepeat: 'no-repeat',
+                backgroundColor: 'hsla(196,92%,53%,1)',
+                backgroundImage: "radial-gradient(at 31% 59%, hsla(180,100%,65%,1) 0px, transparent 50%),\
+                radial-gradient(at 93% 4%, hsla(36,100%,75%,1) 0px, transparent 50%),\
+                radial-gradient(at 91% 8%, hsla(194,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 17% 9%, hsla(146,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 9% 88%, hsla(287,100%,61%,1) 0px, transparent 50%),\
+                radial-gradient(at 88% 86%, hsla(246,100%,73%,1) 0px, transparent 50%),\
+                radial-gradient(at 72% 16%, hsla(24,100%,62%,1) 0px, transparent 50%)",
+                // backgroundImage: 'radial-gradient(at 83% 7%, hsla(29, 91%, 63%, 1) 0, hsla(29, 91%, 63%, 0) 50%),radial-gradient(at 3% 98%, hsla(112, 85%, 52%, 1) 0, hsla(112, 85%, 52%, 0) 50%),radial-gradient(at 64% 41%, hsla(302, 90%, 51%, 1) 0, hsla(302, 90%, 51%, 0) 50%),radial-gradient(at 5% 39%, hsla(147, 87%, 55%, 1) 0, hsla(147, 87%, 55%, 0) 50%),radial-gradient(at 0% 23%, hsla(153, 85%, 53%, 1) 0, hsla(153, 85%, 53%, 0) 50%),radial-gradient(at 71% 8%, hsla(25, 91%, 67%, 1) 0, hsla(25, 91%, 67%, 0) 50%),radial-gradient(at 43% 62%, hsla(139, 90%, 70%, 1) 0, hsla(139, 90%, 70%, 0) 50%)'
             }}
         >
             <Typography
@@ -70,9 +85,11 @@ export default function Rewards() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    background: 'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
+                    background: 'linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)',
+                    // background: 'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px #999',
                 }}
             >
                 Rewards

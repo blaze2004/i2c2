@@ -6,6 +6,7 @@ import Faqs from '../src/components/faqs';
 import Footer from '../src/components/footer';
 import AboutHackathon from '../src/components/aboutHackathon';
 import Challenges from '../src/components/challenges';
+// import banner from '../src/assets/mountains.png';
 import banner from '../src/assets/hero-bg.png';
 import Speakers from '../src/components/speakers';
 import Mentors from '../src/components/mentors';
@@ -15,10 +16,10 @@ import Sponsors from '../src/components/sponsors';
 import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
 import AboutUs from '../src/components/aboutus';
+import bgMesh from '../src/assets/light_sky_mesh.jpg';
 
 export default function Home() {
   const theme=useTheme();
-  const desktop=useMediaQuery('(min-width:1200px)');
 
   return (
     <Box>
@@ -28,6 +29,7 @@ export default function Home() {
           alignItems: 'center',
           justifyContent: 'center',
           paddingTop: '2rem',
+          backgroundColor: '#04326a',
           backgroundImage: `url(${banner.src})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -51,8 +53,17 @@ export default function Home() {
       <Rewards />
       <Schedule />
       <Sponsors />
-      <Speakers />
-      <Mentors />
+      <Box
+        sx={{
+          backgroundColor: '#fff',
+          backgroundImage: `url(${bgMesh.src})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Speakers />
+        <Mentors />
+      </Box>
 
       <Box
         sx={{

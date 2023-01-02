@@ -8,6 +8,7 @@ import environ from '../assets/3environment.png';
 import web3 from '../assets/4web3.jpg';
 import sports from '../assets/5sports.jpg';
 import misc from '../assets/6Miscel.jpg';
+// import bgMesh from '../assets/red_yellow_mesh.jpg';
 
 export default function Challenges() {
     const theme=useTheme();
@@ -53,7 +54,22 @@ export default function Challenges() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                backgroundColor: theme.palette.text.primary,
+                pb: "2rem",
+                // backgroundColor: theme.palette.text.primary,
+                // backgroundImage:'linear-gradient(0deg, #8EC5FC 0%, #E0C3FC 40%, #ffffff 82%)'
+                // backgroundImage: `url(${bgMesh.src})`,
+                // backgroundSize: 'cover',
+                // backgroundRepeat: 'no-repeat',
+                backgroundColor: 'hsla(196,92%,53%,1)',
+                backgroundImage: "radial-gradient(at 7% 14%, hsla(333,0%,100%,1) 0px, transparent 50%),\
+                radial-gradient(at 13% 76%, hsla(180,100%,65%,1) 0px, transparent 50%),\
+                radial-gradient(at 88% 83%, hsla(36,100%,75%,1) 0px, transparent 50%),\
+                radial-gradient(at 91% 8%, hsla(194,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 35% 87%, hsla(146,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 98% 5%, hsla(287,100%,61%,1) 0px, transparent 50%),\
+                radial-gradient(at 88% 45%, hsla(246,100%,73%,1) 0px, transparent 50%),\
+                radial-gradient(at 45% 83%, hsla(24,100%,62%,1) 0px, transparent 50%)"
+
             }}
         >
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>

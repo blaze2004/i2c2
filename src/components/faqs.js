@@ -55,7 +55,8 @@ export default function Faqs() {
                     mb: "2rem",
                     background: 'linear-gradient(180deg, #215dff 0%, #21D4FD 100%)',
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: '2px white',
                 }}
             >
                 Frequently Asked Questions
