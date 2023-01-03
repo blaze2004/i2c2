@@ -59,18 +59,19 @@ export default function Schedule() {
                 flexDirection: 'column',
                 // backgroundColor: theme.palette.text.primary
                 // backgroundImage: 'linear-gradient(180deg, #4158d0 0%, #C850C0 26%, #FFCC70 91%)'
-                // backgroundImage: `url(${bgMesh.src})`,
+                // backgroundImage: `url(${animateMesh.src})`,
                 // backgroundSize: 'cover',
                 // backgroundRepeat: 'no-repeat',
                 backgroundColor:'hsla(196,92%,53%,1)',
-                backgroundImage:"radial-gradient(at 11% 88%, hsla(85,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 63% 42%, hsla(180,100%,65%,1) 0px, transparent 50%),\
-                radial-gradient(at 90% 89%, hsla(36,100%,75%,1) 0px, transparent 50%),\
-                radial-gradient(at 95% 35%, hsla(194,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 15% 34%, hsla(146,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 11% 9%, hsla(287,100%,61%,1) 0px, transparent 50%),\
-                radial-gradient(at 92% 6%, hsla(246,100%,73%,1) 0px, transparent 50%),\
-                radial-gradient(at 84% 22%, hsla(24,100%,62%,1) 0px, transparent 50%)"
+                backgroundImage:"radial-gradient(at 83% 18%, hsla(194,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 0% 80%, hsla(111,62%,60%,1) 0px, transparent 50%),\
+                radial-gradient(at 92% 87%, hsla(168,14%,88%,1) 0px, transparent 50%),\
+                radial-gradient(at 100% 35%, hsla(36,100%,75%,1) 0px, transparent 50%),\
+                radial-gradient(at 30% 15%, hsla(194,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 31% 45%, hsla(146,100%,77%,1) 0px, transparent 50%),\
+                radial-gradient(at 93% 9%, hsla(287,100%,61%,1) 0px, transparent 50%),\
+                radial-gradient(at 15% 3%, hsla(245,100%,73%,1) 0px, transparent 50%),\
+                radial-gradient(at 23% 18%, hsla(24,100%,62%,1) 0px, transparent 50%)"
             }}
         >
             <Typography

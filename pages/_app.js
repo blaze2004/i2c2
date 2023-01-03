@@ -20,8 +20,8 @@ const clientSideEmotionCache=createEmotionCache();
 function MyApp({ Component, emotionCache=clientSideEmotionCache, pageProps }) {
   return (
     <CacheProvider value={emotionCache}>
-      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-      <Script strategy="lazyOnload">
+      <Script id="google_analytics" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script id="google_analytics_tag" strategy="lazyOnload">
         {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
