@@ -88,7 +88,7 @@ export default function Home() {
           background: '#25D366'
         }}>
         <WhatsApp sx={{ mr: 1 }} />
-        Join WhatsaApp Group
+        Join WhatsApp Group
       </Fab>
     </Box>
   )

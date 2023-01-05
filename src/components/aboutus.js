@@ -82,15 +82,25 @@ function CommunityCard({ name, bio, logo, link }) {
                 >
                     <Box
                         sx={{
-                            p: 2,
-                            borderRadius: '2rem',
-                            border: '1px solid #fff',
-                            boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-                            position: 'absolute',
+                            p: '22px',
+                            borderRadius: '1.2rem',
+                            border: '2px solid #272727',
+                            // background: 'linear-gradient(to right, #f284c3, #d574bb, #b865b3, #9957aa, #784ba0)',
                             width: '100%',
                             height: '100%',
+                            // backgroundSize: 'cover',
+                            background: 'linear-gradient(45deg, #c7c7c72e, transparent)',
+                            backgroundSize: '100%',
+                            textAlign: 'justify',
                             WebkitBackfaceVisibility: 'hidden',
-                            backfaceVisibility: 'hidden'
+                            backfaceVisibility: 'hidden',
+                            // transform: 'rotateY(180deg)',
+                            // display: 'flex',
+                            // alignItems: 'center',
+                            // justifyContent: 'center',
+                            // wordWrap: 'break-word'
+                            boxShadow: '0px 14px 80px rgb(58 64 186 / 17%)',
+                            position: 'absolute',
                         }}>
                         <Typography variant="h3" fontWeight={"bold"} sx={{ mb: 2 }}>
                             {name}
@@ -107,7 +117,7 @@ function CommunityCard({ name, bio, logo, link }) {
                             position: 'absolute',
                             width: '100%',
                             height: '100%',
-                            backgroundSize: '100% 100%',
+                            backgroundSize: 'cover',
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
                             transform: 'rotateY(180deg)',
