@@ -18,6 +18,8 @@ import sosTech from '../assets/sos_tech.jpeg';
 import chatraShala from '../assets/chatra_shala.jpeg';
 import coderEvoke from '../assets/coders_evoke.jpeg';
 import skillShip from '../assets/skillship_logo.png';
+import mindsDb from '../assets/mindsDB_logo.png';
+import threeWay from '../assets/Threeway_Logo.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {
@@ -46,6 +48,11 @@ export default function Sponsors() {
                 title: "Coding Minutes",
                 imgUrl: codingMinutes,
                 link: "https://codingminutes.com"
+            },
+            {
+                title: "Minds DB",
+                imgUrl: mindsDb,
+                link: "https://mindsdb.com"
             }
         ],
         economy: [
@@ -64,6 +71,11 @@ export default function Sponsors() {
                 imgUrl: replit,
                 link: 'https://replit.com'
             },
+            {
+                title: "ThreeWay Studio",
+                imgUrl: threeWay,
+                link: "https://www.threeway.studio"
+            }
         ],
         standard: [
 
