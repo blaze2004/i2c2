@@ -220,7 +220,7 @@ export default function Sponsors() {
                         onClick={() => window.open("https://forms.gle/KYp3rPxN1cyCYmBU8", '_blank', 'noopener,noreferrer')}
                         sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
                     >
-                        Let's Partner
+                        Let&apos;s Partner
                     </Button>
                 </Box>
                 <Box className={styles.cardsList}>
