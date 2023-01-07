@@ -255,29 +255,35 @@ export default function Sponsors() {
             <Box
                 sx={{
                     display: 'flex',
-                    flexDirection: smallScreen? 'column':'row',
+                    flexDirection: 'column',
                     m: '2rem 1rem',
                     p: '1rem 1rem',
                     borderRadius: '1.2rem',
                     border: '2px solid #272727',
-                    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                    boxShadow: "0px 14px 80px rgb(58 64 186 / 17%)",
                     "&:hover": {
                         transform: "translateY(-3px)",
                         boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
                     },
-                    width: 'inherit'
+                    width: 'inherit',
+                    maxWidth: 600
                 }}
             >
-                <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#000" sx={{ m: 1 }}>
-                    Become a Campus Ambassador
-                </Typography>
-                <Button
-                    variant='contained'
-                    onClick={() => window.open("https://forms.gle/3FK39TDLe41hBmZA6", '_blank', 'noopener,noreferrer')}
-                    sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
-                >
-                    Apply Now
-                </Button>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#000" sx={{ m: 1 }}>
+                        Become a Campus Ambassador
+                    </Typography>
+                <Typography textAlign={smallScreen? 'center':'justify'} variant="body" color="#010" sx={{ m: 1 }}>
+                        Be the brand ambassador of I2C2. Be our campus ambassador and become the face of the hackathon by promoting the event in the campus and recruiting students to participate.
+                    </Typography>
+
+                    <Button
+                        variant='contained'
+                        onClick={() => window.open("https://forms.gle/3FK39TDLe41hBmZA6", '_blank', 'noopener,noreferrer')}
+                        sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
+                    >
+                        Apply Now
+                    </Button>
+
             </Box>
 
         </Box>
