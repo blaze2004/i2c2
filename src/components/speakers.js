@@ -21,15 +21,6 @@ export default function Speakers() {
             }
         },
         {
-            title: "Unnati Chhabra",
-            description: "Unnati is the founder of CodXCrypt, an open-source community that hosts workshops, mentorship sessions, and hackathons. They have a goal of teaching every student about open-source and have already impacted over 10,000 people through their community.",
-            imgUrl: unnatiChhabra,
-            links: {
-                twitter: "https://twitter.com/Unnati_twts",
-                linkedin: "https://www.linkedin.com/in/unnati-chhabra-"
-            }
-        },
-        {
             title: "Mayank Rajvansh",
             description: "UI/ UX Designer",
             imgUrl: speaker,
@@ -37,6 +28,15 @@ export default function Speakers() {
                 github: "https://github.com/blaze2004",
                 twitter: "https://twitter.com/@blaze06112004",
                 linkedin: "https://linkedin.com/blaze2004"
+            }
+        },
+        {
+            title: "Unnati Chhabra",
+            description: (<Typography>SDE <a href='https://zomato.com' target="_blank" rel="noopener,noreferrer">@Zomato</a>, Founder of CodXCrypt, an open-source community with a goal of teaching every student about open-source and have already impacted 10,000+ people through their community.</Typography>),
+            imgUrl: unnatiChhabra,
+            links: {
+                twitter: "https://twitter.com/Unnati_twts",
+                linkedin: "https://www.linkedin.com/in/unnati-chhabra-"
             }
         },
     ];

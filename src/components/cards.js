@@ -95,7 +95,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                     {
                         person? (
                             <>
-                                <Typography>{description}</Typography>
+                                {description}
                                 <Box>
                                     {
                                         github===undefined? null:
