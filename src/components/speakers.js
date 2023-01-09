@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
 import speaker from '../assets/speaker1.jpg';
 import adityaArora from '../assets/Aditya_arora.jpeg';
+import unnatiChhabra from '../assets/unnati_chhabra.jpeg';
 
 export default function Speakers() {
     const theme=useTheme();
@@ -20,13 +21,12 @@ export default function Speakers() {
             }
         },
         {
-            title: "Rajesh Singh",
-            description: "iOS App Developer",
-            imgUrl: speaker,
+            title: "Unnati Chhabra",
+            description: "Unnati is the founder of CodXCrypt, an open-source community that hosts workshops, mentorship sessions, and hackathons. They have a goal of teaching every student about open-source and have already impacted over 10,000 people through their community.",
+            imgUrl: unnatiChhabra,
             links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
+                twitter: "https://twitter.com/Unnati_twts",
+                linkedin: "https://www.linkedin.com/in/unnati-chhabra-"
             }
         },
         {
