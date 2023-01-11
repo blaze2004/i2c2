@@ -18,7 +18,7 @@ export default function Rewards() {
             img: silver,
             position: 'SECOND PLACE',
             prizes: [
-                "Cash Prize ₹5,000",
+                "Cash Prize: To be announced",
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -29,7 +29,7 @@ export default function Rewards() {
             img: gold,
             position: 'FIRST PLACE',
             prizes: [
-                "Cash Prize ₹10,000",
+                "Cash Prize: To be announced",
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -40,7 +40,7 @@ export default function Rewards() {
             img: bronze,
             position: 'THIRD PLACE',
             prizes: [
-                "Cash Prize ₹2,000",
+                "Cash Prize:To be announced",
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."

@@ -39,6 +39,7 @@ export default function Mentors() {
                 linkedin: "https://linkedin.com/blaze2004"
             }
         },
+        
     ];
 
     return (
