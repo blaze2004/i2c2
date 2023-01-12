@@ -9,36 +9,36 @@ export default function Mentors() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
 
     const mentors=[
-        {
-            title: "Abhilash Jain",
-            description: "Web Developer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
-        {
-            title: "Rajesh Singh",
-            description: "iOS App Developer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
-        {
-            title: "Mayank Rajvansh",
-            description: "UI/ UX Designer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
+        // {
+        //     title: "Abhilash Jain",
+        //     description: "Web Developer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
+        // {
+        //     title: "Rajesh Singh",
+        //     description: "iOS App Developer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
+        // {
+        //     title: "Mayank Rajvansh",
+        //     description: "UI/ UX Designer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
     ];
 
     return (
@@ -78,21 +78,43 @@ export default function Mentors() {
                 Grab the opportunity to learn from great mentors.
             </Typography>
 
-            <Box className={styles.cardsList}>
-                {
-                    mentors.map((mentor, key) => (
-                        <HoverInfoCard
-                            key={key}
-                            title={mentor.title}
-                            description={mentor.description}
-                            img={mentor.imgUrl}
-                            colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
-                            person={true}
-                            links={mentor.links}
-                        />
-                    ))
-                }
-            </Box>
+            {
+                mentors.length>0? (
+                    <Box className={styles.cardsList}>
+                        {
+                            mentors.map((mentor, key) => (
+                                <HoverInfoCard
+                                    key={key}
+                                    title={mentor.title}
+                                    description={mentor.description}
+                                    img={mentor.imgUrl}
+                                    colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
+                                    person={true}
+                                    links={mentor.links}
+                                />
+                            ))
+                        }
+                    </Box>
+                ):(
+                    <Typography
+                        textAlign={"center"}
+                        fontWeight={"bold"}
+                        fontSize={"xx-large"}
+                        sx={{
+                            mt: "1rem",
+                            mb: "3rem",
+                            color: "white",
+                            background: "rgb(35, 64, 280)",
+                            padding: "10px 4%",
+                            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75);",
+                            borderRadius: "15px",
+                        }}
+                    >
+                        To be announced soon
+                    </Typography>
+                )
+            }
+
         </Box>
     );
 }
