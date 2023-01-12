@@ -46,7 +46,6 @@ export default function Hero() {
                     data-button-theme="light"
                     style={{ height: '44px', width: '312px' }}
                 ></div>
-
             </Box>
         </Box>
     );

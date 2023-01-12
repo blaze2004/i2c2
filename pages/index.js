@@ -8,7 +8,7 @@ import Footer from '../src/components/footer';
 import AboutHackathon from '../src/components/aboutHackathon';
 import Challenges from '../src/components/challenges';
 import Speakers from '../src/components/speakers';
-import Mentors from '../src/components/mentors';
+// import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
 import Rewards from '../src/components/rewards';
@@ -43,7 +43,7 @@ export default function Home() {
       <Box
       >
         <Speakers />
-        <Mentors />
+        {/* <Mentors /> */}
       </Box>
 
       <Box
