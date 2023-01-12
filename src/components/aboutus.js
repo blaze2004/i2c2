@@ -4,9 +4,11 @@ import Image from 'next/image';
 import code8 from '../assets/code8.png';
 import befikra from '../assets/befikra.jpeg';
 import codedu from '../assets/codedu.png';
+import { useTheme } from '@mui/material/styles';
 
 export default function AboutUs() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const theme=useTheme();
 
     const communities=[
         {
@@ -38,10 +40,7 @@ export default function AboutUs() {
                 sx={{
                     mt: "5rem",
                     mb: "2rem",
-                    background: 'linear-gradient(296deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #fff',
+                    color: theme.palette.text.light
                 }}
             >
                 Who are We?
@@ -85,20 +84,13 @@ function CommunityCard({ name, bio, logo, link }) {
                             p: '22px',
                             borderRadius: '1.2rem',
                             border: '2px solid #272727',
-                            // background: 'linear-gradient(to right, #f284c3, #d574bb, #b865b3, #9957aa, #784ba0)',
                             width: '100%',
                             height: '100%',
-                            // backgroundSize: 'cover',
                             background: 'linear-gradient(45deg, #c7c7c72e, transparent)',
                             backgroundSize: '100%',
                             textAlign: 'justify',
                             WebkitBackfaceVisibility: 'hidden',
                             backfaceVisibility: 'hidden',
-                            // transform: 'rotateY(180deg)',
-                            // display: 'flex',
-                            // alignItems: 'center',
-                            // justifyContent: 'center',
-                            // wordWrap: 'break-word'
                             boxShadow: '0px 14px 80px rgb(58 64 186 / 17%)',
                             position: 'absolute',
                         }}>

@@ -49,7 +49,7 @@ export default function WhyJoinUs() {
                 flexDirection: 'column',
                 p: '2rem',
                 pb: '10rem',
-                backgroundColor: theme.palette.text.primary               
+                backgroundColor: theme.palette.background.default               
 
             }}
         >
@@ -61,15 +61,16 @@ export default function WhyJoinUs() {
                     sx={{
                         mt: "5rem",
                         mb: "2rem",
-                        background: 'linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);',
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        WebkitTextStroke: '2px #999',
+                        color: theme.palette.text.light
+                        // background: 'linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);',
+                        // WebkitBackgroundClip: "text",
+                        // WebkitTextFillColor: "transparent",
+                        // WebkitTextStroke: '2px #999',
                     }}
                 >
                     Why Join Us?
                 </Typography>
-                <Box sx={{ background: 'grey' }}>
+                <Box sx={{ background: 'white' }}>
                     <Box className={styles.cardsListBorder}>
                         {
                             points.map((info, key) => (

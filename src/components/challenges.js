@@ -61,20 +61,7 @@ export default function Challenges() {
                 alignItems: "center",
                 flexDirection: 'column',
                 pb: "2rem",
-                // backgroundColor: theme.palette.text.primary,
-                // backgroundImage:'linear-gradient(0deg, #8EC5FC 0%, #E0C3FC 40%, #ffffff 82%)'
-                // backgroundImage: `url(${bgMesh.src})`,
-                // backgroundSize: 'cover',
-                // backgroundRepeat: 'no-repeat',
-                backgroundColor: 'hsla(196,92%,53%,1)',
-                backgroundImage: "radial-gradient(at 7% 14%, hsla(333,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 13% 76%, hsla(180,100%,65%,1) 0px, transparent 50%),\
-                radial-gradient(at 88% 83%, hsla(36,100%,75%,1) 0px, transparent 50%),\
-                radial-gradient(at 91% 8%, hsla(194,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 35% 87%, hsla(146,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 98% 5%, hsla(287,100%,61%,1) 0px, transparent 50%),\
-                radial-gradient(at 88% 45%, hsla(246,100%,73%,1) 0px, transparent 50%),\
-                radial-gradient(at 45% 83%, hsla(24,100%,62%,1) 0px, transparent 50%)"
+                backgroundColor: theme.palette.background.secondary
 
             }}
         >
@@ -86,10 +73,7 @@ export default function Challenges() {
                     sx={{
                         mt: "5rem",
                         mb: "1rem",
-                        background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)',
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        WebkitTextStroke: '2px #999',
+                        color: theme.palette.text.light
                     }}
                 >
                     Challenges
@@ -100,7 +84,7 @@ export default function Challenges() {
                 textAlign={"center"}
                 fontWeight={"bold"}
                 fontSize={"x-large"}
-                color={theme.palette.neutral.black}
+                color={theme.palette.neutral.primary}
                 sx={{
                     mt: "1rem",
                     mb: "2rem",

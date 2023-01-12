@@ -134,24 +134,7 @@ export default function Sponsors() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                // backgroundColor: theme.palette.text.primary,
-                // backgroundImage: 'linear-gradient(180deg, #ffcc70 13%, #e64e4e 100%)',
-                // backgroundImage: `url(${bgMesh.src})`,
-                // backgroundSize: 'cover',
-                // backgroundRepeat: 'no-repeat',
-                backgroundColor: "hsla(196,92%,53%,1)",
-                backgroundImage: "radial-gradient(at 69% 100%, hsla(104,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 6% 99%, hsla(88,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 32% 99%, hsla(304,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 93% 99%, hsla(304,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 22% 49%, hsla(149,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 7% 6%, hsla(124,0%,100%,1) 0px, transparent 50%),\
-                radial-gradient(at 100% 49%, hsla(183,100%,65%,1) 0px, transparent 50%),\
-                radial-gradient(at 95% 6%, hsla(39,100%,75%,1) 0px, transparent 50%),\
-                radial-gradient(at 73% 20%, hsla(197,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 52% 58%, hsla(290,100%,61%,1) 0px, transparent 50%),\
-                radial-gradient(at 63% 72%, hsla(249,100%,73%,1) 0px, transparent 50%),\
-                radial-gradient(at 38% 67%, hsla(27,100%,62%,1) 0px, transparent 50%)"
+                backgroundColor: theme.palette.background.default
 
             }}
         >
@@ -162,11 +145,7 @@ export default function Sponsors() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    // color: 'transparent',
-                    background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #999',
+                    color: theme.palette.text.light
                 }}
             >
                 Sponsors &amp; Partners
@@ -186,7 +165,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#ddd" sx={{ m: 1 }}>
                         Interested in Sponsoring
                     </Typography>
                     <Button
@@ -212,7 +191,7 @@ export default function Sponsors() {
                         flexDirection: smallScreen? 'column':'row',
                     }}
                 >
-                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#4d4c4c" sx={{ m: 1 }}>
+                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#ddd" sx={{ m: 1 }}>
                         Become a partner
                     </Typography>
                     <Button
@@ -223,69 +202,8 @@ export default function Sponsors() {
                         Let&apos;s Partner
                     </Button>
                 </Box>
-                <Box className={styles.cardsList}>
-                    {
-                        communityPartners.map((data, key) => (
-                            <Box
-                                key={key}
-                                sx={{
-                                    m: '5px',
-                                    transition: "0.3s",
-                                    borderRadius: '1rem',
-                                    padding: '5px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    // boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-                                    "&:hover": {
-                                        transform: "scale(1.2)",
-                                        // transform: "translateY(-3px)",
-                                        boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
-                                    },
-                                }}
-                            >
-                                <a href={data.link} target="_blank" rel="noreferrer">
-                                    <Image src={data.imgUrl} alt={data.title} width={312} />
-                                </a>
-                            </Box>
-                        ))
-                    }
-                </Box>
+                <SponsorGroup title={""} sponsors={communityPartners} />
             </LogoGroup>
-
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    m: '2rem 1rem',
-                    p: '1rem 1rem',
-                    borderRadius: '1.2rem',
-                    border: '2px solid #272727',
-                    boxShadow: "0px 14px 80px rgb(58 64 186 / 17%)",
-                    "&:hover": {
-                        transform: "translateY(-3px)",
-                        boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
-                    },
-                    width: 'inherit',
-                    maxWidth: 600
-                }}
-            >
-                    <Typography textAlign={smallScreen? 'center':'left'} variant="h4" color="#000" sx={{ m: 1 }}>
-                        Become a Campus Ambassador
-                    </Typography>
-                <Typography textAlign={smallScreen? 'center':'justify'} variant="body" color="#010" sx={{ m: 1 }}>
-                        Be the brand ambassador of I2C2. Be our campus ambassador and become the face of the hackathon by promoting the event in the campus and recruiting students to participate.
-                    </Typography>
-
-                    <Button
-                        variant='contained'
-                        onClick={() => window.open("https://forms.gle/3FK39TDLe41hBmZA6", '_blank', 'noopener,noreferrer')}
-                        sx={{ borderRadius: '1rem', m: 1, fontSize: 'large' }}
-                    >
-                        Apply Now
-                    </Button>
-
-            </Box>
-
         </Box>
     );
 }
@@ -301,6 +219,7 @@ function LogoGroup({ children, value, index }) {
 
 function SponsorGroup({ title, sponsors }) {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const theme=useTheme();
 
     if (sponsors.length<1) {
         return;
@@ -311,6 +230,7 @@ function SponsorGroup({ title, sponsors }) {
                 m: '2rem 1rem',
                 p: '1rem 1rem',
                 borderRadius: '1rem',
+                background: '#999',
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                 "&:hover": {
                     transform: "translateY(-3px)",
@@ -325,13 +245,7 @@ function SponsorGroup({ title, sponsors }) {
                 fontWeight={"bold"}
                 sx={{
                     mb: "1rem",
-                    background: 'linear-gradient(300deg, #21D4FD 0%, #B721FF 73%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                    // color: 'transparent',
-                    // backgroundImage: 'url(https://media.giphy.com/media/l4FGmfnKZRGwtJ4v6/giphy.gif)',
-                    // backgroundPosition: 'center',
-                    // WebkitBackgroundClip: 'text'
+                    color: theme.palette.text.primary
                 }}
             >
                 {title}

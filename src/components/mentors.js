@@ -58,10 +58,7 @@ export default function Mentors() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    background: 'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #999',
+                    color: theme.palette.text.light
                 }}
             >
                 Mentors
@@ -70,7 +67,7 @@ export default function Mentors() {
                 textAlign={"center"}
                 fontWeight={"bold"}
                 fontSize={"x-large"}
-                color={theme.palette.neutral.black}
+                color={theme.palette.text.primary}
                 sx={{
                     mt: "1rem",
                     mb: "2rem",
@@ -103,10 +100,10 @@ export default function Mentors() {
                         sx={{
                             mt: "1rem",
                             mb: "3rem",
-                            color: "white",
-                            background: "rgb(35, 64, 280)",
+                            color: theme.palette.text.primary,
+                            background: theme.palette.background.secondary,
                             padding: "10px 4%",
-                            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75);",
+                            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
                             borderRadius: "15px",
                         }}
                     >
