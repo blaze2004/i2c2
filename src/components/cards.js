@@ -90,7 +90,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                         p:2
                     }}
                 >
-                    <Typography fontWeight={"bold"} variant={"h3"} gutterBottom>{title}</Typography>
+                    <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
                     {/* <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography> */}
                     {
                         person? (
@@ -190,7 +190,7 @@ export function RewardsCard({ reward }) {
                     p: 2,
                 }}
             >
-                {
+                {   
                     reward.prizes.map((prize, key) => (
                         <Box key={key} >
                             <Typography color="#000" fontSize={"large"}>

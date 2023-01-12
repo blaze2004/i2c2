@@ -13,13 +13,13 @@ import Image from 'next/image';
 import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
 import cybrancee from '../assets/logo_cybrancee.png';
-import codingMinutes from '../assets/coding_minutes_logo.png';
+import codingMinutes from '../assets/coding_minutes_logo.jpg';
 import sosTech from '../assets/sos_tech.jpeg';
 import chatraShala from '../assets/chatra_shala.jpeg';
 import coderEvoke from '../assets/coders_evoke.jpeg';
 import skillShip from '../assets/skillship_logo.png';
 import mindsDb from '../assets/mindsDB_logo.png';
-import threeWay from '../assets/Threeway_Logo.png';
+import threeWay from '../assets/Threeway_Logo.jpeg';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 export default function Sponsors() {

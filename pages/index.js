@@ -10,7 +10,7 @@ import Challenges from '../src/components/challenges';
 // import banner from '../src/assets/mountains.png';
 import banner from '../src/assets/hero-bg.png';
 import Speakers from '../src/components/speakers';
-// import Mentors from '../src/components/mentors';
+import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
 // import { useEffect } from 'react';
@@ -57,7 +57,7 @@ export default function Home() {
         }}
       >
         <Speakers />
-        {/* <Mentors /> */}
+        <Mentors />
       </Box>
 
       <Box
