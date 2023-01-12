@@ -1,35 +1,9 @@
-import { Box, Avatar, Button, Typography, useMediaQuery } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-// import devfolio from '../assets/Devfolio_Logo-White.png';
-// import YouTube from 'react-youtube';
-// import { useEffect } from 'react';
 
 export default function Hero() {
     const theme=useTheme();
     const smallScreen=useMediaQuery('(max-width: 650px');
-    // const mobileScreen=useMediaQuery('(max-width: 500px)');
-    // const videoWidth=mobileScreen? 300:(smallScreen? 400:600)
-    // const opts={
-    //     height: '390',
-    //     width: videoWidth,
-    //     playerVars: {
-    //         autoplay: 0,
-    //         controls: 0,
-    //         loop: 1,
-    //         modestbranding: 1,
-    //     },
-    // };
-
-    // useEffect(() => {
-    //     const script=document.createElement('script');
-    //     script.src='https://apply.devfolio.co/v2/sdk.js';
-    //     script.async=true;
-    //     script.defer=true;
-    //     document.body.appendChild(script);
-    //     return () => {
-    //         document.body.removeChild(script);
-    //     }
-    // }, []);
 
     return (
         <Box sx={{ m: '12% 0' }}>
@@ -74,20 +48,6 @@ export default function Hero() {
                 ></div>
 
             </Box>
-
-            {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: "center", mb: "3rem", mt: "2rem", background: theme.palette.background.secondary }}>
-                <Box sx={{ backgroundColor: theme.palette.neutral.black, borderRadius: '1rem', width: 'max-content', padding: '5px', height: '400px', width: videoWidth+10 }}>
-                    <YouTube
-                        title='I2C2 Teaser Video'
-                        videoId='r1qbSJUYJBM'
-                        opts={opts}
-                        onReady={() => { }}
-                    />
-                    <video muted={true} autoPlay={true} preload="auto" loop style={{ width: '360px', height: '500px' }} >
-                    <source src={'/teaser.m4v'} type='video/mp4' controls={false} />
-                </video>
-                </Box>
-            </Box> */}
         </Box>
     );
 }
