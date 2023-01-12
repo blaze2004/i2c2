@@ -9,37 +9,36 @@ export default function Mentors() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
 
     const mentors=[
-        {
-            title: "Abhilash Jain",
-            description: "Web Developer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
-        {
-            title: "Rajesh Singh",
-            description: "iOS App Developer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
-        {
-            title: "Mayank Rajvansh",
-            description: "UI/ UX Designer",
-            imgUrl: speaker,
-            links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
-            }
-        },
-        
+        // {
+        //     title: "Abhilash Jain",
+        //     description: "Web Developer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
+        // {
+        //     title: "Rajesh Singh",
+        //     description: "iOS App Developer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
+        // {
+        //     title: "Mayank Rajvansh",
+        //     description: "UI/ UX Designer",
+        //     imgUrl: speaker,
+        //     links: {
+        //         github: "https://github.com/blaze2004",
+        //         twitter: "https://twitter.com/@blaze06112004",
+        //         linkedin: "https://linkedin.com/blaze2004"
+        //     }
+        // },
     ];
 
     return (
@@ -59,10 +58,7 @@ export default function Mentors() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    background: 'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #999',
+                    color: theme.palette.text.light
                 }}
             >
                 Mentors
@@ -71,7 +67,7 @@ export default function Mentors() {
                 textAlign={"center"}
                 fontWeight={"bold"}
                 fontSize={"x-large"}
-                color={theme.palette.neutral.black}
+                color={theme.palette.text.primary}
                 sx={{
                     mt: "1rem",
                     mb: "2rem",
@@ -79,21 +75,43 @@ export default function Mentors() {
                 Grab the opportunity to learn from great mentors.
             </Typography>
 
-            <Box className={styles.cardsList}>
-                {
-                    mentors.map((mentor, key) => (
-                        <HoverInfoCard
-                            key={key}
-                            title={mentor.title}
-                            description={mentor.description}
-                            img={mentor.imgUrl}
-                            colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
-                            person={true}
-                            links={mentor.links}
-                        />
-                    ))
-                }
-            </Box>
+            {
+                mentors.length>0? (
+                    <Box className={styles.cardsList}>
+                        {
+                            mentors.map((mentor, key) => (
+                                <HoverInfoCard
+                                    key={key}
+                                    title={mentor.title}
+                                    description={mentor.description}
+                                    img={mentor.imgUrl}
+                                    colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
+                                    person={true}
+                                    links={mentor.links}
+                                />
+                            ))
+                        }
+                    </Box>
+                ):(
+                    <Typography
+                        textAlign={"center"}
+                        fontWeight={"bold"}
+                        fontSize={"xx-large"}
+                        sx={{
+                            mt: "1rem",
+                            mb: "3rem",
+                            color: theme.palette.text.primary,
+                            background: theme.palette.background.secondary,
+                            padding: "10px 4%",
+                            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
+                            borderRadius: "15px",
+                        }}
+                    >
+                        To be announced soon
+                    </Typography>
+                )
+            }
+
         </Box>
     );
 }

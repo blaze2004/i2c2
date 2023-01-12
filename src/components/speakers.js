@@ -57,10 +57,7 @@ export default function Speakers() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    background: 'linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #999',
+                    color: theme.palette.text.light
                 }}
             >
                 Speakers
@@ -69,7 +66,7 @@ export default function Speakers() {
                 textAlign={"center"}
                 fontWeight={"bold"}
                 fontSize={"x-large"}
-                color={theme.palette.neutral.black}
+                color={theme.palette.text.primary}
                 sx={{
                     mt: "1rem",
                     mb: "2rem",

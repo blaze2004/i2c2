@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, Fab } from '@mui/material';
+import { Box, Fab } from '@mui/material';
 import { WhatsApp } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 import Hero from '../src/components/hero';
@@ -7,39 +7,30 @@ import Faqs from '../src/components/faqs';
 import Footer from '../src/components/footer';
 import AboutHackathon from '../src/components/aboutHackathon';
 import Challenges from '../src/components/challenges';
-// import banner from '../src/assets/mountains.png';
-import banner from '../src/assets/hero-bg.png';
 import Speakers from '../src/components/speakers';
 // import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
-// import { useEffect } from 'react';
 import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
 import AboutUs from '../src/components/aboutus';
-import bgMesh from '../src/assets/light_sky_mesh.jpg';
+import JoinUs from '../src/components/joinus';
 
 export default function Home() {
   const theme=useTheme();
 
   return (
     <Box>
+      <Navbar />
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           paddingTop: '2rem',
-          backgroundColor: '#04326a',
-          backgroundImage: `url(${banner.src})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
         }}
       >
-        <Box>
-          <Navbar />
-          <Hero />
-        </Box>
+        <Hero />
       </Box>
 
       <AboutHackathon />
@@ -48,13 +39,8 @@ export default function Home() {
       <Rewards />
       <Schedule />
       <Sponsors />
+      <JoinUs />
       <Box
-        sx={{
-          backgroundColor: '#fff',
-          backgroundImage: `url(${bgMesh.src})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
       >
         <Speakers />
         {/* <Mentors /> */}

@@ -87,10 +87,10 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                         flexDirection: 'column',
                         justifyContent: 'center',
                         wordWrap: 'break-word',
-                        p:2
+                        p: 2
                     }}
                 >
-                    <Typography fontWeight={"bold"} variant={"h3"} gutterBottom>{title}</Typography>
+                    <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
                     {/* <Typography sx={{ opacity: viewProblem? 1:0 }}>{description}</Typography> */}
                     {
                         person? (
@@ -208,28 +208,28 @@ export function RewardsCard({ reward }) {
 
 
 export function WhyUsCard({ icon, title }) {
+
+    const theme=useTheme();
+
     return (
         <Box
             sx={{
                 p: 2,
-                background: 'white',
-                color: '#000',
+                background: theme.palette.background.default,
+                color: theme.palette.text.primary,
                 ':hover': {
-                    background: '#000',
-                    color: 'white'
+                    filter: 'blur(0.5px)',
+                    color: theme.palette.text.secondary
                 }
             }}
         >
             <Image src={icon} width={50} alt="why join us" height={50} />
             <Typography fontWeight={"bold"} variant={"h4"} gutterBottom>{title}</Typography>
-            {/* <Typography>
-                {description}
-            </Typography> */}
         </Box>
     );
 }
 
-export function SummaryCard({ title, content, button, image, flexDirection }) {
+export function SummaryCard({ title, content, button, image, flexDirection="row-reverse", link="" }) {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
     const tranformValue=flexDirection&&flexDirection==="row-reverse"? '24':'-24';
@@ -243,7 +243,7 @@ export function SummaryCard({ title, content, button, image, flexDirection }) {
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                 width: "80%",
                 position: "relative",
-                maxWidth: 800,
+                maxWidth: 1000,
                 mt: '2rem',
                 mb: '2rem',
                 marginLeft: "auto",
@@ -303,6 +303,31 @@ export function SummaryCard({ title, content, button, image, flexDirection }) {
                 <Typography marginBottom={theme.spacing(8)} color={theme.palette.neutral.black}>
                     {content}
                 </Typography>
+                {
+                    button? (
+                        <Button
+                            variant="contained"
+                            onClick={()=>window.open(link, '_blank', 'noopener,noreferrer')}
+                            sx={{
+                                textTransform: 'none',
+                                borderRadius: '1.5rem',
+                                background: theme.palette.background.default,
+                                fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                                fontSize: theme.typography.pxToRem(15),
+                                marginRight: theme.spacing(1),
+                                color: 'rgba(255, 255, 255, 0.7)',
+                                '&.Mui-selected': {
+                                    color: '#fff',
+                                },
+                                '&.Mui-focusVisible': {
+                                    backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                                },
+                            }}
+                        >
+                            Join Now
+                        </Button>
+                    ):null
+                }
             </CardContent>
 
         </Card>

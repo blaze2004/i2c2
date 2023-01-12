@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Faqs() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const theme=useTheme();
 
     const [expanded, setExpanded]=useState(false);
 
@@ -53,10 +54,7 @@ export default function Faqs() {
                 sx={{
                     mt: "5rem",
                     mb: "2rem",
-                    background: 'linear-gradient(180deg, #215dff 0%, #21D4FD 100%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px white',
+                    color: theme.palette.text.light
                 }}
             >
                 Frequently Asked Questions

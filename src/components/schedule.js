@@ -57,21 +57,7 @@ export default function Schedule() {
                 display: 'flex',
                 alignItems: "center",
                 flexDirection: 'column',
-                // backgroundColor: theme.palette.text.primary
-                // backgroundImage: 'linear-gradient(180deg, #4158d0 0%, #C850C0 26%, #FFCC70 91%)'
-                // backgroundImage: `url(${animateMesh.src})`,
-                // backgroundSize: 'cover',
-                // backgroundRepeat: 'no-repeat',
-                backgroundColor:'hsla(196,92%,53%,1)',
-                backgroundImage:"radial-gradient(at 83% 18%, hsla(194,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 0% 80%, hsla(111,62%,60%,1) 0px, transparent 50%),\
-                radial-gradient(at 92% 87%, hsla(168,14%,88%,1) 0px, transparent 50%),\
-                radial-gradient(at 100% 35%, hsla(36,100%,75%,1) 0px, transparent 50%),\
-                radial-gradient(at 30% 15%, hsla(194,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 31% 45%, hsla(146,100%,77%,1) 0px, transparent 50%),\
-                radial-gradient(at 93% 9%, hsla(287,100%,61%,1) 0px, transparent 50%),\
-                radial-gradient(at 15% 3%, hsla(245,100%,73%,1) 0px, transparent 50%),\
-                radial-gradient(at 23% 18%, hsla(24,100%,62%,1) 0px, transparent 50%)"
+                backgroundColor: theme.palette.background.secondary
             }}
         >
             <Typography
@@ -81,11 +67,7 @@ export default function Schedule() {
                 sx={{
                     mt: "5rem",
                     mb: "1rem",
-                    // background: 'linear-gradient(43deg, #C850C0 3%, #FFCC70 99%)',
-                    background: 'linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)',
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    WebkitTextStroke: '2px #999',
+                    color: theme.palette.text.light
                 }}
             >
                 Schedule
@@ -102,7 +84,7 @@ export default function Schedule() {
                                         (<Box sx={{
                                             borderRadius: '2rem',
                                             transition: "0.3s",
-                                            boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                                            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
                                             p: 2,
                                             width: "280px",
                                             // filter: 'blur(5px)',
@@ -124,7 +106,7 @@ export default function Schedule() {
                                                 textAlign={"center"}
                                                 fontWeight={"bold"}
                                                 fontSize={"x-large"}
-                                                color={theme.palette.neutral.black}
+                                                color={theme.palette.text.primary}
                                                 sx={{
                                                     mt: "1rem",
                                                     mb: "2rem",
@@ -144,7 +126,7 @@ export default function Schedule() {
                                         :(<TimelineContent sx={{
                                             borderRadius: '2rem',
                                             transition: "0.3s",
-                                            boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                                            boxShadow: "0px 14px 80px rgba(0,0,0,0.75)",
                                             p: 2,
                                             // filter: 'blur(5px)',
                                             "&:hover": {
@@ -165,7 +147,7 @@ export default function Schedule() {
                                                 textAlign={"center"}
                                                 fontWeight={"bold"}
                                                 fontSize={"x-large"}
-                                                color={theme.palette.neutral.black}
+                                                color={theme.palette.text.primary}
                                                 sx={{
                                                     mt: "1rem",
                                                     mb: "2rem",
