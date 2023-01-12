@@ -82,7 +82,7 @@ export default function AboutHackathon() {
                     onChange={handleChange}
                     aria-label="about hackathon"
                 >
-                    <StyledTab label="What is I2C2?" {...a11yProps(0)} />
+                    <StyledTab label="About" {...a11yProps(0)} />
                     <StyledTab label="Why Participate?" {...a11yProps(1)} />
                     <StyledTab label="Theme" {...a11yProps(2)} />
                 </StyledTabs>

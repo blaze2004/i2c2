@@ -108,7 +108,7 @@ export default function JoinUs() {
                 >
                     <StyledTab label="Speaker" {...a11yProps(0)} />
                     <StyledTab label="Mentor" {...a11yProps(1)} />
-                    <StyledTab label="Campus Ambassador" {...a11yProps(2)} />
+                    <StyledTab label="Campus Star" {...a11yProps(2)} />
                 </StyledTabs>
 
             </Box>
@@ -117,7 +117,7 @@ export default function JoinUs() {
                 <SummaryCard
                     title={"Be an I2C2 Speaker"}
                     content={
-                        "The online hackathon is divided into 3 phases and will continue for 45 days. There will be sessions and everyone will have access to mentors who are experts in various domains and guide all the participants."
+                        "Want to share your knowledge and expertise in technology? Join us as a speaker and impart your wisdom to the next generation of tech innovators."
                     }
                     image={banner.src}
                     button={true}
@@ -130,7 +130,7 @@ export default function JoinUs() {
                 <SummaryCard
                     title={"Join I2C2 as a Mentor"}
                     content={
-                        "You’ll get to grip new technologies, learn new technical skills, chance to network, and meet experienced industry-level professionals. You will get a taste of smart management, team dynamics, and innovative new ideas that will be helpful for the society and environment."
+                        "Use your expertise to shape the future of technology by mentoring young coders at I2C2. Help guide and support the next generation of hackers to reach their full potential."
                     }
                     image={whyParticipate.src}
                     button={true}
@@ -142,7 +142,7 @@ export default function JoinUs() {
                 <SummaryCard
                     title={"Campus Ambassador"}
                     content={
-                        "Our themes are based on Website Development. We will be accepting the participation of students either individually or a maximum of 4 members in a team with 4 different roles (UI/UX Designer, Frontend Developer, Backend Developer & Full-Stack Developer)."
+                        "Represent I2C2 as a campus ambassador and become the face of the hackathon by promoting it in your campus and encouraging students to participate."
                     }
                     image={crystal.src}
                     button={true}
