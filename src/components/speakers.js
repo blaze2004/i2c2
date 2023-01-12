@@ -32,7 +32,7 @@ export default function Speakers() {
         },
         {
             title: "Unnati Chhabra",
-            description: (<Typography>SDE <a href='https://zomato.com' target="_blank" rel="noreferrer">@Zomato</a>, Founder of CodXCrypt, an open-source community with a goal of teaching every student about open-source and have already impacted 10,000+ people through their community.</Typography>),
+            description: (<Typography>SDE <a href='https://zomato.com' target="_blank" rel="noopener,noreferrer">@Zomato</a>, Founder of CodXCrypt, an open-source community with a goal of teaching every student about open-source and have already impacted 10,000+ people through their community.</Typography>),
             imgUrl: unnatiChhabra,
             links: {
                 twitter: "https://twitter.com/Unnati_twts",
