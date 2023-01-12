@@ -23,6 +23,7 @@ export default function Rewards() {
           textAlign={"center"}
           fontWeight={"bold"}
           fontSize={"small"}
+          key={0}
           className="rewards-text"
           sx={{
             //   mt: "1rem",
@@ -52,6 +53,7 @@ export default function Rewards() {
       prizes: [
         "Cash Prize: ",
         <Button
+        key={1}
         textAlign={"center"}
         fontWeight={"bold"}
         fontSize={"small"}
@@ -84,6 +86,7 @@ export default function Rewards() {
       prizes: [
         "Cash Prize:",
         <Button
+        key={2}
         textAlign={"center"}
         fontWeight={"bold"}
         fontSize={"small"}
