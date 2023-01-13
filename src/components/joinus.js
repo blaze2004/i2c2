@@ -108,7 +108,7 @@ export default function JoinUs() {
                 >
                     <StyledTab label="Speaker" {...a11yProps(0)} />
                     <StyledTab label="Mentor" {...a11yProps(1)} />
-                    <StyledTab label="Campus Star" {...a11yProps(2)} />
+                    <StyledTab label="Campus Champs" {...a11yProps(2)} />
                 </StyledTabs>
 
             </Box>
@@ -142,7 +142,7 @@ export default function JoinUs() {
                 <SummaryCard
                     title={"Campus Ambassador"}
                     content={
-                        "Represent I2C2 as a campus ambassador and become the face of the hackathon by promoting it in your campus and encouraging students to participate."
+                        "Represent I2C2 as a campus ambassador and become the face of the hackathon by promoting it in your campus and encouraging students to participate and win goodies."
                     }
                     image={crystal.src}
                     button={true}

@@ -36,6 +36,9 @@ export default function Hero() {
                 <Typography
                     textAlign={"center"}
                     variant="body1"
+                    sx={{
+                        mb: 2
+                    }}
                 >
                     Go from Idea to Prototype with I2C2 Hackathon!
                 </Typography>

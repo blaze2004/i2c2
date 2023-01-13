@@ -105,6 +105,10 @@ export default function Mentors() {
                             padding: "10px 4%",
                             boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
                             borderRadius: "15px",
+                            "&:hover": {
+                                transform: "translateY(-3px)",
+                                boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
+                            },
                         }}
                     >
                         To be announced soon

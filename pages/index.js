@@ -8,16 +8,48 @@ import Footer from '../src/components/footer';
 import AboutHackathon from '../src/components/aboutHackathon';
 import Challenges from '../src/components/challenges';
 import Speakers from '../src/components/speakers';
-// import Mentors from '../src/components/mentors';
+import Mentors from '../src/components/mentors';
 import Schedule from '../src/components/schedule';
 import Sponsors from '../src/components/sponsors';
 import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
 import AboutUs from '../src/components/aboutus';
 import JoinUs from '../src/components/joinus';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const theme=useTheme();
+
+  const [variant, setVariant]=useState('extended');
+  const [scrollStatus, setScrollStatus]=useState({
+    scrollDirection: null,
+    scrollPos: 0,
+  });
+
+  const handleScroll=() => {
+    setScrollStatus((prev) => {
+      return {
+        scrollDirection:
+          document.body.getBoundingClientRect().top>prev.scrollPos
+            ? "up"
+            :"down",
+        scrollPos: document.body.getBoundingClientRect().top,
+      };
+    });
+
+    if (scrollStatus.scrollDirection==="down") {
+      setVariant("circular");
+    }
+    else {
+      setVariant("extended");
+    }
+  }
+
+  useEffect(() => {
+    document.removeEventListener('scroll', handleScroll);
+    document.addEventListener('scroll', handleScroll);
+    return () => document.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
     <Box>
@@ -43,7 +75,7 @@ export default function Home() {
       <Box
       >
         <Speakers />
-        {/* <Mentors /> */}
+        <Mentors />
       </Box>
 
       <Box
@@ -63,18 +95,21 @@ export default function Home() {
         <Footer />
       </Box>
       <Fab
-        variant="extended"
+        variant={variant}
         // color="green"
-        aria-label="add"
+        aria-label="join whatsapp group"
         onClick={() => window.open("https://chat.whatsapp.com/KtuB2CpU6EH9Sku2xV2igA", '_blank', 'noopener,noreferrer')}
         sx={{
           position: 'fixed',
           bottom: 48,
           right: 16,
-          background: '#25D366'
+          background: '#25D366',
+          transition: 'ease-in-out'
         }}>
-        <WhatsApp sx={{ mr: 1 }} />
-        Join WhatsApp Group
+        <WhatsApp sx={{ mr: variant==="extended"? 1:0 }} />
+        {
+          variant==="extended"? "Join WhatsApp Group":null
+        }
       </Fab>
     </Box>
   )
