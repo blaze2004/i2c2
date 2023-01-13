@@ -1,13 +1,29 @@
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import cssstyles from '../styles/crackers.module.css';
 
 export default function Hero() {
     const theme=useTheme();
     const smallScreen=useMediaQuery('(max-width: 650px');
 
     return (
-        <Box sx={{ m: '12% 0' }}>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: "2rem", flexDirection: 'column' }}>
+        <Box sx={{ m: '12% 0', overflow: 'hidden'}} >
+
+            <Box className={cssstyles.pyro}>
+                <Box className={cssstyles.before}></Box>
+                <Box className={cssstyles.after}></Box>
+            </Box>
+
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    mb: "2rem",
+                    flexDirection: 'column',
+                    zIndex: 10,
+                }}
+            >
                 <Typography
                     textAlign={"center"}
                     variant={smallScreen? "h2":"h1"}

@@ -54,17 +54,7 @@ export default function Home() {
   return (
     <Box>
       <Navbar />
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          paddingTop: '2rem',
-        }}
-      >
-        <Hero />
-      </Box>
-
+      <Hero />
       <AboutHackathon />
       <WhyJoinUs />
       <Challenges />
