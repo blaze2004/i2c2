@@ -4,7 +4,8 @@ import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
 import speaker from '../assets/speaker1.jpg';
 import adityaArora from '../assets/Aditya_arora.jpeg';
-import unnatiChhabra from '../assets/unnati_chhabra.jpeg';
+import naveenPal from '../assets/naveen_pal.jpeg';
+import prateekNarang from '../assets/prateek_narang.jpeg';
 
 export default function Speakers() {
     const theme=useTheme();
@@ -21,22 +22,19 @@ export default function Speakers() {
             }
         },
         {
-            title: "Mayank Rajvansh",
-            description: "UI/ UX Designer",
-            imgUrl: speaker,
+            title: "Naveen Pal",
+            description: "Naveen Pal is an experienced UX/UI designer with 3 years of experience in IT industry, specialized in creating intuitive and seamless technology experiences for diverse range of projects, passionate about innovation and user-friendly design.",
+            imgUrl: naveenPal,
             links: {
-                github: "https://github.com/blaze2004",
-                twitter: "https://twitter.com/@blaze06112004",
-                linkedin: "https://linkedin.com/blaze2004"
+                linkedin: "https://www.linkedin.com/in/naveen-pal-72435919a"
             }
         },
         {
-            title: "Unnati Chhabra",
-            description: (<Typography>SDE <a href='https://zomato.com' target="_blank" rel="noreferrer">@Zomato</a>, Founder of CodXCrypt, an open-source community with a goal of teaching every student about open-source and have already impacted 10,000+ people through their community.</Typography>),
-            imgUrl: unnatiChhabra,
+            title: "Prateek Narang",
+            description: (<Typography>Prateek Narang is a software engineer and professional coding instructor, currently works at Google and founded an online platform for coding education, <a href='https://codingminutes.com' target="_blank" rel="noreferrer">CodingMinutes.com</a>. He mentored over 50,000 students in programming as a former co-founder at Coding Blocks.</Typography>),
+            imgUrl: prateekNarang,
             links: {
-                twitter: "https://twitter.com/Unnati_twts",
-                linkedin: "https://www.linkedin.com/in/unnati-chhabra-"
+                linkedin: "https://www.linkedin.com/in/prateeknarang27"
             }
         },
     ];
@@ -83,7 +81,7 @@ export default function Speakers() {
                             description={speaker.description}
                             img={speaker.imgUrl}
                             person={true}
-                            colorTheme="linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)"
+                            // colorTheme="linear-gradient(114deg, #FF3CAC 0%, #784BA0 70%)"
                             links={speaker.links}
                         />
                     ))

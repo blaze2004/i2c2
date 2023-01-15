@@ -17,6 +17,7 @@ export default function Rewards() {
             medal: 'Silver',
             img: silver,
             position: 'SECOND PLACE',
+            cash: 0,
             prizes: [
                 "Cash Prize: To be announced",
                 "Goodies & Tshirts",
@@ -28,6 +29,7 @@ export default function Rewards() {
             medal: 'Gold',
             img: gold,
             position: 'FIRST PLACE',
+            cash: 0,
             prizes: [
                 "Cash Prize: To be announced",
                 "Goodies & Tshirts",
@@ -39,6 +41,7 @@ export default function Rewards() {
             medal: 'Bronze',
             img: bronze,
             position: 'THIRD PLACE',
+            cash: 0,
             prizes: [
                 "Cash Prize:To be announced",
                 "Goodies & Tshirts",

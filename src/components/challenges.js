@@ -100,7 +100,7 @@ export default function Challenges() {
                             title={challenge.title}
                             description={challenge.description}
                             img={challenge.imgUrl}
-                            colorTheme="linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)"
+                            // colorTheme="linear-gradient(147deg, #FFE53B 0%, #FF2525 51%, #f00ed6 100%)"
                         />
                     ))
                 }

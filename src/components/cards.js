@@ -42,7 +42,14 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                 background: 'transparent',
                 width: mobileScreen? '280px':'400px',
                 height: '350px',
-                perspective: '1000px'
+                perspective: '1000px',
+                overflow: 'hidden',
+                backgroundImage: `url(${img.src})`,
+                // backgroundSize: '100% 100%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: '2rem',
+                boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
             }}
         >
             <Box
@@ -54,35 +61,21 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                     transition: 'transform 0.8s',
                     transformStyle: 'preserve-3d',
                     ":hover": {
-                        transform: 'rotateY(180deg)',
+                        transform: 'translateY(-350px)',
                     }
                 }}
             >
-                <Box sx={{
-                    borderRadius: '2rem',
-                    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-                    backgroundImage: `url(${img.src})`,
-                    // backgroundSize: '100% 100%',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    WebkitBackfaceVisibility: 'hidden',
-                    backfaceVisibility: 'hidden'
-                }}>
-                </Box>
                 <Box
                     sx={{
                         borderRadius: '2rem',
-                        background: colorTheme||'linear-gradient(to right, #f284c3, #d574bb, #b865b3, #9957aa, #784ba0)',
+                        background: colorTheme||'linear-gradient(90deg, #21D4FD 0%, #215dff 100%)',
                         position: 'absolute',
                         width: '100%',
                         height: '100%',
                         backgroundSize: 'cover',
-                        WebkitBackfaceVisibility: 'hidden',
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)',
+                        // WebkitBackfaceVisibility: 'hidden',
+                        // backfaceVisibility: 'hidden',
+                        transform: 'translateY(350px)',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
@@ -159,12 +152,41 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                         </DialogActions>
                     </Dialog>
                 </Box>
+
+                {/* <Box sx={{
+                    borderRadius: '2rem',
+                    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                    backgroundImage: `url(${img.src})`,
+                    // backgroundSize: '100% 100%',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    // transform: 'translateY(-350px)',
+                    // WebkitBackfaceVisibility: 'hidden',
+                    // backfaceVisibility: 'hidden'
+                }}>
+                </Box> */}
             </Box>
         </Box>
     );
 }
 
 export function RewardsCard({ reward }) {
+
+    const [open, setOpen]=useState(false);
+
+    const handleClickOpen=() => {
+        setOpen(true);
+    };
+
+    const handleClose=() => {
+        setOpen(false);
+    };
+
+    const theme=useTheme();
+
     return (
         <Box
             sx={{
@@ -174,7 +196,7 @@ export function RewardsCard({ reward }) {
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
                 p: 2,
                 alignItems: 'center',
-                background: "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
+                background: "linear-gradient(90deg, #21D4FD 0%, #215dff 100%)",
                 "&:hover": {
                     transform: "translateY(-3px)",
                     boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
@@ -185,23 +207,38 @@ export function RewardsCard({ reward }) {
                 {reward.medal}
             </Typography>
             <Image src={reward.img} alt="rewards" width={250} height={250} />
-            <Box
-                sx={{
-                    p: 2,
-                }}
+
+            <Typography fontWeight={"bold"} variant={"h4"} gutterBottom sx={{ mt: 2}}>{reward.cash==0? "To be announced":reward.cash}</Typography>
+
+            <Button sx={{borderRadius: '1rem'}} variant={'contained'} onClick={handleClickOpen}>More Prizes</Button>
+
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
             >
-                {
-                    reward.prizes.map((prize, key) => (
-                        <Box key={key} >
-                            <Typography color="#000" fontSize={"large"}>
-                                {prize}
-                            </Typography>
-                            <Divider />
-                        </Box>
-                    ))
-                }
-            </Box>
-            <Button variant={'contained'}>Know More</Button>
+                <DialogTitle id="alert-dialog-title" color={theme.palette.neutral.black}>
+                    Prizes for {reward.medal} Medallist
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText color={theme.palette.neutral.black}>
+                        {
+                            reward.prizes.map((prize, key) => (
+                                <Box key={key} >
+                                    <Typography fontSize={"large"}>
+                                        {prize}
+                                    </Typography>
+                                    <Divider />
+                                </Box>
+                            ))
+                        }
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button autoFocus onClick={handleClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     );
 }
@@ -307,7 +344,7 @@ export function SummaryCard({ title, content, button, image, flexDirection="row-
                     button? (
                         <Button
                             variant="contained"
-                            onClick={()=>window.open(link, '_blank', 'noopener,noreferrer')}
+                            onClick={() => window.open(link, '_blank', 'noopener,noreferrer')}
                             sx={{
                                 textTransform: 'none',
                                 borderRadius: '1.5rem',

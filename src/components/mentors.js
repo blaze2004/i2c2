@@ -2,43 +2,39 @@ import styles from '../styles/Home.module.css';
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
-import speaker from '../assets/speaker1.jpg';
+import rishavAggarwal from '../assets/rishav_agarwal.jpg';
+import bratatiDas from '../assets/bratati_das.jpeg';
+import akashJaiswal from '../assets/akash_jaiswal.jpeg';
 
 export default function Mentors() {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
 
     const mentors=[
-        // {
-        //     title: "Abhilash Jain",
-        //     description: "Web Developer",
-        //     imgUrl: speaker,
-        //     links: {
-        //         github: "https://github.com/blaze2004",
-        //         twitter: "https://twitter.com/@blaze06112004",
-        //         linkedin: "https://linkedin.com/blaze2004"
-        //     }
-        // },
-        // {
-        //     title: "Rajesh Singh",
-        //     description: "iOS App Developer",
-        //     imgUrl: speaker,
-        //     links: {
-        //         github: "https://github.com/blaze2004",
-        //         twitter: "https://twitter.com/@blaze06112004",
-        //         linkedin: "https://linkedin.com/blaze2004"
-        //     }
-        // },
-        // {
-        //     title: "Mayank Rajvansh",
-        //     description: "UI/ UX Designer",
-        //     imgUrl: speaker,
-        //     links: {
-        //         github: "https://github.com/blaze2004",
-        //         twitter: "https://twitter.com/@blaze06112004",
-        //         linkedin: "https://linkedin.com/blaze2004"
-        //     }
-        // },
+        {
+            title: "Rishav Agarwal",
+            description: "Idea Generation",
+            imgUrl: rishavAggarwal,
+            links: {
+                linkedin: "https://www.linkedin.com/in/rishav-agarwal/",
+            }
+        },
+        {
+            title: "Bratati Das	",
+            description: "UI/UX Design",
+            imgUrl: bratatiDas,
+            links: {
+                linkedin: "https://www.linkedin.com/in/bratatidas/"
+            }
+        },
+        {
+            title: "Akash Jaiswal",
+            description: "Project Development",
+            imgUrl: akashJaiswal,
+            links: {
+                linkedin: "https://www.linkedin.com/in/akashjaiswal03"
+            }
+        },
     ];
 
     return (
@@ -85,7 +81,7 @@ export default function Mentors() {
                                     title={mentor.title}
                                     description={mentor.description}
                                     img={mentor.imgUrl}
-                                    colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
+                                    // colorTheme="linear-gradient(90deg, #21D4FD 0%, #215dff 100%)"
                                     person={true}
                                     links={mentor.links}
                                 />
