@@ -31,7 +31,7 @@ export default function Speakers() {
         },
         {
             title: "Prateek Narang",
-            description: (<Typography>Prateek Narang is a software engineer and professional coding instructor, currently works at Google and founded an online platform for coding education, <a href='https://codingminutes.com' target="_blank" rel="noreferrer">CodingMinutes.com</a>. He mentored over 50,000 students in programming as a former co-founder at Coding Blocks.</Typography>),
+            description: (<Typography>Prateek Narang is a software engineer and professional coding instructor, ex-Google SDE and currently works at Scaler and founded, <a href='https://codingminutes.com' target="_blank" rel="noreferrer">CodingMinutes.com</a>. He mentored over 50,000 students in programming as a former co-founder at Coding Blocks.</Typography>),
             imgUrl: prateekNarang,
             links: {
                 linkedin: "https://www.linkedin.com/in/prateeknarang27"

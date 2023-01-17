@@ -18,7 +18,7 @@ import chatraShala from '../assets/chatra_shala.jpeg';
 import coderEvoke from '../assets/coders_evoke.jpeg';
 import skillShip from '../assets/skillship_logo.png';
 import mindsDb from '../assets/mindsDB_logo.png';
-import threeWay from '../assets/Threeway_Logo.png';
+import threeWay from '../assets/threeway_logo.jpeg';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -207,7 +207,7 @@ export default function Sponsors() {
                     color: theme.palette.text.light
                 }}
             >
-                Sponsors &amp; Partners
+                Sponsors &amp; Community Partners
             </Typography>
 
             <Box
