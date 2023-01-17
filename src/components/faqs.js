@@ -41,7 +41,7 @@ export default function Faqs() {
         },
         {
             summary: "Have more questions?",
-            description: (<Typography>Join our <Link href="https://discord.com" style={{ textDecoration: 'none', color: '#21D4FD' }}>Discord Community</Link> Get in touch with a bigger community and ask any further queries you may have. Looking forward to welcoming you.</Typography>)
+            description: (<Typography>Join our <Link href="https://discord.io/i2c2-hackathon" style={{ textDecoration: 'none', color: '#21D4FD' }}>Discord Community</Link> Get in touch with a bigger community and ask any further queries you may have. Looking forward to welcoming you.</Typography>)
         }
     ];
 
