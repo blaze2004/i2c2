@@ -2,13 +2,13 @@ import styles from '../styles/Home.module.css';
 import { Box, Slide, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
-import health from '../assets/1health.png';
-import edu from '../assets/2education.png';
-import environ from '../assets/3environment.png';
-import web3 from '../assets/4web3.jpg';
-import sports from '../assets/5sports.jpg';
-import misc from '../assets/6Miscel.jpg';
-import entrepreneurs from "../assets/entrepreneurship.jpg";
+import health from '../assets/health.png';
+import edu from '../assets/education.png';
+import environ from '../assets/environment.png';
+import web3 from '../assets/web3.png';
+import sports from '../assets/sports.png';
+import misc from '../assets/miscellaneous.png';
+import entrepreneurs from "../assets/entrepreneurship.png";
 // import bgMesh from '../assets/red_yellow_mesh.jpg';
 
 export default function Challenges() {

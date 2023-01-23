@@ -1,8 +1,8 @@
 import { Box, Tabs, Tab, useMediaQuery, Typography } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
-import banner from '../assets/logo.jpg';
-import whyParticipate from '../assets/bird.png';
-import crystal from '../assets/crystal.png';
+import speaker from '../assets/speaker.png';
+import mentor from '../assets/mentor.png';
+import campusChamp from '../assets/campus_champ.png';
 import { SummaryCard } from './cards';
 import { useState } from 'react';
 
@@ -119,7 +119,7 @@ export default function JoinUs() {
                     content={
                         "Want to share your knowledge and expertise in technology? Join us as a speaker and impart your wisdom to the next generation of tech innovators."
                     }
-                    image={banner.src}
+                    image={speaker.src}
                     button={true}
                     link="https://bit.ly/i2c2CallForSpeaker"
                 />
@@ -132,7 +132,7 @@ export default function JoinUs() {
                     content={
                         "Use your expertise to shape the future of technology by mentoring young coders at I2C2. Help guide and support the next generation of hackers to reach their full potential."
                     }
-                    image={whyParticipate.src}
+                    image={mentor.src}
                     button={true}
                     link="https://bit.ly/i2c2CallForMentors"
                 />
@@ -140,11 +140,11 @@ export default function JoinUs() {
 
             <TabPanel value={value} index={2}>
                 <SummaryCard
-                    title={"Campus Ambassador"}
+                    title={"Campus Champ"}
                     content={
                         "Represent I2C2 as a campus ambassador and become the face of the hackathon by promoting it in your campus and encouraging students to participate and win goodies."
                     }
-                    image={crystal.src}
+                    image={campusChamp.src}
                     button={true}
                     link="https://bit.ly/i2c2CallForCampusChamp"
                 />
