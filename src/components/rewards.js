@@ -19,7 +19,7 @@ export default function Rewards() {
             position: 'SECOND PLACE',
             cash: 0,
             prizes: [
-                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                (<Typography key={2}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -31,7 +31,7 @@ export default function Rewards() {
             position: 'FIRST PLACE',
             cash: 0,
             prizes: [
-                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                (<Typography key={1}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -43,7 +43,7 @@ export default function Rewards() {
             position: 'THIRD PLACE',
             cash: 0,
             prizes: [
-                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                (<Typography key={3}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
