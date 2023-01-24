@@ -19,6 +19,7 @@ import coderEvoke from '../assets/coders_evoke.jpeg';
 import skillShip from '../assets/skillship_logo.png';
 import mindsDb from '../assets/mindsDB_logo.png';
 import threeWay from '../assets/threeway_logo.jpeg';
+import tezos from '../assets/tezos.jpeg';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -76,6 +77,11 @@ export default function Sponsors() {
                 title: "Minds DB",
                 imgUrl: mindsDb,
                 link: "https://mindsdb.com"
+            },
+            {
+                title: "Tezos",
+                imgUrl: tezos,
+                link: 'https://tezos.com'
             }
         ],
         economy: [
