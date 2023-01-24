@@ -45,7 +45,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                 perspective: '1000px',
                 overflow: 'hidden',
                 backgroundImage: `url(${img.src})`,
-                backgroundSize: '100% 100%',
+                backgroundSize: person ? 'cover': (mobileScreen ? '100% 100%': 'cover'),
                 // backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 borderRadius: '2rem',

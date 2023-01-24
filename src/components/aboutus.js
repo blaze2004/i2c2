@@ -64,10 +64,31 @@ function CommunityCard({ name, bio, logo, link }) {
                     background: 'transparent',
                     width: '350px',
                     height: '300px',
-                    perspective: '1000px',
                 }}
             >
                 <Box
+                    sx={{
+                        p: '22px',
+                        borderRadius: '1.2rem',
+                        border: '2px solid #272727',
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(45deg, #c7c7c72e, transparent)',
+                        backgroundSize: '100%',
+                        textAlign: 'justify',
+                        boxShadow: '0px 14px 80px rgb(58 64 186 / 17%)',
+                    }}>
+                    <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <Typography variant="h3" fontWeight={"bold"} sx={{ mb: 2 }}>
+                            {name}
+                        </Typography>
+                        <Image alt="community-logo" src={logo.src} width={60} height={60} />
+                    </Box>
+                    <Typography>
+                        {bio}
+                    </Typography>
+                </Box>
+                {/* <Box
                     sx={{
                         position: 'relative',
                         width: '100%',
@@ -78,31 +99,9 @@ function CommunityCard({ name, bio, logo, link }) {
                             transform: 'rotateY(180deg)',
                         }
                     }}
-                >
-                    <Box
-                        sx={{
-                            p: '22px',
-                            borderRadius: '1.2rem',
-                            border: '2px solid #272727',
-                            width: '100%',
-                            height: '100%',
-                            background: 'linear-gradient(45deg, #c7c7c72e, transparent)',
-                            backgroundSize: '100%',
-                            textAlign: 'justify',
-                            WebkitBackfaceVisibility: 'hidden',
-                            backfaceVisibility: 'hidden',
-                            boxShadow: '0px 14px 80px rgb(58 64 186 / 17%)',
-                            position: 'absolute',
-                        }}>
-                        <Typography variant="h3" fontWeight={"bold"} sx={{ mb: 2 }}>
-                            {name}
-                        </Typography>
-                        <Typography>
-                            {bio}
-                        </Typography>
-                    </Box>
+                > */}
 
-                    <Box
+                {/* <Box
                         sx={{
                             borderRadius: '2rem',
                             background: 'linear-gradient(to right, #f284c3, #d574bb, #b865b3, #9957aa, #784ba0)',
@@ -119,9 +118,8 @@ function CommunityCard({ name, bio, logo, link }) {
                             wordWrap: 'break-word'
                         }}
                     >
-                        <Image alt="community-logo" src={logo.src} width={80} height={80} />
-                    </Box>
-                </Box>
+                    </Box> */}
+                {/* </Box> */}
             </Box>
         </a>
     );
