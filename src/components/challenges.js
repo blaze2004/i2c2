@@ -18,37 +18,37 @@ export default function Challenges() {
     const challenges=[
         {
             title: "Health",
-            description: "How will you solve the problems in health awareness for teenagers?",
+            description: "To be announced",
             imgUrl: health,
         },
         {
             title: "Education",
-            description: "One of the main problems facing K-12 education is the achievement gap between low-income and minority students and their more affluent and non-minority peers. This gap is often the result of a lack of access to quality education and resources, and it can lead to significant disparities in educational outcomes and opportunities. Other issues facing K-12 education include inadequate funding, under-qualified teachers, and large class sizes. These factors can make it difficult for schools to provide students with the individualized attention and support they need to succeed.",
+            description: "To be announced",
             imgUrl: edu,
         },
         {
             title: "Environment",
-            description: "How will you solve the problems in the environment sector in the post - covid world using the latest technologies?",
+            description: "To be announced",
             imgUrl: environ,
         },
         {
             title: "Web3 Accessibility",
-            description: "How can we make web3 space more accessible & improve the user onboarding experience?",
+            description: "To be announced",
             imgUrl: web3,
         },
         {
             title: "Sports",
-            description: "One of the main problems facing the e-sports industry is the lack of regulation and standardization. Because e-sports is a relatively new and rapidly evolving industry, there are few established rules and guidelines for teams, players, and organizations to follow. This can lead to confusion and inconsistencies in how competitions are run, and can make it difficult for e-sports to be taken seriously as a legitimate form of competition. Another problem is the lack of clear revenue-sharing models, many professional e-sports players are not making a living wage, this lack of revenue sharing also makes it difficult to form a sustainable business model for teams, organizations, and investors. Another problem facing the e-sports industry is the lack of infrastructure and support for players. Many professional e-sports players are not provided with the same training, resources, and support as traditional athletes, which can make it difficult for them to perform at the highest level.",
+            description: "To be announced",
             imgUrl: sports,
         },
         {
             title: "Entrepreneurship",
-            description: "India has a large and rapidly growing market for technology and internet services, but lacks a significant number of companies that can match the reach and impact of their foreign counterparts, resulting in a trade deficit in the technology sector. The absence of large, successful technology companies in India limits the opportunities for domestic entrepreneurs and engineers and reduces the incentive for foreign companies to invest in the country. This lack of a thriving technology ecosystem hinders India's economic growth, innovation, and ability to fully tap into the potential of its skilled population",
+            description: "To be announced",
             imgUrl: entrepreneurs,
         },
         {
             title: "Miscellaneous",
-            description: "",
+            description: "To be announced",
             imgUrl: misc,
         },
     ];

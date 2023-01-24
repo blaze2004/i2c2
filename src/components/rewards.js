@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { RewardsCard } from './cards';
 import gold from '../assets/trophy.png';
@@ -19,7 +19,7 @@ export default function Rewards() {
             position: 'SECOND PLACE',
             cash: 0,
             prizes: [
-                "Cash Prize: To be announced",
+                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -31,7 +31,7 @@ export default function Rewards() {
             position: 'FIRST PLACE',
             cash: 0,
             prizes: [
-                "Cash Prize: To be announced",
+                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -43,7 +43,7 @@ export default function Rewards() {
             position: 'THIRD PLACE',
             cash: 0,
             prizes: [
-                "Cash Prize:To be announced",
+                (<Typography>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
