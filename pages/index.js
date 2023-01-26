@@ -88,7 +88,7 @@ export default function Home() {
         variant={variant}
         // color="green"
         aria-label="join whatsapp group"
-        onClick={() => window.open("https://chat.whatsapp.com/KtuB2CpU6EH9Sku2xV2igA", '_blank', 'noopener,noreferrer')}
+        onClick={() => window.open("https://chat.whatsapp.com/GWUyDCZ0qlfKqrYelHLp3t", '_blank', 'noopener,noreferrer')}
         sx={{
           position: 'fixed',
           bottom: 48,
