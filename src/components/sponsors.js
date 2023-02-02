@@ -20,6 +20,7 @@ import skillShip from '../assets/skillship_logo.png';
 import mindsDb from '../assets/mindsDB_logo.png';
 import threeWay from '../assets/threeway_logo.jpeg';
 import tezos from '../assets/tezos.jpeg';
+import fire from '../assets/5ire.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -82,6 +83,11 @@ export default function Sponsors() {
                 title: "Tezos",
                 imgUrl: tezos,
                 link: 'https://tezos.com'
+            },
+            {
+                title: '5ire chain',
+                imgUrl: fire,
+                link: 'https://www.5ire.org'
             }
         ],
         economy: [
