@@ -18,7 +18,7 @@ export default function Footer() {
             <IconButton onClick={() => window.open("https://twitter.com/i2c2hackathon", '_blank', 'noopener,noreferrer')}>
                 <Twitter color="primary" />
             </IconButton>
-            <IconButton onClick={() => window.open("https://chat.whatsapp.com/KtuB2CpU6EH9Sku2xV2igA", '_blank', 'noopener,noreferrer')}>
+            <IconButton onClick={() => window.open("https://chat.whatsapp.com/GWUyDCZ0qlfKqrYelHLp3t", '_blank', 'noopener,noreferrer')}>
                 <WhatsApp color="primary" />
             </IconButton>
             <IconButton onClick={() => window.open("mailto:contact.i2c2@gmail.com", '_blank', 'noopener,noreferrer')}>
