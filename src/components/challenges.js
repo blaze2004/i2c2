@@ -32,8 +32,8 @@ export default function Challenges() {
             imgUrl: environ,
         },
         {
-            title: "Web3 Accessibility",
-            description: "To be announced",
+            title: "Blockchain",
+            description: (<Typography>Build a platform for the users to design their own avatar (e.g. <a href="https://avatarmaker.com" target={"_blank"} rel="noreferrer">https://avatarmaker.com</a>) and mint them as an NFT on Tezos for a price based on the amount of personalization they’ve added to their avatar such as makeup, hair, facial hair, and accessories, etc.  A generative NFT collection in short.</Typography>),
             imgUrl: web3,
         },
         {

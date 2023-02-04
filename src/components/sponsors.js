@@ -21,6 +21,7 @@ import mindsDb from '../assets/mindsDB_logo.png';
 import threeWay from '../assets/threeway_logo.jpeg';
 import tezos from '../assets/tezos.jpeg';
 import fire from '../assets/5ire.png';
+import balsamiq from '../assets/balsamiq.png';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -135,6 +136,11 @@ export default function Sponsors() {
                 title: 'cybrancee',
                 imgUrl: cybrancee,
                 link: 'https://cybrancee.com'
+            },
+            {
+                title: 'balsamiq',
+                imgUrl: balsamiq,
+                link: 'https://balsamiq.com'
             }
         ]
     };
