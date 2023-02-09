@@ -6,7 +6,7 @@ import health from '../assets/health.png';
 import edu from '../assets/education.png';
 import environ from '../assets/environment.png';
 import web3 from '../assets/web3.png';
-import sports from '../assets/sports.png';
+import frontend from '../assets/frontend.png';
 import misc from '../assets/miscellaneous.png';
 import entrepreneurs from "../assets/entrepreneurship.png";
 // import bgMesh from '../assets/red_yellow_mesh.jpg';
@@ -33,13 +33,13 @@ export default function Challenges() {
         },
         {
             title: "Blockchain",
-            description: (<Typography>Build a platform for the users to design their own avatar (e.g. <a href="https://avatarmaker.com" target={"_blank"} rel="noreferrer">https://avatarmaker.com</a>) and mint them as an NFT on Tezos for a price based on the amount of personalization they’ve added to their avatar such as makeup, hair, facial hair, and accessories, etc.  A generative NFT collection in short.</Typography>),
+            description: (<Typography>Build a platform for the users to design their own avatar (e.g. <a href="https://avatarmaker.com" target={"_blank"} rel="noreferrer">https://avatarmaker.com</a>) and mint them as an NFT on Tezos for a price based on the amount of personalization they’ve added to their avatar such as makeup, hair, facial hair, and accessories, etc. A generative NFT collection in short.</Typography>),
             imgUrl: web3,
         },
         {
-            title: "Sports",
-            description: "To be announced",
-            imgUrl: sports,
+            title: "Frontend Dev",
+            description: "Redesign 5irechain's website with theme inspired from NFT, Dexas and all. You have to submit complete code for the website and not just figma(Wireframing).",
+            imgUrl: frontend,
         },
         {
             title: "Entrepreneurship",
@@ -48,7 +48,7 @@ export default function Challenges() {
         },
         {
             title: "Miscellaneous",
-            description: "To be announced",
+            description: "Bring your own awesome project.",
             imgUrl: misc,
         },
     ];
