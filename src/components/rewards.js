@@ -17,9 +17,9 @@ export default function Rewards() {
             medal: 'Silver',
             img: silver,
             position: 'SECOND PLACE',
-            cash: 0,
+            cash: '₹ 5,000',
             prizes: [
-                (<Typography key={2}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                'Cash Prize: ₹5k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -29,9 +29,9 @@ export default function Rewards() {
             medal: 'Gold',
             img: gold,
             position: 'FIRST PLACE',
-            cash: 0,
+            cash: '₹ 10,000',
             prizes: [
-                (<Typography key={1}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                'Cash Prize: ₹10k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -41,9 +41,9 @@ export default function Rewards() {
             medal: 'Bronze',
             img: bronze,
             position: 'THIRD PLACE',
-            cash: 0,
+            cash: '₹ 2,000',
             prizes: [
-                (<Typography key={3}>Cash Prize: <Button variant="contained">To be announced</Button></Typography>),
+                'Cash Prize: ₹2k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
                 "Food Coupons, domain name etc."
@@ -89,7 +89,8 @@ export default function Rewards() {
                     mt: "1rem",
                     mb: "2rem",
                 }}>
-                Great rewards for everyone!
+                Great rewards for everyone!<br />
+                ₹2 Lakh+ in cash prizes and goodies!
             </Typography>
 
             <Box className={styles.cardsList}>
