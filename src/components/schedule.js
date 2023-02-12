@@ -9,7 +9,7 @@ export default function Schedule() {
 
     const steps=[
         {
-            text: 'Hackathon starts along with the idea phase',
+            text: 'Idea Deadline Approaching - Idea Phase',
             date: '10 March 2023',
         },
         {
