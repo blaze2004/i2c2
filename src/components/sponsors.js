@@ -13,15 +13,18 @@ import taskade from '../assets/logo_taskade_black.png';
 import { useState } from 'react';
 import cybrancee from '../assets/logo_cybrancee.png';
 import codingMinutes from '../assets/coding_minutes_logo.png';
-import sosTech from '../assets/sos_tech.jpeg';
+import sosTech from '../assets/sos_tech.png';
 import chatraShala from '../assets/chatra_shala.jpeg';
-import coderEvoke from '../assets/coders_evoke.jpeg';
+import coderEvoke from '../assets/coders_evoke.png';
 import skillShip from '../assets/skillship_logo.png';
 import mindsDb from '../assets/mindsDB_logo.png';
 import threeWay from '../assets/threeway_logo.jpeg';
 import tezos from '../assets/tezos.jpeg';
 import fire from '../assets/5ire.png';
 import balsamiq from '../assets/balsamiq.png';
+import algocs from '../assets/algocs.jpeg';
+import amitycc from '../assets/amity_coding_club.png';
+import { useRouter } from 'next/router';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -165,7 +168,17 @@ export default function Sponsors() {
             title: "Coders Evoke",
             imgUrl: coderEvoke,
             link: "https://www.linkedin.com/company/codersevoke/"
-        }
+        },
+        {
+            title: 'algocs',
+            imgUrl: algocs,
+            link: '',
+        },
+        {
+            title: 'amitycc',
+            imgUrl: amitycc,
+            link: '',
+        },
     ];
 
     const StyledTabs=styled((props) => (
@@ -325,16 +338,43 @@ export default function Sponsors() {
                         Let&apos;s Partner
                     </Button>
                 </Box>
-                <SponsorGroup title={""} sponsors={communityPartners} />
+                <SponsorGroup title={""} sponsors={communityPartners} button={true} />
             </TabPanel>
         </Box>
     );
 }
 
 
-function SponsorGroup({ title, sponsors }) {
+function SponsorGroup({ title, sponsors, button=false }) {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
     const theme=useTheme();
+    const router=useRouter();
+
+    const loadMoreButton=(
+        <Box sx={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <Button
+            variant='contained'
+            onClick={()=>router.push('communities')}
+            sx={{
+                textTransform: 'none',
+                borderRadius: '1.5rem',
+                background: theme.palette.background.secondary,
+                fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                fontSize: theme.typography.pxToRem(16),
+                marginRight: theme.spacing(1),
+                color: 'rgba(255, 255, 255, 0.7)',
+                '&.Mui-selected': {
+                    color: '#fff',
+                },
+                '&.Mui-focusVisible': {
+                    backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                },
+            }}
+        >
+            Load More
+        </Button>
+        </Box>
+    )
 
     if (sponsors.length<1) {
         return;
@@ -392,6 +432,9 @@ function SponsorGroup({ title, sponsors }) {
                     ))
                 }
             </Box>
+            {
+                button&&loadMoreButton
+            }
         </Box>
     );
 }
