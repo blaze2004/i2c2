@@ -55,7 +55,7 @@
   }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1480px) {
   .communityList {
       grid-template-columns: repeat(4, 1fr);
   }

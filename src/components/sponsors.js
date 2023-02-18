@@ -24,6 +24,8 @@ import fire from '../assets/5ire.png';
 import balsamiq from '../assets/balsamiq.png';
 import algocs from '../assets/algocs.jpeg';
 import amitycc from '../assets/amity_coding_club.png';
+import trikon from '../assets/trikon.jpeg';
+import Github from '../assets/GitHub_Logo.png';
 import { useRouter } from 'next/router';
 // import bgMesh from '../assets/light_mesh.jpg';
 
@@ -92,6 +94,11 @@ export default function Sponsors() {
                 title: '5ire chain',
                 imgUrl: fire,
                 link: 'https://www.5ire.org'
+            },
+            {
+                title: "Trikon",
+                imgUrl: trikon,
+                link: 'https://trikon.io'
             }
         ],
         economy: [
@@ -115,6 +122,11 @@ export default function Sponsors() {
                 imgUrl: replit,
                 link: 'https://replit.com'
             },
+            {
+                title: 'Github',
+                imgUrl: Github,
+                link: 'https://github.com'
+            }
         ],
         standard: [
 

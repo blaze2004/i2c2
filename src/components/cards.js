@@ -36,6 +36,27 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
     const mobileScreen=useMediaQuery('(max-width: 500px)');
     const { github, twitter, linkedin, instagram }=links;
 
+    const challengeDetailBox=(
+        <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+        >
+            <DialogTitle id="alert-dialog-title" color={theme.palette.neutral.black}>
+                Problem Statement for {title} category
+            </DialogTitle>
+            <DialogContent>
+                <DialogContentText color={theme.palette.neutral.black}>
+                    {description}
+                </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button autoFocus onClick={handleClose}>Close</Button>
+            </DialogActions>
+        </Dialog>
+    );
+
     return (
         <Box
             sx={{
@@ -45,7 +66,7 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                 perspective: '1000px',
                 overflow: 'hidden',
                 backgroundImage: `url(${img.src})`,
-                backgroundSize: person ? 'cover': (mobileScreen ? '100% 100%': 'cover'),
+                backgroundSize: person? 'cover':(mobileScreen? '100% 100%':'cover'),
                 // backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 borderRadius: '2rem',
@@ -59,7 +80,6 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                     height: '100%',
                     textAlign: 'center',
                     transition: 'transform 0.8s',
-                    transformStyle: 'preserve-3d',
                     ":hover": {
                         transform: 'translateY(-350px)',
                     }
@@ -130,44 +150,11 @@ export default function HoverInfoCard({ title, description, img, colorTheme, per
                                     <Button variant="contained" sx={{ borderRadius: '2rem', maxWidth: 'max-content' }} onClick={handleClickOpen}>
                                         View Problem Statement
                                     </Button>
+                                    {challengeDetailBox}
                                 </Box>
                             )
                     }
-                    <Dialog
-                        open={open}
-                        onClose={handleClose}
-                        aria-labelledby="alert-dialog-title"
-                        aria-describedby="alert-dialog-description"
-                    >
-                        <DialogTitle id="alert-dialog-title" color={theme.palette.neutral.black}>
-                            Problem Statement for {title} category
-                        </DialogTitle>
-                        <DialogContent>
-                            <DialogContentText color={theme.palette.neutral.black}>
-                                {description}
-                            </DialogContentText>
-                        </DialogContent>
-                        <DialogActions>
-                            <Button autoFocus onClick={handleClose}>Close</Button>
-                        </DialogActions>
-                    </Dialog>
                 </Box>
-
-                {/* <Box sx={{
-                    borderRadius: '2rem',
-                    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-                    backgroundImage: `url(${img.src})`,
-                    // backgroundSize: '100% 100%',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    // transform: 'translateY(-350px)',
-                    // WebkitBackfaceVisibility: 'hidden',
-                    // backfaceVisibility: 'hidden'
-                }}>
-                </Box> */}
             </Box>
         </Box>
     );
@@ -208,9 +195,9 @@ export function RewardsCard({ reward }) {
             </Typography>
             <Image src={reward.img} alt="rewards" width={250} height={250} />
 
-            <Typography fontWeight={"bold"} variant={"h4"} gutterBottom sx={{ mt: 2}}>{reward.cash==0? "To be announced":reward.cash}</Typography>
+            <Typography fontWeight={"bold"} variant={"h4"} gutterBottom sx={{ mt: 2 }}>{reward.cash==0? "To be announced":reward.cash}</Typography>
 
-            <Button sx={{borderRadius: '1rem'}} variant={'contained'} onClick={handleClickOpen}>More Prizes</Button>
+            <Button sx={{ borderRadius: '1rem' }} variant={'contained'} onClick={handleClickOpen}>More Prizes</Button>
 
             <Dialog
                 open={open}

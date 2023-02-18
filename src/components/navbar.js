@@ -27,6 +27,7 @@ export default function Navbar() {
             <Box sx={{ display: 'flex', flexDirection: smallScreen? 'column':'row', alignItems: 'center' }}>
                 <NavbarLink href="/#challenges">Challenges</NavbarLink>
                 <NavbarLink href="/#rewards">Rewards</NavbarLink>
+                <NavbarLink href="/swags">Swags</NavbarLink>
                 <NavbarLink href="/#schedule">Schedule</NavbarLink>
                 <NavbarLink href="/#sponsors">Sponsors</NavbarLink>
                 <NavbarLink href="/#faq">FAQ</NavbarLink>
