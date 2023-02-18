@@ -246,7 +246,7 @@ export function BadgeBuilderCard() {
 
             </CardContent>
 
-            <Badge ref={badgeRef} name={name.trim()==""? "Your Name":name} image={image} />
+            <Badge badgeRef={badgeRef} name={name.trim()==""? "Your Name":name} image={image} />
 
         </Card>
     );

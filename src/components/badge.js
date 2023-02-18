@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import logo from '../assets/logo.png';
 import Image from 'next/image';
 
-export default function Badge({ name, image, ref }) {
+export default function Badge({ name, image, badgeRef }) {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
     return (
@@ -35,7 +35,7 @@ export default function Badge({ name, image, ref }) {
                     opacity: 0
                 }
             }}
-            ref={ref}
+            ref={badgeRef}
         >
             <Box
                 sx={{
