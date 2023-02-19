@@ -5,8 +5,8 @@ import Navbar from '../src/components/navbar';
 import Footer from '../src/components/footer';
 import edu from '../src/assets/2education.png';
 import Badge from '../src/components/badge.js';
-import { useEffect, useState, useRef } from 'react';
-// import { exportComponentAsPNG } from 'react-component-export-image';
+import { useEffect, useState, useRef, useCallback } from 'react';
+import { toPng } from 'html-to-image';
 
 export default function Swags() {
     const theme=useTheme();
@@ -100,18 +100,25 @@ export function BadgeBuilderCard() {
 
     const badgeRef=useRef(null);
 
-    const title="DigitalSwags";
+    const handleImageDownload=useCallback(() => {
+        if (badgeRef.current===null) {
+            return;
+        }
+        toPng(badgeRef.current, { cacheBust: true, })
+            .then((dataUrl) => {
+                const link=document.createElement('a')
+                link.download='i2c2-badge.png'
+                link.href=dataUrl
+                link.click()
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+
+    }, [badgeRef]);
+
+    const title="Digital Swags";
     const description="Fill your name and upload your photo to get a personalized I2C2 badge built for you only.";
-
-    // const [handleImageDownload, setHandleImageDownload]=useState(() => { });
-
-    // useEffect(() => {
-    //     setHandleImageDownload(() => {
-    //         exportComponentAsPNG(badgeRef, {
-    //             fileName: `I2C2Badge`,
-    //         });
-    //     });
-    // }, []);
 
     return (
         <Card
@@ -208,9 +215,7 @@ export function BadgeBuilderCard() {
                                 fileReader.addEventListener("load", function () {
                                     console.log(this.result);
                                     setImage(this.result);
-                                    if (name) {
-                                        setIsDownloadable(true);
-                                    }
+                                    setIsDownloadable(true);
                                 });
                             }}
                         />
@@ -221,9 +226,8 @@ export function BadgeBuilderCard() {
 
                     <Button
                         variant="contained"
-                        // onClick={handleImageDownload}
-                        // disabled={!isDownloadable||name.trim()==""}
-                        disabled={true}
+                        onClick={handleImageDownload}
+                        disabled={!isDownloadable||name.trim()==""}
                         sx={{
                             textTransform: 'none',
                             borderRadius: '1.5rem',
@@ -240,7 +244,7 @@ export function BadgeBuilderCard() {
                             },
                         }}
                     >
-                        Available Soon
+                        Download
                     </Button>
                 </Box>
 

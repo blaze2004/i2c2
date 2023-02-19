@@ -12,15 +12,9 @@ export default function Badge({ name, image, badgeRef }) {
                 flexShrink: 0,
                 width: 300,
                 height: 300,
-                paddingTop: 27.46875,
                 transform: `translateX(${smallScreen? 0:24}%)`,
                 boxShadow: "1px 1px 1px 5px rgba(252, 56, 56, 0.8)",
                 borderRadius: theme.spacing(3), // 8
-                backgroundImage: `url(${image.src? image.src:image})`,
-                // backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
                 backgroundColor: theme.palette.text.primary,
                 overflow: "hidden",
                 "&:after": {
@@ -35,24 +29,37 @@ export default function Badge({ name, image, badgeRef }) {
                     opacity: 0
                 }
             }}
-            ref={badgeRef}
         >
             <Box
                 sx={{
-                    background: "linear-gradient(90deg, #21D4FD 0%, #215dff 100%)",
-                    height: 80,
-                    borderRadius: '1.5rem',
-                    p: 2,
-                    display: 'flex',
-                    justifyContent: 'space-between'
-                }}>
+                    paddingTop: 27.46875,
+                    boxShadow: "1px 1px 1px 5px rgba(252, 56, 56, 0.8)",
+                    backgroundImage: `url(${image.src? image.src:image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundColor: theme.palette.text.primary,
+                    overflow: "hidden",
+                }}
+                ref={badgeRef}
+            >
+                <Box
+                    sx={{
+                        background: "linear-gradient(90deg, #21D4FD 0%, #215dff 100%)",
+                        height: 80,
+                        borderRadius: '1.5rem 1.5rem 0 0',
+                        p: 2,
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                    }}>
 
-                <Box>
-                    <Typography>{name}</Typography>
-                    <Typography color={"#000E20"} fontWeight="bold">I2C2 | 10th March-16 April</Typography>
+                    <Box>
+                        <Typography>{name}</Typography>
+                        <Typography color={"#000E20"} fontWeight="bold">I2C2 | 10th March-16 April</Typography>
 
+                    </Box>
+                    <Image src={logo.src} width={55} height={60} />
                 </Box>
-                <Image src={logo.src} width={55} height={60} />
             </Box>
 
         </Box>
