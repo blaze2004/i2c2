@@ -4,7 +4,6 @@ import Image from 'next/image';
 import code8 from '../assets/code8.png';
 import befikra from '../assets/befikra.jpeg';
 import codedu from '../assets/codedu.png';
-import coderwise from '../assets/coderwise_logo.png';
 import { useTheme } from '@mui/material/styles';
 
 export default function AboutUs() {
@@ -29,12 +28,6 @@ export default function AboutUs() {
             bio: 'Codedu is an Open Source Community that helps tech enthusiasts to grow their self in tech. We are providing FREE Learning Content in the form of Video as well as Notes.',
             logo: codedu,
             link: 'https://codedu.tech'
-        },
-        {
-            name: 'CoderWise',
-            bio: 'CoderWise is built with mission to enable Active Learning in the technology space by providing mentorship, connections, networks, resources, guides, and fun! Their goal is to tackle obstacles and enable everyone to achieve their maximum potential.',
-            logo: coderwise,
-            link:'https://linktr.ee/coderwise'
         }
     ];
 
