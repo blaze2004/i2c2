@@ -17,8 +17,8 @@ export default function Challenges() {
 
     const challenges=[
         {
-            title: "Health",
-            description: "To be announced",
+            title: "Gaming",
+            description: (<p>Developing an AI-powered game that can learn and adapt player behavior to provide a personalized gaming experience. unique challenges and obstacles based on the player's strengths and weaknesses.<br /><br />Challenge by <a href="https://trikon.io"><b>Trikon</b></a></p>),
             imgUrl: health,
         },
         {
@@ -26,19 +26,19 @@ export default function Challenges() {
             description: "To be announced",
             imgUrl: edu,
         },
-        {
-            title: "Environment",
-            description: "To be announced",
-            imgUrl: environ,
-        },
+        // {
+        //     title: "Environment",
+        //     description: "To be announced",
+        //     imgUrl: environ,
+        // },
         {
             title: "Blockchain",
-            description: (<Typography>Build a platform for the users to design their own avatar (e.g. <a href="https://avatarmaker.com" target={"_blank"} rel="noreferrer">https://avatarmaker.com</a>) and mint them as an NFT on Tezos for a price based on the amount of personalization they’ve added to their avatar such as makeup, hair, facial hair, and accessories, etc. A generative NFT collection in short.</Typography>),
+            description: (<Typography>Build a platform for the users to design their own avatar (e.g. <a href="https://avatarmaker.com" target={"_blank"} rel="noreferrer">https://avatarmaker.com</a>) and mint them as an NFT on Tezos for a price based on the amount of personalization they’ve added to their avatar such as makeup, hair, facial hair, and accessories, etc. A generative NFT collection in short. <br /><br />Challenge by <a href="https://tezos.com"><b>Tezos</b></a> </Typography>),
             imgUrl: web3,
         },
         {
             title: "Frontend Dev",
-            description: "Redesign 5irechain's website with theme inspired from NFT, Dexas and all. You have to submit complete code for the website and not just figma(Wireframing).",
+            description: (<p>Redesign 5irechain's website with theme inspired from NFT, Dexas and all. You have to submit complete code for the website and not just figma Wireframing.<br /><br />Challenge by <a href="https://www.5ire.org"><b>5ire</b></a><br /><br/><b>Special Prize: </b>5ireChain will provide extra $1000 (If the project is selected by 5ireChain Judges).</p>),
             imgUrl: frontend,
         },
         {

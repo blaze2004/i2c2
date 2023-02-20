@@ -22,7 +22,8 @@ export default function Rewards() {
                 'Cash Prize: ₹5k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
-                "Food Coupons, domain name etc."
+                "Food Coupons, domain name etc.",
+                "* You can see special prizes for a challenge in the challenge section."
             ]
         },
         {
@@ -34,7 +35,8 @@ export default function Rewards() {
                 'Cash Prize: ₹10k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
-                "Food Coupons, domain name etc."
+                "Food Coupons, domain name etc.",
+                "* You can see special prizes for a challenge in the challenge section."
             ]
         },
         {
@@ -46,7 +48,8 @@ export default function Rewards() {
                 'Cash Prize: ₹2k',
                 "Goodies & Tshirts",
                 "Vouchers worth ₹5k",
-                "Food Coupons, domain name etc."
+                "Food Coupons, domain name etc.",
+                "* You can see special prizes for a challenge in the challenge section."
             ]
         },
 
