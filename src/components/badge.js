@@ -58,7 +58,7 @@ export default function Badge({ name, image, badgeRef }) {
                         <Typography color={"#000E20"} fontWeight="bold">I2C2 | 10th March-16 April</Typography>
 
                     </Box>
-                    <Image src={logo.src} width={55} height={60} />
+                    <Image src={logo.src} alt="i2c2 logo" width={55} height={60} />
                 </Box>
             </Box>
 

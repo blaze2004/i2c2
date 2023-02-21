@@ -15,7 +15,7 @@ import Rewards from '../src/components/rewards';
 import WhyJoinUs from '../src/components/whyjoinus';
 import AboutUs from '../src/components/aboutus';
 import JoinUs from '../src/components/joinus';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function Home() {
   const theme=useTheme();
@@ -26,7 +26,7 @@ export default function Home() {
     scrollPos: 0,
   });
 
-  const handleScroll=() => {
+  const handleScroll=useCallback(() => {
     setScrollStatus((prev) => {
       return {
         scrollDirection:
@@ -43,7 +43,7 @@ export default function Home() {
     else {
       setVariant("extended");
     }
-  }
+  }, [scrollStatus.scrollDirection]);
 
   useEffect(() => {
     document.removeEventListener('scroll', handleScroll);

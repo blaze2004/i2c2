@@ -18,7 +18,7 @@ export default function Swags() {
         scrollPos: 0,
     });
 
-    const handleScroll=() => {
+    const handleScroll=useCallback(() => {
         setScrollStatus((prev) => {
             return {
                 scrollDirection:
@@ -35,7 +35,7 @@ export default function Swags() {
         else {
             setVariant("extended");
         }
-    }
+    }, [scrollStatus.scrollDirection]);
 
     useEffect(() => {
         document.removeEventListener('scroll', handleScroll);

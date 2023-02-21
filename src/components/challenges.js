@@ -18,7 +18,7 @@ export default function Challenges() {
     const challenges=[
         {
             title: "Gaming",
-            description: (<p>Developing an AI-powered game that can learn and adapt player behavior to provide a personalized gaming experience. unique challenges and obstacles based on the player's strengths and weaknesses.<br /><br />Challenge by <a href="https://trikon.io"><b>Trikon</b></a></p>),
+            description: (<p>Developing an AI-powered game that can learn and adapt player behavior to provide a personalized gaming experience. unique challenges and obstacles based on the player&apos;s strengths and weaknesses.<br /><br />Challenge by <a href="https://trikon.io"><b>Trikon</b></a></p>),
             imgUrl: health,
         },
         {
@@ -38,7 +38,7 @@ export default function Challenges() {
         },
         {
             title: "Frontend Dev",
-            description: (<p>Redesign 5irechain's website with theme inspired from NFT, Dexas and all. You have to submit complete code for the website and not just figma Wireframing.<br /><br />Challenge by <a href="https://www.5ire.org"><b>5ire</b></a><br /><br/><b>Special Prize: </b>5ireChain will provide extra $1000 (If the project is selected by 5ireChain Judges).</p>),
+            description: (<p>Redesign 5irechain&apos;s website with theme inspired from NFT, Dexas and all. You have to submit complete code for the website and not just figma Wireframing.<br /><br />Challenge by <a href="https://www.5ire.org"><b>5ire</b></a><br /><br/><b>Special Prize: </b>5ireChain will provide extra $1000 (If the project is selected by 5ireChain Judges).</p>),
             imgUrl: frontend,
         },
         {
