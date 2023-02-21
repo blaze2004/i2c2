@@ -99,6 +99,11 @@ export default function Sponsors() {
                 title: "Trikon",
                 imgUrl: trikon,
                 link: 'https://trikon.io'
+            },
+            {
+                title: 'Github',
+                imgUrl: Github,
+                link: 'https://github.com'
             }
         ],
         economy: [
@@ -122,11 +127,6 @@ export default function Sponsors() {
                 imgUrl: replit,
                 link: 'https://replit.com'
             },
-            {
-                title: 'Github',
-                imgUrl: Github,
-                link: 'https://github.com'
-            }
         ],
         standard: [
 
@@ -363,28 +363,28 @@ function SponsorGroup({ title, sponsors, button=false }) {
     const router=useRouter();
 
     const loadMoreButton=(
-        <Box sx={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Button
-            variant='contained'
-            onClick={()=>router.push('communities')}
-            sx={{
-                textTransform: 'none',
-                borderRadius: '1.5rem',
-                background: theme.palette.background.secondary,
-                fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
-                fontSize: theme.typography.pxToRem(16),
-                marginRight: theme.spacing(1),
-                color: 'rgba(255, 255, 255, 0.7)',
-                '&.Mui-selected': {
-                    color: '#fff',
-                },
-                '&.Mui-focusVisible': {
-                    backgroundColor: 'rgba(100, 95, 228, 0.32)',
-                },
-            }}
-        >
-            Load More
-        </Button>
+                variant='contained'
+                onClick={() => router.push('communities')}
+                sx={{
+                    textTransform: 'none',
+                    borderRadius: '1.5rem',
+                    background: theme.palette.background.secondary,
+                    fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                    fontSize: theme.typography.pxToRem(16),
+                    marginRight: theme.spacing(1),
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    '&.Mui-selected': {
+                        color: '#fff',
+                    },
+                    '&.Mui-focusVisible': {
+                        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                    },
+                }}
+            >
+                Load More
+            </Button>
         </Box>
     )
 

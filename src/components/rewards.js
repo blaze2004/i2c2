@@ -93,7 +93,7 @@ export default function Rewards() {
                     mb: "2rem",
                 }}>
                 Great rewards for everyone!<br />
-                ₹2 Lakh+ in cash prizes and goodies!
+                ₹3 Lakh+ in cash prizes and goodies!
             </Typography>
 
             <Box className={styles.cardsList}>
