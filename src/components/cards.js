@@ -253,7 +253,7 @@ export function WhyUsCard({ icon, title }) {
     );
 }
 
-export function SummaryCard({ title, content, button, image, flexDirection="row-reverse", link="" }) {
+export function SummaryCard({ title, content, button, image, flexDirection="row-reverse", link="", buttonText="Join Now" }) {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
     const tranformValue=flexDirection&&flexDirection==="row-reverse"? '24':'-24';
@@ -265,6 +265,7 @@ export function SummaryCard({ title, content, button, image, flexDirection="row-
                 borderRadius: theme.spacing(8), // 8px
                 transition: "0.3s",
                 boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+                // backgroundColor: theme.palette.background.secondary,
                 width: "80%",
                 position: "relative",
                 maxWidth: 1000,
@@ -348,7 +349,7 @@ export function SummaryCard({ title, content, button, image, flexDirection="row-
                                 },
                             }}
                         >
-                            Join Now
+                            {buttonText}
                         </Button>
                     ):null
                 }

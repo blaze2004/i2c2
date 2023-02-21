@@ -23,7 +23,7 @@ export default function Challenges() {
         },
         {
             title: "Education",
-            description: "To be announced",
+            description: (<p>The problem in EdTech is the lack of effective and personalized learning experiences, as well as the limited accessibility to technology, particularly in low-income areas. The challenge is to develop innovative solutions that provide high-quality, affordable, and accessible education to all learners, regardless of their background or location.<br /><br />Challenge by <a href="https://i2c2.tech"><b>I2C2 Team</b></a></p>),
             imgUrl: edu,
         },
         // {

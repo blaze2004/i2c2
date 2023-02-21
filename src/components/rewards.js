@@ -93,7 +93,8 @@ export default function Rewards() {
                     mb: "2rem",
                 }}>
                 Great rewards for everyone!<br />
-                ₹3 Lakh+ in cash prizes and goodies!
+                ₹3 Lakh+ in cash prizes and goodies!<br />
+                Swags for top 10(4-10) teams in each challenge.
             </Typography>
 
             <Box className={styles.cardsList}>
@@ -103,6 +104,17 @@ export default function Rewards() {
                     ))
                 }
             </Box>
+            <Typography
+                textAlign={"center"}
+                fontWeight={"bold"}
+                // fontSize={"x-large"}
+                color={theme.palette.neutral.primary}
+                sx={{
+                    mt: "2rem",
+                    mb: "2rem",
+                }}>
+                You can see special prizes for each challenge in the challenges section.
+            </Typography>
         </Box>
     );
 }

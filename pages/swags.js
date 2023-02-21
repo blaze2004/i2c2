@@ -7,6 +7,8 @@ import edu from '../src/assets/2education.png';
 import Badge from '../src/components/badge.js';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { toPng } from 'html-to-image';
+import { SummaryCard } from '../src/components/cards';
+import githubEducation from '../src/assets/github_student_developer_pack.png';
 
 export default function Swags() {
     const theme=useTheme();
@@ -66,6 +68,15 @@ export default function Swags() {
 
             <BadgeBuilderCard />
 
+            <SummaryCard
+                title={"GitHub Student Developer Pack"}
+                content={"GitHub Student Developer Pack is a free program for students to learn how to code and build software. It includes access to GitHub Pro, Azure for Students, and more."}
+                image={githubEducation.src}
+                button={true}
+                buttonText={"Get yours now"}
+                link={"https://education.github.com/benefits?utm_source=2023-03-19-I2C2"}
+            />
+
             <Box sx={{ mt: 25 }}>
                 <Footer />
             </Box>
@@ -117,7 +128,7 @@ export function BadgeBuilderCard() {
 
     }, [badgeRef]);
 
-    const title="Digital Swags";
+    const title="Digital Badge";
     const description="Fill your name and upload your photo to get a personalized I2C2 badge built for you only.";
 
     return (
