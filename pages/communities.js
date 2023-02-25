@@ -3,8 +3,6 @@ import styles from '../src/styles/Home.module.css';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-import Navbar from '../src/components/navbar';
-import Footer from '../src/components/footer';
 
 import sosTech from '../src/assets/sos_tech.png';
 import chatraShala from '../src/assets/chatra_shala.jpeg';
@@ -25,6 +23,7 @@ import ocd from '../src/assets/ocd.png';
 import sheBuilds from '../src/assets/she_builds.png';
 import web3punjab from '../src/assets/web3_punjab.jpeg';
 import youngincentive from '../src/assets/young_incentive.jpeg';
+import mentorle from '../src/assets/mentorle.png';
 
 export default function Communities() {
 
@@ -127,6 +126,11 @@ export default function Communities() {
             imgUrl: youngincentive,
             link: '',
         },
+        {
+            title: "Mentorle",
+            imgUrl: mentrole,
+            link: ''
+        }
 
     ];
 

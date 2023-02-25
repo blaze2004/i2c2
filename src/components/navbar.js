@@ -13,6 +13,8 @@ export default function Navbar() {
         setDrawerOpen(!drawerOpen);
     };
 
+    const router=useRouter();
+
     const registerButton=(
         <div
             className="apply-button"
@@ -57,7 +59,9 @@ export default function Navbar() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
             }}>
-                <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 50, height: 50 }} />
+                <IconButton onClick={() => router.push("/")}>
+                    <Avatar alt="i2c2 logo" src={logo.src} sx={{ width: 50, height: 50 }} />
+                </IconButton>
                 {
                     smallScreen?
                         (
