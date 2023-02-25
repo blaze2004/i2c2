@@ -130,7 +130,7 @@ export default function Communities() {
         {
             title: "Mentorle",
             imgUrl: mentorle,
-            link: ''
+            link: 'https://discord.gg/Fkm6sDbk'
         },
         {
             title: "Devorld",

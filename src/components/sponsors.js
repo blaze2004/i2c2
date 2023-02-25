@@ -27,6 +27,7 @@ import amitycc from '../assets/amity_coding_club.png';
 import trikon from '../assets/trikon.jpeg';
 import Github from '../assets/GitHub_Logo.png';
 import huddle from '../assets/huddle_logo.png';
+import strive from '../assets/strive.png';
 import { useRouter } from 'next/router';
 // import bgMesh from '../assets/light_mesh.jpg';
 
@@ -162,6 +163,11 @@ export default function Sponsors() {
                 title: 'Huddle01',
                 imgUrl: huddle,
                 link: 'https://www.huddle01.com'
+            },
+            {
+                title: 'Strive',
+                imgUrl: strive,
+                link: 'https://linktr.ee/strvnetwork'
             }
         ]
     };
