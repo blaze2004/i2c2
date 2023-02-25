@@ -128,7 +128,7 @@ export default function Communities() {
         },
         {
             title: "Mentorle",
-            imgUrl: mentrole,
+            imgUrl: mentorle,
             link: ''
         }
 
