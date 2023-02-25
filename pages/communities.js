@@ -23,7 +23,8 @@ import ocd from '../src/assets/ocd.png';
 import sheBuilds from '../src/assets/she_builds.png';
 import web3punjab from '../src/assets/web3_punjab.jpeg';
 import youngincentive from '../src/assets/young_incentive.jpeg';
-import mentorle from '../src/assets/mentorle.png';
+import mentorle from '../src/assets/mentorle.jpeg';
+import devorld from '../src/assets/devorld.jpeg';
 
 export default function Communities() {
 
@@ -129,6 +130,11 @@ export default function Communities() {
         {
             title: "Mentorle",
             imgUrl: mentorle,
+            link: ''
+        },
+        {
+            title: "Devorld",
+            imgUrl: devorld,
             link: ''
         }
 
