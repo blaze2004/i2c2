@@ -43,7 +43,7 @@ export default function Challenges() {
         },
         {
             title: "Entrepreneurship",
-            description: "To be announced",
+            description: (<p>Develop an MVP for a peer-to-peer platform that connects Indian college students with mentors, industry experts, and potential employers. It should include discussion forums, group messaging, file-sharing, event planning, and mentor matching, as well as tools for students to showcase their skills and connect with potential employers. The platform should be user-friendly, accessible on web and mobile, scalable, and prioritise creative ideas to improve students' education and career prospects.<br /><br />Challenge by <a href="https://i2c2.tech"><b>I2C2 Team</b></a></p>),
             imgUrl: entrepreneurs,
         },
         {
