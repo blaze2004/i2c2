@@ -6,6 +6,7 @@ import speaker from '../assets/speaker1.jpg';
 import adityaArora from '../assets/Aditya_arora.jpeg';
 import naveenPal from '../assets/naveen_pal.jpeg';
 import prateekNarang from '../assets/prateek_narang.jpeg';
+import entrepreneurs from "../assets/entrepreneurship.png";
 
 export default function Speakers() {
     const theme=useTheme();
@@ -13,12 +14,12 @@ export default function Speakers() {
 
     const speakers=[
         {
-            title: "Aditya Arora",
-            description: "At the age of 25, Aditya has been recognized as a Successful Young Entrepreneur and Achiever on various National and International platforms. Currently, he is the CEO at Faad Network Pvt LTD. and an Angel Investor in 20+ Startups.",
-            imgUrl: adityaArora,
+            title: "To be Announced",
+            description: "",
+            imgUrl: entrepreneurs,
             links:{
-                linkedin: 'https://www.linkedin.com/in/thefaadguy',
-                instagram: 'https://instagram.com/adi__arora'
+                // linkedin: 'https://www.linkedin.com/in/thefaadguy',
+                // instagram: 'https://instagram.com/adi__arora'
             }
         },
         {
