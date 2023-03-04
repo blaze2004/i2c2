@@ -25,6 +25,7 @@ import web3punjab from '../src/assets/web3_punjab.jpeg';
 import youngincentive from '../src/assets/young_incentive.jpeg';
 import mentorle from '../src/assets/mentorle.jpeg';
 import devorld from '../src/assets/devorld.jpeg';
+import mesh from '../src/assets/mesh.jpeg';
 
 export default function Communities() {
 
@@ -135,6 +136,11 @@ export default function Communities() {
         {
             title: "Devorld",
             imgUrl: devorld,
+            link: ''
+        },
+        {
+            title: 'Mesh',
+            imgUrl: mesh,
             link: ''
         }
 
