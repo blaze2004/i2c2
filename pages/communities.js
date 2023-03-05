@@ -26,6 +26,7 @@ import youngincentive from '../src/assets/young_incentive.jpeg';
 import mentorle from '../src/assets/mentorle.jpeg';
 import devorld from '../src/assets/devorld.jpeg';
 import mesh from '../src/assets/mesh.jpeg';
+import devBoard from '../src/assets/DevBoard_landscape_logo_no_bg.png';
 
 export default function Communities() {
 
@@ -33,6 +34,26 @@ export default function Communities() {
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
 
     const communityPartners=[
+        {
+            title: "DevBoard",
+            imgUrl: devBoard,
+            link: "https://devboard.bio.link"
+        },
+        {
+            title: 'newtons',
+            imgUrl: newtons,
+            link: 'https://newtonschool.co',
+        },
+        {
+            title: "Mentorle",
+            imgUrl: mentorle,
+            link: 'https://discord.gg/Fkm6sDbk'
+        },
+        {
+            title: 'ocd',
+            imgUrl: ocd,
+            link: '',
+        },
         {
             title: "Sos Tech Inc.",
             imgUrl: sosTech,
@@ -104,16 +125,6 @@ export default function Communities() {
             link: '',
         },
         {
-            title: 'newtons',
-            imgUrl: newtons,
-            link: '',
-        },
-        {
-            title: 'ocd',
-            imgUrl: ocd,
-            link: '',
-        },
-        {
             title: 'sheBuilds',
             imgUrl: sheBuilds,
             link: '',
@@ -127,11 +138,6 @@ export default function Communities() {
             title: 'youngincentive',
             imgUrl: youngincentive,
             link: '',
-        },
-        {
-            title: "Mentorle",
-            imgUrl: mentorle,
-            link: 'https://discord.gg/Fkm6sDbk'
         },
         {
             title: "Devorld",

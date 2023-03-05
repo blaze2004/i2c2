@@ -23,12 +23,14 @@ import tezos from '../assets/tezos.jpeg';
 import fire from '../assets/5ire.png';
 import balsamiq from '../assets/balsamiq.png';
 import algocs from '../assets/algocs.jpeg';
-import amitycc from '../assets/amity_coding_club.png';
 import trikon from '../assets/trikon.jpeg';
 import Github from '../assets/GitHub_Logo.png';
 import huddle from '../assets/huddle_logo.png';
 import strive from '../assets/strive.png';
 import { useRouter } from 'next/router';
+import devBoard from '../assets/DevBoard_landscape_logo_no_bg.png';
+import newtons from '../assets/newton_school.jpeg';
+import mentorle from '../assets/mentorle.jpeg';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -174,14 +176,24 @@ export default function Sponsors() {
 
     const communityPartners=[
         {
+            title: "DevBoard",
+            imgUrl: devBoard,
+            link: "https://devboard.bio.link"
+        },
+        {
+            title: 'newtons',
+            imgUrl: newtons,
+            link: 'https://newtonschool.co',
+        },
+        {
+            title: "Mentorle",
+            imgUrl: mentorle,
+            link: 'https://discord.gg/Fkm6sDbk'
+        },
+        {
             title: "Sos Tech Inc.",
             imgUrl: sosTech,
             link: "https://www.linkedin.com/company/sos-tech-inc/"
-        },
-        {
-            title: "Chatra Shala",
-            imgUrl: chatraShala,
-            link: "https://chatrashala.com"
         },
         {
             title: "Skillship",
@@ -192,17 +204,7 @@ export default function Sponsors() {
             title: "Coders Evoke",
             imgUrl: coderEvoke,
             link: "https://www.linkedin.com/company/codersevoke/"
-        },
-        {
-            title: 'algocs',
-            imgUrl: algocs,
-            link: '',
-        },
-        {
-            title: 'amitycc',
-            imgUrl: amitycc,
-            link: '',
-        },
+        }
     ];
 
     const StyledTabs=styled((props) => (
