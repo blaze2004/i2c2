@@ -2,11 +2,9 @@ import styles from '../styles/Home.module.css';
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import HoverInfoCard from './cards';
-import speaker from '../assets/speaker1.jpg';
-import adityaArora from '../assets/Aditya_arora.jpeg';
+import pranavMalik from '../assets/pranav_malik.jpeg';
 import naveenPal from '../assets/naveen_pal.jpeg';
 import prateekNarang from '../assets/prateek_narang.jpeg';
-import entrepreneurs from "../assets/entrepreneurship.png";
 
 export default function Speakers() {
     const theme=useTheme();
@@ -14,12 +12,11 @@ export default function Speakers() {
 
     const speakers=[
         {
-            title: "To be Announced",
-            description: "",
-            imgUrl: entrepreneurs,
+            title: "Pranav Malik",
+            description: "Pranav Malik is an experienced software engineer with a passion for Fullstack and Big Data Distributed Systems. With over 3.7 years in the software industry, he has worked for various product-based companies.",
+            imgUrl: pranavMalik,
             links:{
-                // linkedin: 'https://www.linkedin.com/in/thefaadguy',
-                // instagram: 'https://instagram.com/adi__arora'
+                linkedin: 'https://www.linkedin.com/in/candidatepstx-95adfsdk23/',
             }
         },
         {
