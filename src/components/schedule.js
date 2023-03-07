@@ -1,11 +1,13 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, Button, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
+import { useRouter } from "next/router";
 // import bgMesh from '../assets/orange_light_mesh.jpg';
 
 export default function Schedule() {
     const theme=useTheme();
     const smallScreen=useMediaQuery(`(max-width: 800px)`);
+    const router=useRouter();
 
     const steps=[
         {
@@ -13,8 +15,33 @@ export default function Schedule() {
             date: '10 March 2023',
         },
         {
-            text: 'Idea Submission',
+            text: "Idea Submission",
             date: '16 March 2023',
+            extra: (<Button
+                variant='contained'
+                onClick={() => router.push('/I2C2_Idea_Phase_Submission_Template.pptx')}
+                sx={{
+                    textTransform: 'none',
+                    borderRadius: '1.5rem',
+                    background: theme.palette.text.light,
+                    fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                    fontSize: theme.typography.pxToRem(16),
+                    color: theme.palette.neutral.black,
+                    // color: 'rgba(255, 255, 255, 0.7)',
+                    '&.Mui-selected': {
+                        color: '#fff',
+                    },
+                    ':hover': {
+                        background: theme.palette.background.default,
+                        color: 'rgba(255, 255, 255, 0.7)',
+                    },
+                    '&.Mui-focusVisible': {
+                        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                    },
+                }}
+            >
+                Submission Template
+            </Button>),
         },
         {
             text: 'Idea Result Announcement',
@@ -86,6 +113,10 @@ export default function Schedule() {
                                             transition: "0.3s",
                                             boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
                                             p: 2,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             width: "280px",
                                             // filter: 'blur(5px)',
                                             "&:hover": {
@@ -113,11 +144,12 @@ export default function Schedule() {
                                                 }}>
                                                 {step.text}
                                             </Typography>
+                                            {step.extra}
                                         </Box>)
                                         :<TimelineDot color="primary" />
                                     }
                                     {
-                                        key===9? null:(<TimelineConnector sx={{backgroundColor: '#000'}} />)
+                                        key===9? null:(<TimelineConnector sx={{ backgroundColor: '#000' }} />)
                                     }
                                 </TimelineSeparator>
                                 {
@@ -128,6 +160,10 @@ export default function Schedule() {
                                             transition: "0.3s",
                                             boxShadow: "0px 14px 80px rgba(0,0,0,0.75)",
                                             p: 2,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             // filter: 'blur(5px)',
                                             "&:hover": {
                                                 transform: "translateY(-3px)",
@@ -154,6 +190,7 @@ export default function Schedule() {
                                                 }}>
                                                 {step.text}
                                             </Typography>
+                                            {step.extra}
                                         </TimelineContent>)
                                 }
                             </TimelineItem>
