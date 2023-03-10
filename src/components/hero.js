@@ -7,7 +7,7 @@ export default function Hero() {
     const smallScreen=useMediaQuery('(max-width: 650px');
 
     return (
-        <Box sx={{ m: '12% 0', overflow: 'hidden'}} >
+        <Box sx={{ m: '12% 0', overflow: 'hidden' }} >
 
             <Box className={cssstyles.pyro}>
                 <Box className={cssstyles.before}></Box>
@@ -58,6 +58,20 @@ export default function Hero() {
                 >
                     Go from Idea to Prototype with I2C2 Hackathon!
                 </Typography>
+
+                <Box
+                    sx={{
+                        textTransform: 'none',
+                        borderRadius: '1.5rem',
+                        background: theme.palette.background.secondary,
+                        fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                        fontSize: theme.typography.pxToRem(16),
+                        p: theme.spacing(2),
+                        mb: theme.spacing(2),
+                        color: 'rgba(255, 255, 255, 0.7)',
+                    }}>
+                    Registration Extened till 16th March
+                </Box>
 
                 <div
                     className="apply-button"
