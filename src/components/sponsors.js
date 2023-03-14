@@ -31,6 +31,7 @@ import { useRouter } from 'next/router';
 import devBoard from '../assets/DevBoard_landscape_logo_no_bg.png';
 import newtons from '../assets/newton_school.jpeg';
 import mentorle from '../assets/mentorle.jpeg';
+import quillbot from '../assets/quillbot.jpeg';
 // import bgMesh from '../assets/light_mesh.jpg';
 
 function a11yProps(index) {
@@ -170,6 +171,11 @@ export default function Sponsors() {
                 title: 'Strive',
                 imgUrl: strive,
                 link: 'https://linktr.ee/strvnetwork'
+            },
+            {
+                title: 'Quillbot',
+                imgUrl: quillbot,
+                link: 'https://quillbot.com'
             }
         ]
     };

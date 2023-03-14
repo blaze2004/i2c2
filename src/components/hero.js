@@ -70,7 +70,7 @@ export default function Hero() {
                         mb: theme.spacing(2),
                         color: 'rgba(255, 255, 255, 0.7)',
                     }}>
-                    Registration Extened till 16th March
+                    Registration Extended till 16th March
                 </Box>
 
                 <div

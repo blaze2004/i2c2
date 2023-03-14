@@ -13,10 +13,6 @@ export default function Schedule() {
         {
             text: 'Idea Deadline Approaching - Idea Phase',
             date: '10 March 2023',
-        },
-        {
-            text: "Idea Submission",
-            date: '16 March 2023',
             extra: (<Button
                 variant='contained'
                 onClick={() => router.push('/I2C2_Idea_Phase_Submission_Template.pptx')}
@@ -41,6 +37,35 @@ export default function Schedule() {
                 }}
             >
                 Submission Template
+            </Button>),
+        },
+        {
+            text: "Idea Submission",
+            date: '16 March 2023',
+            extra: (<Button
+                variant='contained'
+                onClick={() => window.open('https://forms.gle/Hz2Mdxke5rNiib9h8', '_blank', 'noopener,noreferrer')}
+                sx={{
+                    textTransform: 'none',
+                    borderRadius: '1.5rem',
+                    background: theme.palette.text.light,
+                    fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                    fontSize: theme.typography.pxToRem(16),
+                    color: theme.palette.neutral.black,
+                    // color: 'rgba(255, 255, 255, 0.7)',
+                    '&.Mui-selected': {
+                        color: '#fff',
+                    },
+                    ':hover': {
+                        background: theme.palette.background.default,
+                        color: 'rgba(255, 255, 255, 0.7)',
+                    },
+                    '&.Mui-focusVisible': {
+                        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                    },
+                }}
+            >
+                Submit Your Idea
             </Button>),
         },
         {
