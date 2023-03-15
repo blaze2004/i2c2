@@ -28,6 +28,7 @@ import devorld from '../src/assets/devorld.jpeg';
 import mesh from '../src/assets/mesh.jpeg';
 import devBoard from '../src/assets/DevBoard_landscape_logo_no_bg.png';
 import web3samaj from '../src/assets/web3samaj.png';
+import IdcLogo from '../src/assets/idc.jpeg';
 
 export default function Communities() {
 
@@ -154,6 +155,11 @@ export default function Communities() {
             title: 'Web3Samaj',
             imgUrl: web3samaj,
             link: 'https://web3samaj.com'
+        },
+        {
+            title: "Ingenious Developers Community",
+            imgUrl: IdcLogo,
+            link: "https://linktr.ee/ingenious_devs"
         }
 
     ];
