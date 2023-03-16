@@ -29,7 +29,7 @@ export default function Faqs() {
         },
         {
             summary: "Can we form a team?",
-            description: "Yes, it is required that each participant be a part of a team. Participants may form teams of 4 participants from the same institution/university. Every squad is required to include at least one female player. Each participant must belong to a single team and submit a single project."
+            description: "Yes, you can participate in a team or solo. Participants may form teams of upto 4 members. Each participant must belong to a single team and submit a single project."
         },
         {
             summary: "Can we work on old or ongoing projects?",

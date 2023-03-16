@@ -41,7 +41,7 @@ export default function Schedule() {
         },
         {
             text: "Idea Submission",
-            date: '16 March 2023',
+            date: "18 March 2023",
             extra: (<Button
                 variant='contained'
                 onClick={() => window.open('https://forms.gle/Hz2Mdxke5rNiib9h8', '_blank', 'noopener,noreferrer')}
