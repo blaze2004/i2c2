@@ -69,8 +69,8 @@ export default function Schedule() {
             </Button>),
         },
         {
-            text: 'Idea Result Announcement',
-            date: '18 March 2023',
+            text: 'Idea phase results will be announced in a few days',
+            date: '',
         },
         {
             text: 'UI/ UX Phase starts with a workshop',
