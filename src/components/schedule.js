@@ -81,6 +81,10 @@ export default function Schedule() {
             date: '',
         },
         {
+            text:'Join our discord server and WhatsApp group to stay updated with announcements.',
+            date:''
+        },
+        {
             text: 'Get review on your UI design. Submit your UI design in below link if you want review over your design.',
             date: '',
             extra: (<Button
