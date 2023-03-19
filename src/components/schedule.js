@@ -77,7 +77,7 @@ export default function Schedule() {
             date: '',
         },
         {
-            text: 'Stucked? Get help from mentors having industry experience.,
+            text: 'Stucked? Get help from mentors having industry experience.',
             date: '',
         },
         {
