@@ -81,8 +81,57 @@ export default function Schedule() {
             date: '',
         },
         {
-            text: 'Get review on your UI design.',
+            text: 'Get review on your UI design. Submit your UI design in below link if you want review over your design.',
             date: '',
+            extra: (<Button
+
+                variant='contained'
+
+                onClick={() => window.open('https://forms.gle/Hz2Mdxke5rNiib9h8', '_blank', 'noopener,noreferrer')}
+
+                sx={{
+
+                    textTransform: 'none',
+
+                    borderRadius: '1.5rem',
+
+                    background: theme.palette.text.light,
+
+                    fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+
+                    fontSize: theme.typography.pxToRem(16),
+
+                    color: theme.palette.neutral.black,
+
+                    // color: 'rgba(255, 255, 255, 0.7)',
+
+                    '&.Mui-selected': {
+
+                        color: '#fff',
+
+                    },
+
+                    ':hover': {
+
+                        background: theme.palette.background.default,
+
+                        color: 'rgba(255, 255, 255, 0.7)',
+
+                    },
+
+                    '&.Mui-focusVisible': {
+
+                        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+
+                    },
+
+                }}
+
+            >
+
+                UI Design Submission Link
+
+            </Button>),
         },
         {
             text: 'Build your solution (project)',
