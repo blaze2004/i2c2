@@ -44,7 +44,7 @@ export default function Schedule() {
             </Button>),
         },
         {
-            text: "Submit your idea report. Also don&apos;t forget to create your metamask wallet for NFT prizes.",
+            text: "Submit your idea report. Also don't forget to create your metamask wallet for NFT prizes.",
             date: "",
             extra: (<Button
                 variant='contained'
