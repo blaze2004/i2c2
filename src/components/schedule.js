@@ -10,9 +10,13 @@ export default function Schedule() {
     const router=useRouter();
 
     const steps=[
+    {
+    text: 'Hackathon Begins',
+    date:'10 March 2023'
+    },
         {
-            text: 'Idea Deadline Approaching - Idea Phase',
-            date: '10 March 2023',
+            text: 'Select the Challenge and Submit your project idea.',
+            date: '',
             extra: (<Button
                 variant='contained'
                 onClick={() => router.push('/I2C2_Idea_Phase_Submission_Template.pptx')}
@@ -36,12 +40,12 @@ export default function Schedule() {
                     },
                 }}
             >
-                Submission Template
+                Idea Submission Template
             </Button>),
         },
         {
-            text: "Idea Submission",
-            date: "18 March 2023",
+            text: "Submit your idea report.",
+            date: "",
             extra: (<Button
                 variant='contained'
                 onClick={() => window.open('https://forms.gle/Hz2Mdxke5rNiib9h8', '_blank', 'noopener,noreferrer')}
@@ -65,24 +69,24 @@ export default function Schedule() {
                     },
                 }}
             >
-                Submit Your Idea
+                Idea Submission Link
             </Button>),
         },
         {
-            text: 'Idea phase results will be announced in a few days',
+            text: 'Attend sessions to get insights into ideation, design and development.',
             date: '',
         },
         {
-            text: 'UI/ UX Phase starts with a workshop',
-            date: '19 March 2023',
+            text: 'Stucked? Get help from mentors having industry experience.,
+            date: '',
         },
         {
-            text: 'UI/ UX Phase ends',
-            date: '25 March 2023',
+            text: 'Get review on your UI design.',
+            date: '',
         },
         {
-            text: 'Developement Phase starts with a workshop',
-            date: '26 March 2023',
+            text: 'Build your solution (project)',
+            date: '',
         },
         {
             text: 'Project Submission',
