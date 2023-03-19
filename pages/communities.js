@@ -29,6 +29,7 @@ import mesh from '../src/assets/mesh.jpeg';
 import devBoard from '../src/assets/DevBoard_landscape_logo_no_bg.png';
 import web3samaj from '../src/assets/web3samaj.png';
 import IdcLogo from '../src/assets/idc.jpeg';
+import tbic from '../src/assets/tbic.jpeg';
 
 export default function Communities() {
 
@@ -97,11 +98,6 @@ export default function Communities() {
             link: '',
         },
         {
-            title: 'codersEvoke',
-            imgUrl: codersEvoke,
-            link: '',
-        },
-        {
             title: 'csg',
             imgUrl: csg,
             link: '',
@@ -160,6 +156,11 @@ export default function Communities() {
             title: "Ingenious Developers Community",
             imgUrl: IdcLogo,
             link: "https://linktr.ee/ingenious_devs"
+        },
+        {
+            title: "TBIC",
+            imgUrl: tbic,
+            link: ""
         }
 
     ];
