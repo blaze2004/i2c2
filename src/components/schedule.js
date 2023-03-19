@@ -15,7 +15,7 @@ export default function Schedule() {
     date:'10 March 2023'
     },
         {
-            text: 'Select the Challenge and Submit your project idea.',
+            text: 'Select the Challenge and prepare your project idea.',
             date: '',
             extra: (<Button
                 variant='contained'
