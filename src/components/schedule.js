@@ -271,7 +271,7 @@ export default function Schedule() {
                                             flexDirection: 'column',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-                                            maxWidth: "350px",
+                                            maxWidth: "600px",
                                             // filter: 'blur(5px)',
                                             "&:hover": {
                                                 transform: "translateY(-3px)",
