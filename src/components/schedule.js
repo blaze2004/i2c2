@@ -144,6 +144,31 @@ export default function Schedule() {
         {
             text: 'Project Submission',
             date: '09 April 2023',
+            extra: (<Button
+                variant='contained'
+                onClick={() => window.open('https://i2c2-hackathon.devfolio.co', '_blank', 'noopener,noreferrer')}
+                sx={{
+                    textTransform: 'none',
+                    borderRadius: '1.5rem',
+                    background: theme.palette.text.light,
+                    fontWeight: smallScreen? theme.typography.fontWeightRegular:theme.typography.fontWeightBold,
+                    fontSize: theme.typography.pxToRem(16),
+                    color: theme.palette.neutral.black,
+                    // color: 'rgba(255, 255, 255, 0.7)',
+                    '&.Mui-selected': {
+                        color: '#fff',
+                    },
+                    ':hover': {
+                        background: theme.palette.background.default,
+                        color: 'rgba(255, 255, 255, 0.7)',
+                    },
+                    '&.Mui-focusVisible': {
+                        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+                    },
+                }}
+            >
+                Submit Here
+            </Button>),
         },
         {
             text: 'Result Announcement (3 Winners per Theme)',
@@ -246,6 +271,7 @@ export default function Schedule() {
                                             flexDirection: 'column',
                                             alignItems: 'center',
                                             justifyContent: 'center',
+                                            maxWidth: "350px",
                                             // filter: 'blur(5px)',
                                             "&:hover": {
                                                 transform: "translateY(-3px)",
