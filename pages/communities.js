@@ -12,14 +12,12 @@ import algocs from '../src/assets/algocs.jpeg';
 import amitycc from '../src/assets/amity_coding_club.png';
 import blockchainsrm from '../src/assets/blockchain_srm.png';
 import bubbleup from '../src/assets/bubbleup.jpeg';
-import codersEvoke from '../src/assets/coders_evoke.png';
 import csg from '../src/assets/csg.png';
 import devstation from '../src/assets/dev_station.jpeg';
 import gaminggeeks from '../src/assets/gaminggeeks.png';
 import inovact from '../src/assets/inovact.png';
 import metaworks from '../src/assets/metaworks.jpeg';
 import newtons from '../src/assets/newton_school.jpeg';
-import ocd from '../src/assets/ocd.png';
 import sheBuilds from '../src/assets/she_builds.png';
 import web3punjab from '../src/assets/web3_punjab.jpeg';
 import youngincentive from '../src/assets/young_incentive.jpeg';
@@ -30,6 +28,7 @@ import devBoard from '../src/assets/DevBoard_landscape_logo_no_bg.png';
 import web3samaj from '../src/assets/web3samaj.png';
 import IdcLogo from '../src/assets/idc.jpeg';
 import tbic from '../src/assets/tbic.jpeg';
+import serenity from '../src/assets/serenity.png';
 
 export default function Communities() {
 
@@ -51,11 +50,6 @@ export default function Communities() {
             title: "Mentorle",
             imgUrl: mentorle,
             link: 'https://discord.gg/Fkm6sDbk'
-        },
-        {
-            title: 'ocd',
-            imgUrl: ocd,
-            link: '',
         },
         {
             title: "Sos Tech Inc.",
@@ -160,6 +154,11 @@ export default function Communities() {
         {
             title: "TBIC",
             imgUrl: tbic,
+            link: ""
+        },
+        {
+            title: "Serenity",
+            imgUrl: serenity,
             link: ""
         }
 
