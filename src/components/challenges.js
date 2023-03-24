@@ -18,7 +18,7 @@ export default function Challenges() {
     const challenges=[
         {
             title: "Gaming",
-            description: (<p>Developing an AI-powered game that can learn and adapt player behavior to provide a personalized gaming experience. unique challenges and obstacles based on the player&apos;s strengths and weaknesses.<br /><br />Challenge by <a href="https://trikon.io"><b>Trikon</b></a></p>),
+            description: (<p>&quot;Welcome to the world of Web3 gaming! Your mission, should you choose to accept it, is to create a user-friendly game distribution platform for blockchain-based games. Envision a user-friendly, entry-level gaming distribution platform based on Web3 technology, specifically tailored for new players in the blockchain gaming space. Your challenge is to create a solution that facilitates seamless game discovery, purchasing, and management using cryptocurrencies while fostering a supportive community for gamers to grow and thrive in the world of decentralized gaming.&quot;<br /><br />Design a simple working/non working  website for this problem statement.<br /><br />Challenge by <a href="https://trikon.io"><b>Trikon</b></a></p>),
             imgUrl: health,
         },
         {
