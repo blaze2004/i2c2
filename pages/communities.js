@@ -102,18 +102,8 @@ export default function Communities() {
             link: '',
         },
         {
-            title: 'gaminggeeks',
-            imgUrl: gaminggeeks,
-            link: '',
-        },
-        {
             title: 'inovact',
             imgUrl: inovact,
-            link: '',
-        },
-        {
-            title: 'metaworks',
-            imgUrl: metaworks,
             link: '',
         },
         {
