@@ -116,11 +116,7 @@ export default function Communities() {
             imgUrl: web3punjab,
             link: '',
         },
-        {
-            title: 'youngincentive',
-            imgUrl: youngincentive,
-            link: '',
-        },
+
         {
             title: "Devorld",
             imgUrl: devorld,
