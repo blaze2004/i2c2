@@ -91,7 +91,7 @@ export default function Schedule() {
 
                 variant='contained'
 
-                onClick={() => window.open('https://forms.gle/Hz2Mdxke5rNiib9h8', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://forms.gle/rztrZp6Wg8B6ogKy8', '_blank', 'noopener,noreferrer')}
 
                 sx={{
 
