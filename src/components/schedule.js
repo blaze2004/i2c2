@@ -85,7 +85,7 @@ export default function Schedule() {
             date:''
         },
         {
-            text: 'Get review on your UI design. Submit your UI design in below link if you want review over your design.',
+            text: 'Get review on your UI design. Submit your UI design in below link if you want review over your design. (UI submission is optional)',
             date: '',
             extra: (<Button
 
