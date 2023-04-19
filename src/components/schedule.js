@@ -172,16 +172,8 @@ export default function Schedule() {
         },
         {
             text: 'Result Announcement (3 Winners per Theme)',
-            date: '12 April 2023',
-        },
-        {
-            text: 'Project pitch to sponsors',
-            date: '13, 14 April 2023',
-        },
-        {
-            text: 'Final Result (1 Winner per Theme)',
-            date: '16 April 2023',
-        },
+            date: '20 April 2023',
+        }
     ];
 
     return (
