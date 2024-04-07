@@ -5,6 +5,7 @@ import ShareButton from '@/components/share-button';
 import About from '@/components/about-hackathon';
 import parallaxStyles from '@/components/styles/parallax.module.css';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
+import Challenges from '@/components/challenges';
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-8 gap-3 flex justify-center">
+                <div className="mt-8 gap-3 flex flex-col sm:flex-row justify-center">
                   <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white'>
                     Register Now
                     <svg className="flex-shrink-0 size-4 ml-2 my-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
@@ -62,7 +63,7 @@ export default function Home() {
       </div>
 
       <div className='min-h-screen flex flex-col items-center justify-center p-8'>
-        <h1 className='scroll-m-20 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Why join Us</h1>
+        <h1 className='scroll-m-20 text-6xl font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Why join Us</h1>
         <HoverEffect
           className='mt-20'
           items={[
@@ -92,6 +93,8 @@ export default function Home() {
           }
         ]} />
       </div>
+
+      <Challenges />
     </main>
   );
 }
