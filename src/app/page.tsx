@@ -6,6 +6,8 @@ import About from '@/components/about-hackathon';
 import parallaxStyles from '@/components/styles/parallax.module.css';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import Challenges from '@/components/challenges';
+import Faq from '@/components/faq';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -67,34 +69,54 @@ export default function Home() {
         <HoverEffect
           className='mt-20'
           items={[
-          {
-            title: "Informative & Interactive Session",
-            description: "",
-          },
-          {
-            title:  "Mentorship Support",
-            description: "",
-          },
-          {
-            title: "NFT's, Certificates  & Swags",
-            description: "",
-          },
-          {
-            title: "Project Building Experience",
-            description: "",
-          },
-          {
-            title: "Learn, Build & Participate",
-            description: ""
-          },
-          {
-            title: "Internship & PPO Opportunities",
-            description: ""
-          }
-        ]} />
+            {
+              title: "Informative & Interactive Session",
+              description: "",
+            },
+            {
+              title: "Mentorship Support",
+              description: "",
+            },
+            {
+              title: "NFT's, Certificates  & Swags",
+              description: "",
+            },
+            {
+              title: "Project Building Experience",
+              description: "",
+            },
+            {
+              title: "Learn, Build & Participate",
+              description: ""
+            },
+            {
+              title: "Internship & PPO Opportunities",
+              description: ""
+            }
+          ]} />
       </div>
 
       <Challenges />
+
+      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Rewards</h1>
+        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
+      </div>
+      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Schedule</h1>
+        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
+      </div>
+      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Sponsors</h1>
+        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
+      </div>
+      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Speakers & Mentors</h1>
+        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
+      </div>
+
+      <Faq />
+      <Footer />
     </main>
   );
 }
