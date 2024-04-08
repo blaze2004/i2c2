@@ -95,7 +95,7 @@ export default function Challenges() {
                                         />
                                     </CardContent>
                                     <CardFooter>
-                                        <DialogTrigger>
+                                        <DialogTrigger asChild>
                                             <Button>View Problem Statement</Button>
                                         </DialogTrigger>
                                     </CardFooter>
