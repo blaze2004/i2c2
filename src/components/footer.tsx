@@ -6,12 +6,8 @@ export default function Footer() {
         <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto border-t">
 
             <div className="text-center">
-                <div>
-                    <a className="flex-none text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">i2C2</a>
-                </div>
-
                 <div className="mt-3">
-                    <p className="text-gray-500">We&apos;re <a className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="">I2C2</a> family.</p>
+                    <p className="text-gray-500">We&apos;re <span className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400">I2C2</span> family.</p>
                     <p className="text-gray-500">© I2C2. 2024. All rights reserved.</p>
                 </div>
 
