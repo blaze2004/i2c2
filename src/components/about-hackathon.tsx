@@ -5,7 +5,6 @@ import logo from '@/assets/logo.png'
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 export default function About() {
-
     const content: {
         title: string;
         description: string;
@@ -29,7 +28,7 @@ export default function About() {
         ];
 
     return (
-        <div className="bg-secondary min-h-screen">
+        <div className="bg-secondary">
             <StickyScroll content={content} />
         </div>
     )
