@@ -1,3 +1,4 @@
+'use client'
 import { cn } from '@/lib/utils';
 import styles from '@/components/styles/hero.module.css';
 import { Button } from '@/components/ui/button';
@@ -6,11 +7,15 @@ import About from '@/components/about-hackathon';
 import parallaxStyles from '@/components/styles/parallax.module.css';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import Challenges from '@/components/challenges';
+import Page6 from "../components/Rewards/Page6"
+import Page7 from "../components/Schedule/Page7"
+import Page10 from "../components/Speakers/Page10"
 import Faq from '@/components/faq';
 import Footer from '@/components/footer';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 export default function Home() {
+
+  
   return (
     <main>
       <div className={parallaxStyles.parallax}>
@@ -31,7 +36,7 @@ export default function Home() {
                   >
                     Join us on Discord
                     <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full font-semibold text-sm bg-gray-700 text-gray-400">
-                      <ChevronRightIcon className="flex-shrink-0 size-4" />
+                      <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                     </span>
                   </a>
                 </div>
@@ -50,7 +55,7 @@ export default function Home() {
                 <div className="mt-8 gap-3 flex flex-col sm:flex-row justify-center">
                   <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white'>
                     Register Now
-                    <ChevronRightIcon className="flex-shrink-0 size-4 ml-2 my-4" />
+                    <svg className="flex-shrink-0 size-4 ml-2 my-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                   </Button>
                   <ShareButton />
                 </div>
@@ -66,7 +71,7 @@ export default function Home() {
       </div>
 
       <div className='min-h-screen flex flex-col items-center justify-center p-8'>
-        <h1 className='scroll-m-20 text-6xl text-left font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Why join Us</h1>
+        <h1 className='scroll-m-20 text-6xl font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Why join Us</h1>
         <HoverEffect
           className='mt-20'
           items={[
@@ -98,23 +103,26 @@ export default function Home() {
       </div>
 
       <Challenges />
+      <Page6 />
 
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+      {/* <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
         <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Rewards</h1>
         <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+      </div> */}
+      {/* <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
         <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Schedule</h1>
         <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
+      </div> */}
+      <Page7 />
       <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
         <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Sponsors</h1>
         <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
       </div>
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+      {/* <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
         <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Speakers & Mentors</h1>
         <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
+      </div> */}
+      <Page10 />
 
       <Faq />
       <Footer />

@@ -1,0 +1,37 @@
+.page6Height{
+    height: 120svh;
+    background-color:hsl(var(--secondary));
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+.page6HeightInsideDiv{
+    width: 80%;
+}
+.page6HDiv{
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    padding: 5%;
+}
+.page6BottomDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    width: 100%;
+    justify-content: center;
+}
+.showPriceWindow{
+    position: fixed;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+}
+.imgSectionPg6{
+    display: flex;
+    justify-content: center;
+}

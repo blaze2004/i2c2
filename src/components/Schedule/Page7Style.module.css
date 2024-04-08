@@ -1,0 +1,12 @@
+.page7Div{
+    background-color: hsl(var(--secondary));
+    color: white;
+    overflow-y: auto;
+}
+.page7DivHDiv{
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    
+}

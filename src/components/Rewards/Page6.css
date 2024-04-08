@@ -1,0 +1,87 @@
+
+.cardPg6 {
+    --bg: #f7f7f8;
+    --hover-bg: #73c9ff;
+    --hover-text: #111;
+    max-width: 23ch;
+    text-align: center;
+    background: var(--bg);
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 25%;
+    height: 40svh;
+  }
+  
+  .card__bodyPg6 {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+  
+  .cardPg6 > :not(span) {
+    transition: .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .cardPg6 > strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: -.035em;
+  }
+  
+  .cardPg6 span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .cardPg6:hover span {
+    top: 0;
+    font-size: 1.2em;
+  }
+  
+  .cardPg6:hover {
+    background: var(--hover-bg);
+  }
+  
+  .cardPg6:hover>div,.cardPg6:hover>strong {
+    opacity: 0;
+  }
+
+  .goldPricePg6{
+    scale:1.2;
+  }
+
+  .pg6WindowDiv{
+    transform:translateY(100vh);
+  }
+
+  @media(max-width: 770px) {
+    .cardPg6 {
+     height: 200px;
+     width: 200px;
+
+    }
+    .cardPg6 img{
+      width: 60%;
+      text-align: center;
+      margin: auto;
+    }
+}

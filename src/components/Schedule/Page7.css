@@ -1,0 +1,30 @@
+.timeLineCardPg7 {
+    width: 50%;
+    box-shadow: rgba(37, 37, 37, 0.707) 0px 7px 29px 0px;
+    padding: 5%;
+    border-radius: 20px;
+
+}
+
+@media(max-width: 770px) {
+    .timeLineCardPg7 {
+        width: 100%;
+        font-size: 0.8em;
+
+    }
+}
+
+.timeLineCardPg7:hover {
+    box-shadow: rgba(37, 37, 37, 0.707) 0px 2px 2px 0px;
+}
+
+.timeLineCardPg7 div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeLineCardPg7 div button {
+    border-radius: 30px;
+    /* width: 80%; */
+}
