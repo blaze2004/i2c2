@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import code8 from '@/assets/organizers/code8.png';
 import codedu from '@/assets/organizers/codedu.png';
 import befikra from '@/assets/organizers/befikra.png';
@@ -10,7 +10,6 @@ import { Card, CardContent, CardHeader, CardFooter } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "./ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { TerminalIcon } from "./ui/icons";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 export default function Organizers() {
