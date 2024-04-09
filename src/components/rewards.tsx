@@ -7,7 +7,7 @@ export default function Rewards() {
                 <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Prizes</h1>
                 <p className="scroll-m-20 text-center sm:text-left text-xl tracking-tight">Get ready to launch your projects and grab awesome prizes and recognition.</p>
                 <div className="mt-8 flex flex-col md:flex-row gap-4 w-full py-8">
-                    <div className="flex flex-col items-center justify-center flex-1 bg-purple-600 p-4 py-8 max-w-screen-lg min-w-96">
+                    <div className="flex flex-col items-center justify-center flex-1 bg-purple-600 p-4 py-8 max-w-screen-lg sm:min-w-96">
                         <h2 className="uppercase scroll-m-20 text-center font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-7xl">
                             Prize Pool
                         </h2>
