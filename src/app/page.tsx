@@ -9,6 +9,7 @@ import Faq from '@/components/faq';
 import Footer from '@/components/footer';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import Organizers from '@/components/organizers';
+import SpeakersAndMentors from '@/components/speakers-and-mentors';
 
 export default function Home() {
   return (
@@ -102,11 +103,8 @@ export default function Home() {
         <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Sponsors</h1>
         <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
       </div>
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
-        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Speakers & Mentors</h1>
-        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
       
+      <SpeakersAndMentors />
       <Organizers />
       <Faq />
       <Footer />

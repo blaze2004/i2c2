@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import code8 from '@/assets/organizers/code8.png';
 import codedu from '@/assets/organizers/codedu.png';
 import befikra from '@/assets/organizers/befikra.png';
@@ -69,7 +69,7 @@ export default function Organizers() {
     return (
         <div className="min-h-screen flex items-center justify-center p-8 bg-secondary">
             <div>
-                <h1 className="uppercase scroll-m-20 text-6xl text-center sm:text-left font-extrabold tracking-tight sm:text-7xl lg:text-9xl">I2C2 Family</h1>
+                <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">I2C2 Family</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-3">
                     {
                         organizers.map((organizer, index) => (
@@ -100,22 +100,24 @@ export default function Organizers() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4 gap-3">
                             {
                                 positions.map((position, index) => (
-                                    <Card key={index} className="flex flex-col justify-between max-w-md">
-                                        <CardHeader>
-                                            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{position.title}</h3>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p>{position.content}</p>
-                                        </CardContent>
-                                        <CardFooter>
-                                            <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white' asChild>
-                                                <Link href={position.link}>
-                                                    Join us
-                                                    <ChevronRightIcon className="flex-shrink-0 size-4 ml-2 my-4" />
-                                                </Link>
-                                            </Button>
-                                        </CardFooter>
-                                    </Card>
+                                    <div key={index} className="rounded-xl" style={{ backgroundImage: `url('${position.image.src}')`, backgroundSize: 'cover' }}>
+                                        <Card className="flex flex-col justify-between max-w-md backdrop-blur-sm bg-blue-900/50">
+                                            <CardHeader>
+                                                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{position.title}</h3>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <p>{position.content}</p>
+                                            </CardContent>
+                                            <CardFooter>
+                                                <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white' asChild>
+                                                    <Link href={position.link}>
+                                                        Join us
+                                                        <ChevronRightIcon className="flex-shrink-0 size-4 ml-2 my-4" />
+                                                    </Link>
+                                                </Button>
+                                            </CardFooter>
+                                        </Card>
+                                    </div>
                                 ))
                             }
                         </div>
