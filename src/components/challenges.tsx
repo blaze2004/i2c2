@@ -74,7 +74,7 @@ export default function Challenges() {
     return (
         <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
             <div>
-                <h1 className='scroll-m-20 text-6xl text-center sm:text-left font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Challenges</h1>
+            <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Challenges</h1>
                 <p className="mt-5 text-lg text-center sm:text-left text-muted-foreground ml-4">Choose your field, accept the challenge and get the trophy.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10">

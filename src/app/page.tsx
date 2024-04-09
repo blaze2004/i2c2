@@ -10,6 +10,9 @@ import Footer from '@/components/footer';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import Organizers from '@/components/organizers';
 import SpeakersAndMentors from '@/components/speakers-and-mentors';
+import SponsorsAndPartners from '@/components/sponsors-and-partners';
+import Schedule from '@/components/schedule';
+import Rewards from '@/components/rewards';
 
 export default function Home() {
   return (
@@ -57,7 +60,7 @@ export default function Home() {
 
       <div className='min-h-screen flex flex-col items-center justify-center p-8'>
         <div>
-          <h1 className='scroll-m-20 text-6xl text-center sm:text-left font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Why join Us</h1>
+        <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Why join Us</h1>
           <HoverEffect
             className='mt-20'
             items={[
@@ -89,21 +92,10 @@ export default function Home() {
         </div>
       </div>
 
-      <Challenges />
-
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
-        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Rewards</h1>
-        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
-        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Schedule</h1>
-        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
-      <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
-        <h1 className='scroll-m-20 text-6xl text-center font-extrabold tracking-tight sm:text-7xl lg:text-9xl bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent'>Sponsors</h1>
-        <p className="mt-5 text-lg text-center text-muted-foreground">To be announced soon.</p>
-      </div>
-      
+      <Challenges />   
+      <Rewards />
+      <Schedule />
+      <SponsorsAndPartners />      
       <SpeakersAndMentors />
       <Organizers />
       <Faq />
