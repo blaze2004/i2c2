@@ -93,15 +93,14 @@ export default function Organizers() {
                 </div>
 
                 <Alert>
-                    <TerminalIcon className="hidden sm:block h-4 w-4" />
                     <AlertTitle className="scroll-m-20 text-2xl font-semibold tracking-tight">Join I2C2 family</AlertTitle>
                     <AlertDescription>
                         Let&apos;s make this hackathon a success together.
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4 gap-3">
                             {
                                 positions.map((position, index) => (
-                                    <div key={index} className="rounded-xl" style={{ backgroundImage: `url('${position.image.src}')`, backgroundSize: 'cover' }}>
-                                        <Card className="flex flex-col justify-between max-w-md backdrop-blur-sm bg-blue-900/50">
+                                    <div key={index} className="rounded-xl h-full" style={{ backgroundImage: `url('${position.image.src}')`, backgroundSize: 'cover', backgroundPosition: "100% 100%" }}>
+                                        <Card className="flex h-full flex-col justify-between max-w-md backdrop-blur-sm bg-blue-900/50">
                                             <CardHeader>
                                                 <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{position.title}</h3>
                                             </CardHeader>
