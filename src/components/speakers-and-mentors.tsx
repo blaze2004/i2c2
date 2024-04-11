@@ -61,7 +61,7 @@ export default function SpeakersAndMentors() {
     return (
         <div className="bg-secondary">
             <div className="bg-slate-900 min-h-screen flex items-center justify-center p-8 rounded-b-[5rem] py-16">
-                <div>
+                <div className="flex flex-col items-center sm:block">
                     <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Speakers</h1>
                     <p className="scroll-m-20 text-center sm:text-left text-xl tracking-tight">Get to know the speakers of this amazing Hackathon.</p>
                     {/* <PeopleGrid people={speakers} /> */}
