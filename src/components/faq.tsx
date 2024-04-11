@@ -3,7 +3,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 
@@ -68,5 +68,5 @@ export default function Faq() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

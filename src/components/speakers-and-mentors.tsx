@@ -50,8 +50,8 @@ const PeopleGrid=({ people }: { people: People[] }) => {
                 ))
             }
         </div>
-    )
-}
+    );
+};
 
 export default function SpeakersAndMentors() {
 
@@ -73,5 +73,5 @@ export default function SpeakersAndMentors() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

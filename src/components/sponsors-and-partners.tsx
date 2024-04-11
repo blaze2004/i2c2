@@ -30,5 +30,5 @@ export default function SponsorsAndPartners() {
                 <Image src={sponsorPreview.src} width={1000} height={500} alt="Sponsors and Partners" className="my-8 w-full rounded-2xl" />
             </div>
         </div>
-    )
+    );
 }

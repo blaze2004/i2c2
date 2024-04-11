@@ -1,7 +1,11 @@
 import Image from "next/image";
-import bird from '@/assets/bird.png'
-import crystal from '@/assets/crystal.png'
-import logo from '@/assets/logo.png'
+import bird from "@/assets/bird.png";
+import crystal from "@/assets/crystal.png";
+import logo from "@/assets/logo.png";
+import ideateHumaaan from "@/assets/humaaans/ideate-humaaans.png";
+import innovateHumaaan from "@/assets/humaaans/innovate-humaaans.png";
+import collaborateHumaaan from "@/assets/humaaans/collaborate-humaaans.png";
+import competeHumaaan from "@/assets/humaaans/compete-humaaans.png";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 export default function About() {
@@ -31,5 +35,5 @@ export default function About() {
         <div className="bg-secondary">
             <StickyScroll content={content} />
         </div>
-    )
+    );
 }

@@ -1,18 +1,18 @@
-import { cn } from '@/lib/utils';
-import styles from '@/components/styles/hero.module.css';
-import { Button } from '@/components/ui/button';
-import ShareButton from '@/components/share-button';
-import About from '@/components/about-hackathon';
-import { HoverEffect } from '@/components/ui/card-hover-effect';
-import Challenges from '@/components/challenges';
-import Faq from '@/components/faq';
-import Footer from '@/components/footer';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
-import Organizers from '@/components/organizers';
-import SpeakersAndMentors from '@/components/speakers-and-mentors';
-import SponsorsAndPartners from '@/components/sponsors-and-partners';
-import Schedule from '@/components/schedule';
-import Rewards from '@/components/rewards';
+import { cn } from "@/lib/utils";
+import styles from "@/components/styles/hero.module.css";
+import { Button } from "@/components/ui/button";
+import ShareButton from "@/components/share-button";
+import About from "@/components/about-hackathon";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
+import Challenges from "@/components/challenges";
+import Faq from "@/components/faq";
+import Footer from "@/components/footer";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
+import Organizers from "@/components/organizers";
+import SpeakersAndMentors from "@/components/speakers-and-mentors";
+import SponsorsAndPartners from "@/components/sponsors-and-partners";
+import Schedule from "@/components/schedule";
+import Rewards from "@/components/rewards";
 
 export default function Home() {
   return (
@@ -21,13 +21,13 @@ export default function Home() {
         "flex justify-center items-center w-full min-h-screen",
         styles.hero
       )}>
-        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10'>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
 
-          <div className='flex justify-center'>
+          <div className="flex justify-center">
             <a className="inline-flex items-center gap-x-2 text-sm p-1 ps-3 rounded-full transition bg-gray-800 border border-gray-700 hover:border-gray-600 text-gray-200"
-              href='https://discord.io/i2c2-hackathon'
-              target='_blank'
-              rel='noopener,noreferrer'
+              href="https://discord.io/i2c2-hackathon"
+              target="_blank"
+              rel="noopener,noreferrer"
             >
               Join us on Discord
               <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full font-semibold text-sm bg-gray-700 text-gray-400">
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 gap-3 flex flex-col sm:flex-row justify-center">
-            <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white'>
+            <Button className="bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white">
               Register Now
               <ChevronRightIcon className="flex-shrink-0 size-4 ml-2 my-4" />
             </Button>
@@ -58,11 +58,11 @@ export default function Home() {
       </div>
       <About />
 
-      <div className='min-h-screen flex flex-col items-center justify-center p-8'>
+      <div className="min-h-screen flex flex-col items-center justify-center p-8">
         <div>
         <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Why join Us</h1>
           <HoverEffect
-            className='mt-20'
+            className="mt-20"
             items={[
               {
                 title: "Informative & Interactive Session",

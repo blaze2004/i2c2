@@ -65,5 +65,5 @@ export default function Schedule() {
             <h1 className="uppercase scroll-m-20 md:sticky md:top-[40%] text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Schedule</h1>
             <Timeline items={schedule} className="my-8 max-w-lg" />
         </div>
-    )
+    );
 }

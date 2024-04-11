@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { StaticImageData } from "next/image";
-import code8 from '@/assets/organizers/code8.png';
-import codedu from '@/assets/organizers/codedu.png';
-import befikra from '@/assets/organizers/befikra.png';
-import mentor from '@/assets/roles/mentor.png';
-import speaker from '@/assets/roles/speaker.png';
-import campusChamp from '@/assets/roles/campus_champ.png';
+import code8 from "@/assets/organizers/code8.png";
+import codedu from "@/assets/organizers/codedu.png";
+import befikra from "@/assets/organizers/befikra.png";
+import mentor from "@/assets/roles/mentor.png";
+import speaker from "@/assets/roles/speaker.png";
+import campusChamp from "@/assets/roles/campus_champ.png";
 import { Card, CardContent, CardHeader, CardFooter } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "./ui/button";
@@ -20,22 +20,22 @@ export default function Organizers() {
         link: string;
     }[]=[
             {
-                name: 'Befikra',
-                bio: 'The Befikra Community brings together technology professionals, learners, mentors, and companies from around the world to build a supportive environment for learning, growing, enhancing skills, and building projects.',
+                name: "Befikra",
+                bio: "The Befikra Community brings together technology professionals, learners, mentors, and companies from around the world to build a supportive environment for learning, growing, enhancing skills, and building projects.",
                 logo: befikra,
-                link: 'https://befikracommunity.in'
+                link: "https://befikracommunity.in"
             },
             {
-                name: 'Code8',
-                bio: 'Code8 is an experience-based learning platform driven by the energy of code and creativity to churn the wheels of innovation. We are cultivating a culture of project creation to solve real-world problems and an ethos for skill mastering.',
+                name: "Code8",
+                bio: "Code8 is an experience-based learning platform driven by the energy of code and creativity to churn the wheels of innovation. We are cultivating a culture of project creation to solve real-world problems and an ethos for skill mastering.",
                 logo: code8,
-                link: 'https://www.codeate.in'
+                link: "https://www.codeate.in"
             },
             {
-                name: 'Codedu',
-                bio: 'Codedu is an Open Source Community that helps tech enthusiasts to grow their self in tech. We are providing FREE Learning Content in the form of Video as well as Notes.',
+                name: "Codedu",
+                bio: "Codedu is an Open Source Community that helps tech enthusiasts to grow their self in tech. We are providing FREE Learning Content in the form of Video as well as Notes.",
                 logo: codedu,
-                link: 'https://codedu.tech'
+                link: "https://codedu.tech"
             },
         ];
 
@@ -98,7 +98,7 @@ export default function Organizers() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4 gap-3">
                             {
                                 positions.map((position, index) => (
-                                    <div key={index} className="rounded-xl h-full" style={{ backgroundImage: `url('${position.image.src}')`, backgroundSize: 'cover', backgroundPosition: "100% 100%" }}>
+                                    <div key={index} className="rounded-xl h-full" style={{ backgroundImage: `url('${position.image.src}')`, backgroundSize: "cover", backgroundPosition: "100% 100%" }}>
                                         <Card className="flex h-full flex-col justify-between max-w-md backdrop-blur-sm bg-blue-900/50">
                                             <CardHeader>
                                                 <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{position.title}</h3>
@@ -107,7 +107,7 @@ export default function Organizers() {
                                                 <p>{position.content}</p>
                                             </CardContent>
                                             <CardFooter>
-                                                <Button className='bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white' asChild>
+                                                <Button className="bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 text-white" asChild>
                                                     <Link href={position.link}>
                                                         Join us
                                                         <ChevronRightIcon className="flex-shrink-0 size-4 ml-2 my-4" />
@@ -124,5 +124,5 @@ export default function Organizers() {
 
             </div>
         </div>
-    )
+    );
 }

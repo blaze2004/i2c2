@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
-import gaming from '@/assets/challenges/gaming.png';
-import edu from '@/assets/challenges/education.png';
-import web3 from '@/assets/challenges/web3.png';
-import frontend from '@/assets/challenges/frontend.png';
-import misc from '@/assets/challenges/miscellaneous.png';
+import gaming from "@/assets/challenges/gaming.png";
+import edu from "@/assets/challenges/education.png";
+import web3 from "@/assets/challenges/web3.png";
+import frontend from "@/assets/challenges/frontend.png";
+import misc from "@/assets/challenges/miscellaneous.png";
 import entrepreneurs from "@/assets/challenges/entrepreneurship.png";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
@@ -14,7 +14,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "./ui/dialog"
+} from "./ui/dialog";
 import { Fragment } from "react";
 
 
@@ -72,7 +72,7 @@ export default function Challenges() {
         ];
 
     return (
-        <div className='min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary'>
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 gap-3 bg-secondary">
             <div>
             <h1 className="uppercase scroll-m-20 text-center sm:text-left font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">Challenges</h1>
                 <p className="mt-5 text-lg text-center sm:text-left text-muted-foreground ml-4">Choose your field, accept the challenge and get the trophy.</p>
@@ -118,5 +118,5 @@ export default function Challenges() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

@@ -1,3 +1,20 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": [
+    "@stylistic"
+  ],
+  "rules": {
+    "@stylistic/quotes": [
+      1,
+      "double"
+    ],
+    "@stylistic/jsx-quotes": [
+      1,
+      "prefer-double"
+    ],
+    "@stylistic/semi": [
+      1,
+      "always"
+    ]
+  }
 }
